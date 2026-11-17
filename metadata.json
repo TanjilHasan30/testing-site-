@@ -1,0 +1,6 @@
+{
+  "name": "Mother & Child",
+  "description": "Every Story. Every Little Moment. A Bangladesh-focused motherhood social discovery, Q&A, doctor care, baby tracker, and multi-vendor social commerce platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

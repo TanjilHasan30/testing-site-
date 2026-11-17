@@ -1,0 +1,221 @@
+{
+  "entities": {
+    "PublicUser": {
+      "title": "PublicUser",
+      "description": "Public-safe user profile without PII",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "displayName": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "username": { "type": "string", "minLength": 2, "maxLength": 40, "pattern": "^[a-zA-Z0-9_\\.]+$" },
+        "bio": { "type": "string", "maxLength": 300 },
+        "avatarUrl": { "type": "string", "maxLength": 500 },
+        "coverUrl": { "type": "string", "maxLength": 500 },
+        "creatorCategory": { "type": "string", "maxLength": 60 },
+        "isPrivate": { "type": "boolean" },
+        "followersCount": { "type": "number" },
+        "followingCount": { "type": "number" },
+        "likesCount": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "displayName", "username", "isPrivate", "followersCount", "followingCount", "likesCount", "createdAt", "updatedAt"]
+    },
+    "PrivateUserInfo": {
+      "title": "PrivateUserInfo",
+      "description": "Isolated PII for user accounts (owner or admin only)",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "email": { "type": "string", "maxLength": 160 },
+        "phone": { "type": "string", "maxLength": 30 },
+        "district": { "type": "string", "maxLength": 80 },
+        "upazila": { "type": "string", "maxLength": 80 },
+        "area": { "type": "string", "maxLength": 120 },
+        "postalCode": { "type": "string", "maxLength": 20 },
+        "preferredLang": { "type": "string", "enum": ["bn", "en"] },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["uid", "preferredLang", "updatedAt"]
+    },
+    "Post": {
+      "title": "Post",
+      "description": "Social discovery post, video, carousel, or review",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "authorName": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "authorAvatar": { "type": "string", "maxLength": 500 },
+        "type": { "type": "string", "enum": ["photo", "carousel", "short_video", "long_video", "text", "question", "poll", "review"] },
+        "category": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 160 },
+        "caption": { "type": "string", "minLength": 1, "maxLength": 2000 },
+        "mediaUrl": { "type": "string", "maxLength": 500 },
+        "aspectRatio": { "type": "string", "enum": ["3:4", "4:3", "1:1", "9:16", "16:9"] },
+        "isVideo": { "type": "boolean" },
+        "videoDurationSec": { "type": "number" },
+        "isSponsored": { "type": "boolean" },
+        "moderationStatus": { "type": "string", "enum": ["approved", "pending", "removed"] },
+        "likesCount": { "type": "number" },
+        "commentsCount": { "type": "number" },
+        "savesCount": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorId", "authorName", "type", "category", "title", "caption", "aspectRatio", "isVideo", "isSponsored", "moderationStatus", "likesCount", "commentsCount", "savesCount", "createdAt", "updatedAt"]
+    },
+    "Comment": {
+      "title": "Comment",
+      "description": "Comment on a social post",
+      "type": "object",
+      "properties": {
+        "postId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "authorId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "authorName": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "content": { "type": "string", "minLength": 1, "maxLength": 1000 },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["postId", "authorId", "authorName", "content", "createdAt"]
+    },
+    "Question": {
+      "title": "Question",
+      "description": "Community Q&A post with optional anonymity",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "authorDisplayName": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "isAnonymous": { "type": "boolean" },
+        "category": { "type": "string", "minLength": 1, "maxLength": 60 },
+        "title": { "type": "string", "minLength": 1, "maxLength": 200 },
+        "body": { "type": "string", "minLength": 1, "maxLength": 3000 },
+        "answersCount": { "type": "number" },
+        "moderationStatus": { "type": "string", "enum": ["approved", "pending", "removed"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorId", "authorDisplayName", "isAnonymous", "category", "title", "body", "answersCount", "moderationStatus", "createdAt"]
+    },
+    "Appointment": {
+      "title": "Appointment",
+      "description": "Doctor consultation booking",
+      "type": "object",
+      "properties": {
+        "patientId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "doctorId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "date": { "type": "string", "minLength": 10, "maxLength": 10, "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "slot": { "type": "string", "minLength": 3, "maxLength": 30 },
+        "consultationType": { "type": "string", "enum": ["video", "clinic"] },
+        "feeBdt": { "type": "number" },
+        "paymentStatus": { "type": "string", "enum": ["pending", "paid_sandbox", "refunded"] },
+        "status": { "type": "string", "enum": ["pending", "confirmed", "completed", "cancelled"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["patientId", "doctorId", "date", "slot", "consultationType", "feeBdt", "paymentStatus", "status", "createdAt", "updatedAt"]
+    },
+    "BabyProfile": {
+      "title": "BabyProfile",
+      "description": "Private family child profile",
+      "type": "object",
+      "properties": {
+        "parentId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "name": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "dob": { "type": "string", "minLength": 10, "maxLength": 10, "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "gender": { "type": "string", "enum": ["girl", "boy", "unspecified"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["parentId", "name", "dob", "gender", "createdAt"]
+    },
+    "GrowthLog": {
+      "title": "GrowthLog",
+      "description": "Private baby growth measurement record",
+      "type": "object",
+      "properties": {
+        "babyId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "parentId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "recordedDate": { "type": "string", "minLength": 10, "maxLength": 10 },
+        "weightKg": { "type": "number" },
+        "heightCm": { "type": "number" },
+        "sleepHours": { "type": "number" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["babyId", "parentId", "recordedDate", "weightKg", "heightCm", "createdAt"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Marketplace parent order with seller sub-orders",
+      "type": "object",
+      "properties": {
+        "buyerId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "district": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "upazila": { "type": "string", "minLength": 1, "maxLength": 80 },
+        "area": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "postalCode": { "type": "string", "minLength": 2, "maxLength": 20 },
+        "paymentMethod": { "type": "string", "enum": ["bkash_sandbox", "nagad_sandbox", "card_sandbox", "cod"] },
+        "paymentStatus": { "type": "string", "enum": ["unpaid", "paid_sandbox", "refunded"] },
+        "subtotalBdt": { "type": "number" },
+        "deliveryFeeBdt": { "type": "number" },
+        "totalBdt": { "type": "number" },
+        "status": { "type": "string", "enum": ["pending", "confirmed", "shipped", "delivered", "cancelled"] },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["buyerId", "district", "upazila", "area", "postalCode", "paymentMethod", "paymentStatus", "subtotalBdt", "deliveryFeeBdt", "totalBdt", "status", "createdAt", "updatedAt"]
+    },
+    "Report": {
+      "title": "Report",
+      "description": "Content or user moderation report",
+      "type": "object",
+      "properties": {
+        "reporterId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "targetType": { "type": "string", "enum": ["post", "question", "product", "user"] },
+        "targetId": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-zA-Z0-9_\\-]+$" },
+        "reason": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "status": { "type": "string", "enum": ["open", "reviewed", "resolved"] },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["reporterId", "targetType", "targetId", "reason", "status", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/PublicUser" },
+      "description": "Public-safe user profile documents"
+    },
+    "/users/{userId}/private/{docId}": {
+      "schema": { "$ref": "#/entities/PrivateUserInfo" },
+      "description": "Private PII subcollection accessible only to owner and admins"
+    },
+    "/posts/{postId}": {
+      "schema": { "$ref": "#/entities/Post" },
+      "description": "Public social discovery posts and short videos"
+    },
+    "/posts/{postId}/comments/{commentId}": {
+      "schema": { "$ref": "#/entities/Comment" },
+      "description": "Post comments subcollection"
+    },
+    "/questions/{questionId}": {
+      "schema": { "$ref": "#/entities/Question" },
+      "description": "Motherhood Q&A questions"
+    },
+    "/appointments/{appointmentId}": {
+      "schema": { "$ref": "#/entities/Appointment" },
+      "description": "Doctor consultation appointments"
+    },
+    "/babies/{babyId}": {
+      "schema": { "$ref": "#/entities/BabyProfile" },
+      "description": "Private baby profiles owned by parents"
+    },
+    "/babies/{babyId}/growth_logs/{logId}": {
+      "schema": { "$ref": "#/entities/GrowthLog" },
+      "description": "Private baby growth measurements"
+    },
+    "/orders/{orderId}": {
+      "schema": { "$ref": "#/entities/Order" },
+      "description": "Multi-vendor marketplace orders"
+    },
+    "/reports/{reportId}": {
+      "schema": { "$ref": "#/entities/Report" },
+      "description": "Moderation reports queue"
+    }
+  }
+}

@@ -1,0 +1,1618 @@
+# PROJECT: MOTHER & CHILD
+## ULTIMATE A–Z FULL-STACK DEVELOPMENT MASTER PROMPT
+
+You are an expert software architect, senior full-stack engineer, UI/UX designer, database engineer, security engineer, DevOps engineer, and product manager.
+
+Your responsibility is to design, develop, implement, test, and prepare a complete production-oriented social media and social commerce web application called:
+
+# MOTHER & CHILD
+
+Tagline: Every Story. Every Little Moment.
+
+This is a Bangladesh-focused digital ecosystem for mothers, pregnant women, babies, children, parents, healthcare professionals, content creators, and baby product sellers.
+
+IMPORTANT: Do not build a simple landing page, static template, or ordinary e-commerce website.
+
+Build a comprehensive social platform inspired by the discovery experience of RedNote (Xiaohongshu), the masonry layout of Pinterest, the short-video experience of TikTok and Instagram Reels, and modern multi-vendor commerce platforms.
+
+However, create an original brand identity, original interface, and original user experience.
+
+The final application must combine:
+
+1. Social Media Platform
+2. Photo & Video Sharing
+3. Short Video / Reels Platform
+4. Creator Network
+5. Motherhood Community
+6. Questions & Answers
+7. Doctor Corner
+8. Online Appointment Booking
+9. Educational Content Library
+10. Pregnancy Guide
+11. Baby Care Guide
+12. Baby Growth Tracker
+13. Multi-Vendor Marketplace
+14. Social Commerce
+15. Product Reviews
+16. Seller Dashboard
+17. Creator Monetisation
+18. Brand Promotion
+19. Messaging System
+20. Notification System
+21. Admin Dashboard
+22. Analytics
+23. AI-Assisted Discovery (future-ready)
+
+The application must be scalable, secure, responsive, maintainable, and suitable for real users in Bangladesh.
+
+==================================================
+PART 1: PRODUCT REQUIREMENTS
+==================================================
+
+1.1 MARKET
+
+Initial launch market: Bangladesh.
+
+Primary audience:
+- Mothers
+- Pregnant women
+- New mothers
+- Parents
+- Family members
+
+Additional audiences:
+- Doctors
+- Healthcare professionals
+- Nutrition experts
+- Parenting educators
+- Content creators
+- Influencers
+- Baby product sellers
+- Brands
+- Administrators
+
+1.2 LANGUAGES
+
+Support:
+- Bengali
+- English
+
+Default language: Bengali.
+
+Requirements:
+- Global language switcher.
+- Bengali typography using Noto Sans Bengali.
+- English typography using Inter or Plus Jakarta Sans.
+- Localised navigation.
+- Localised notifications.
+- Localised forms.
+- Localised product categories.
+- Localised dates and number formats.
+- Currency displayed in BDT (৳).
+
+Do not hardcode all text directly into components. Use a translation system.
+
+1.3 BRAND IDENTITY
+
+Brand: Mother & Child
+
+Brand personality:
+- Trustworthy
+- Warm
+- Premium
+- Modern
+- Community-focused
+- Family-friendly
+- Professional
+
+Colour palette:
+- Blush Pink: #F7E6E8
+- Cream: #FFF9F3
+- Rose: #D98E9A
+- Sage Green: #A9B8A2
+- Charcoal: #30333A
+- White: #FFFFFF
+
+Create a premium logo and reusable brand design system.
+
+Do not make every section pink. Maintain visual balance.
+
+==================================================
+PART 2: COMPLETE WEBSITE STRUCTURE
+==================================================
+
+Create the following public routes:
+
+/
+ /discover
+ /following
+ /videos
+ /trending
+ /community
+ /questions
+ /guide
+ /pregnancy
+ /baby-care
+ /mother-care
+ /child-development
+ /doctors
+ /doctors/[id]
+ /appointments
+ /marketplace
+ /marketplace/categories/[slug]
+ /products/[id]
+ /shops/[slug]
+ /creators
+ /creators/[username]
+ /search
+ /about
+ /contact
+ /help
+ /privacy
+ /terms
+ /community-guidelines
+
+Authentication routes:
+
+/login
+/register
+/verify-otp
+/forgot-password
+/reset-password
+
+Authenticated user routes:
+
+/profile
+/profile/edit
+/settings
+/saved
+/collections
+/messages
+/notifications
+/create
+/create/photo
+/create/video
+/create/question
+/create/poll
+/orders
+/wishlist
+/cart
+/checkout
+/baby-tracker
+
+Seller routes:
+
+/seller/dashboard
+/seller/shop
+/seller/products
+/seller/products/create
+/seller/orders
+/seller/inventory
+/seller/analytics
+/seller/promotions
+/seller/payouts
+/seller/settings
+
+Doctor routes:
+
+/doctor/dashboard
+/doctor/profile
+/doctor/appointments
+/doctor/availability
+/doctor/questions
+/doctor/consultations
+
+Creator routes:
+
+/creator/dashboard
+/creator/analytics
+/creator/earnings
+/creator/campaigns
+/creator/affiliate
+
+Admin routes:
+
+/admin
+/admin/users
+/admin/creators
+/admin/doctors
+/admin/sellers
+/admin/posts
+/admin/videos
+/admin/products
+/admin/orders
+/admin/appointments
+/admin/reports
+/admin/categories
+/admin/commissions
+/admin/payments
+/admin/content
+/admin/analytics
+/admin/settings
+
+Use protected routing for private pages.
+
+==================================================
+PART 3: MAIN HOMEPAGE
+==================================================
+
+The homepage must be a RedNote-inspired social discovery experience.
+
+This is the most important part of the product.
+
+Desktop layout:
+
+- Premium top navigation.
+- Logo.
+- Discover.
+- Following.
+- Videos.
+- Trending.
+- Search bar.
+- Language selector.
+- Notifications.
+- Messages.
+- User profile.
+- Masonry feed.
+- Floating create-post button.
+
+Mobile layout:
+
+- Compact top bar.
+- Scrollable discovery tabs.
+- Full-width feed cards.
+- Bottom navigation.
+- Floating create button.
+- Mobile-friendly interactions.
+
+Homepage tabs:
+
+1. Discover
+2. Following
+3. Videos
+4. Trending
+
+Content categories:
+
+- Pregnancy
+- Motherhood
+- Newborn
+- Baby Care
+- Parenting
+- Baby Food
+- Nutrition
+- Baby Development
+- Mother Wellness
+- Product Reviews
+- Doctor Advice
+- Lifestyle
+
+Implement a responsive Pinterest-style masonry grid.
+
+Cards should have varying image heights.
+
+Each card should show:
+- Content image or video thumbnail.
+- Creator profile.
+- Creator name.
+- Caption.
+- Like count.
+- Video indicator.
+- Sponsored label where applicable.
+
+Implement:
+- Infinite scrolling.
+- Cursor-based pagination.
+- Loading skeletons.
+- Empty states.
+- Error states.
+- Lazy loading.
+- Feed filtering.
+- Content recommendations.
+
+Do not use the same static sample posts for every user in production.
+
+==================================================
+PART 4: SOCIAL MEDIA SYSTEM
+==================================================
+
+4.1 POST TYPES
+
+Support:
+
+- Single image post.
+- Multiple image carousel.
+- Short video.
+- Long educational video.
+- Text post.
+- Question post.
+- Poll.
+- Product review.
+- Product-tagged post.
+- Expert content.
+
+4.2 POST INTERACTIONS
+
+Implement real functionality for:
+
+- Like.
+- Unlike.
+- Comment.
+- Reply.
+- Share.
+- Save.
+- Follow.
+- Unfollow.
+- Report.
+- Block.
+- Hashtags.
+- Mention users.
+- Edit own posts.
+- Delete own posts.
+
+4.3 FEED ALGORITHM
+
+Create an initial recommendation system based on:
+
+- User interests.
+- Followed creators.
+- Content categories.
+- Recent engagement.
+- Content freshness.
+- Language preference.
+- Safety and moderation status.
+
+Do not recommend reported, removed, blocked, or unapproved content.
+
+Prevent excessive repetition of the same creator.
+
+Build a simple, explainable MVP recommendation algorithm first. Prepare the architecture for advanced recommendation models later.
+
+4.4 USER PROFILES
+
+Every user should have:
+
+- Profile picture.
+- Cover photo.
+- Name.
+- Username.
+- Bio.
+- Followers.
+- Following.
+- Total likes.
+- Posts.
+- Videos.
+- Saved collections.
+- Follow button.
+- Message button.
+- Profile privacy settings.
+
+Support public and private accounts.
+
+==================================================
+PART 5: SHORT VIDEO PLATFORM
+==================================================
+
+Build a complete short-video experience.
+
+Requirements:
+
+- Vertical full-screen video player.
+- Swipe up and down.
+- Autoplay when visible.
+- Pause and play.
+- Mute and unmute.
+- Progress bar.
+- Caption.
+- Hashtags.
+- Creator profile.
+- Follow button.
+- Like button.
+- Comment button.
+- Share button.
+- Save button.
+- Product tags.
+- View counter.
+- Video duration.
+- Video thumbnails.
+
+Video categories:
+
+- Pregnancy Journey.
+- Motherhood Vlogs.
+- Newborn Care.
+- Baby Food.
+- Parenting Tips.
+- Doctor Explains.
+- Baby Product Reviews.
+- Mother Wellness.
+
+Initial video limit: 3 minutes.
+
+Support MP4 and MOV where supported.
+
+Use a professional video infrastructure such as Cloudflare Stream or an equivalent dedicated video service.
+
+Implement direct-to-provider uploads where available.
+
+Video upload workflow:
+
+1. User selects a video.
+2. Frontend validates the file.
+3. Backend authorises the upload.
+4. Backend generates a secure upload URL.
+5. Video uploads directly to the provider.
+6. Provider transcodes the video.
+7. Provider generates thumbnails.
+8. Backend receives processing status.
+9. Video becomes available for publishing.
+10. Published video appears in the feed.
+
+Support:
+- Processing.
+- Ready.
+- Failed.
+- Rejected.
+- Deleted.
+
+Never expose private API credentials in frontend code.
+
+If video credentials are unavailable, implement a functional preview with sample videos and clearly identify the upload integration as pending.
+
+==================================================
+PART 6: CONTENT CREATION STUDIO
+==================================================
+
+Create a central Create button.
+
+Content creation options:
+
+- Photo Post.
+- Video Post.
+- Carousel.
+- Text Story.
+- Question.
+- Poll.
+- Product Review.
+
+Editor features:
+
+- Image upload.
+- Video upload.
+- Image cropping.
+- Cover selection.
+- Caption editor.
+- Hashtags.
+- Category selection.
+- Product tagging.
+- User tagging.
+- Optional location.
+- Draft saving.
+- Preview.
+- Audience visibility.
+- Publishing.
+- Post scheduling for authorised creators.
+
+Support upload progress and clear validation messages.
+
+Create reusable content editor components.
+
+==================================================
+PART 7: CREATOR ECOSYSTEM
+==================================================
+
+Create creator-specific features.
+
+Creator categories:
+
+- Mother Creator.
+- Parenting Creator.
+- Pregnancy Creator.
+- Doctor Creator.
+- Nutrition Expert.
+- Product Reviewer.
+
+Creator dashboard:
+
+- Total followers.
+- Post views.
+- Video views.
+- Engagement.
+- Likes.
+- Comments.
+- Audience demographics where privacy-safe.
+- Product clicks.
+- Affiliate sales.
+- Campaign performance.
+- Estimated earnings.
+
+Creator monetisation:
+
+- Affiliate links.
+- Product tagging.
+- Sponsored posts.
+- Brand collaborations.
+- Paid campaigns.
+
+Clearly disclose sponsored and affiliate content.
+
+Do not guarantee creator earnings.
+
+==================================================
+PART 8: COMMUNITY AND Q&A
+==================================================
+
+Create dedicated community sections.
+
+Categories:
+
+- Pregnancy.
+- New Mothers.
+- Breastfeeding.
+- Newborn Care.
+- Baby Nutrition.
+- Baby Sleep.
+- Parenting.
+- Child Development.
+- Mother Wellness.
+
+Features:
+
+- Create question.
+- Add text.
+- Add images.
+- Choose category.
+- Anonymous question.
+- Answer.
+- Reply.
+- Like answer.
+- Best answer.
+- Save question.
+- Report content.
+
+Implement community moderation.
+
+Anonymous posts must hide identity from public users while preserving controlled access for authorised moderation and legal compliance.
+
+==================================================
+PART 9: DOCTOR CORNER
+==================================================
+
+Create a professional doctor discovery and booking system.
+
+Doctor categories:
+
+- Gynaecologist.
+- Paediatrician.
+- Neonatologist.
+- Nutritionist.
+- Dermatologist.
+- Child Development Specialist.
+- Mental Health Professional.
+
+Doctor onboarding:
+
+- Name.
+- Qualifications.
+- Medical registration details.
+- Specialisation.
+- Experience.
+- Clinic or hospital.
+- Profile photo.
+- Consultation fee.
+- Languages.
+- Available slots.
+
+Verification must be performed by authorised administrators.
+
+Never create fake verified doctor profiles.
+
+Doctor services:
+
+- Public educational posts.
+- Doctor videos.
+- Ask a Doctor.
+- Appointment booking.
+- Consultation records.
+- Reviews.
+
+Appointment workflow:
+
+1. User selects a doctor.
+2. User views availability.
+3. User selects a date.
+4. User selects a slot.
+5. Backend checks slot availability.
+6. User confirms booking.
+7. Payment is initiated if required.
+8. Booking is confirmed only after successful payment or approved booking rules.
+9. Doctor receives notification.
+10. User receives confirmation.
+11. Consultation is completed.
+12. Appointment status is updated.
+
+Prevent double booking.
+
+Support cancellation and refund rules.
+
+Private medical information must be protected.
+
+Include emergency-care guidance.
+
+==================================================
+PART 10: MOTHER'S GUIDE
+==================================================
+
+Create a bilingual educational library.
+
+Categories:
+
+Pregnancy:
+- Week-by-week guide.
+- Trimester information.
+- Nutrition.
+- Pregnancy preparation.
+
+Mother Care:
+- Breastfeeding education.
+- Postpartum care.
+- Maternal nutrition.
+- Mental wellbeing.
+
+Baby Care:
+- Newborn care.
+- Baby hygiene.
+- Sleep.
+- Feeding education.
+
+Child Development:
+- Growth milestones.
+- Learning activities.
+- Development guidance.
+
+Article features:
+
+- Bengali content.
+- English content.
+- Author.
+- Medical reviewer.
+- References.
+- Publication date.
+- Last updated.
+- Related articles.
+- Bookmark.
+- Share.
+- Search.
+- Category filters.
+
+Build a CMS for authorised content editors.
+
+Unreviewed medical articles must not receive an expert-reviewed badge.
+
+==================================================
+PART 11: BABY GROWTH TRACKER
+==================================================
+
+Users can privately add one or more child profiles.
+
+Features:
+
+- Child name or nickname.
+- Date of birth.
+- Optional profile image.
+- Age calculation.
+- Growth measurements.
+- Height logs.
+- Weight logs.
+- Feeding logs.
+- Sleep logs.
+- Vaccination reminders.
+- Development milestones.
+- Appointment reminders.
+
+Support charts and historical records.
+
+Use recognised clinical reference standards when implementing growth charts.
+
+Do not make automated medical diagnoses.
+
+Only authorised family members should access a child's information.
+
+Provide privacy and data deletion controls.
+
+==================================================
+PART 12: MULTI-VENDOR MARKETPLACE
+==================================================
+
+Create a full multi-vendor marketplace.
+
+Product categories:
+
+- Baby Clothing.
+- Diapers and Wipes.
+- Feeding Products.
+- Baby Toys.
+- Baby Skincare.
+- Mother Care.
+- Maternity Wear.
+- Baby Furniture.
+- Educational Toys.
+- Baby Accessories.
+
+Customer features:
+
+- Search.
+- Filters.
+- Sorting.
+- Product details.
+- Product images.
+- Variants.
+- Reviews.
+- Ratings.
+- Wishlist.
+- Cart.
+- Checkout.
+- Order tracking.
+- Cancellation.
+- Returns.
+- Refund requests.
+
+Seller features:
+
+- Registration.
+- Shop profile.
+- Shop branding.
+- Product upload.
+- Product variations.
+- Inventory.
+- Stock alerts.
+- Orders.
+- Sales analytics.
+- Promotions.
+- Discount codes.
+- Payout history.
+
+Admin features:
+
+- Seller approval.
+- Product moderation.
+- Shop suspension.
+- Commission configuration.
+- Order monitoring.
+- Refund management.
+- Payout approval.
+
+Use a parent order with seller-specific sub-orders.
+
+Track order status independently for each seller.
+
+Do not mark COD orders as paid before payment collection is confirmed.
+
+==================================================
+PART 13: SOCIAL COMMERCE
+==================================================
+
+Integrate marketplace products with social content.
+
+Users can:
+
+- Tag products in photos.
+- Tag products in videos.
+- Share product reviews.
+- Create product collections.
+- Follow shops.
+- Visit seller profiles.
+- Purchase products from content.
+
+Creator affiliate system:
+
+- Unique referral links.
+- Click tracking.
+- Purchase attribution.
+- Commission calculation.
+- Pending commission.
+- Approved commission.
+- Paid commission.
+
+Prevent self-referrals and fraudulent attribution.
+
+==================================================
+PART 14: MESSAGING SYSTEM
+==================================================
+
+Create private messaging between permitted users.
+
+Features:
+
+- One-to-one messages.
+- Conversation list.
+- Read status.
+- Unread count.
+- Image sharing.
+- Product sharing.
+- Block.
+- Report.
+- Conversation deletion controls.
+
+Prepare for real-time messaging with Socket.IO or a suitable alternative.
+
+Do not expose private messages publicly.
+
+Provide rate limits and anti-spam protection.
+
+==================================================
+PART 15: NOTIFICATION SYSTEM
+==================================================
+
+Notification types:
+
+- New follower.
+- New like.
+- New comment.
+- Reply.
+- Mention.
+- New message.
+- Appointment confirmation.
+- Appointment reminder.
+- Order update.
+- Payment update.
+- Seller update.
+- Creator campaign.
+- Admin announcement.
+
+Include:
+
+- In-app notifications.
+- Unread counts.
+- Mark as read.
+- Notification preferences.
+- Optional web push.
+
+==================================================
+PART 16: SEARCH & DISCOVERY
+==================================================
+
+Create a global search engine.
+
+Search across:
+
+- Users.
+- Creators.
+- Doctors.
+- Posts.
+- Videos.
+- Hashtags.
+- Products.
+- Shops.
+- Guides.
+- Questions.
+
+Features:
+
+- Autocomplete.
+- Search suggestions.
+- Trending searches.
+- Recent searches.
+- Category filters.
+- Sorting.
+- Language-aware search.
+
+Prepare Bengali and English search support.
+
+==================================================
+PART 17: ADMIN PANEL
+==================================================
+
+Create a complete administration dashboard.
+
+Dashboard metrics:
+
+- Total users.
+- Active users.
+- New registrations.
+- Posts.
+- Video uploads.
+- Total views.
+- Sellers.
+- Products.
+- Orders.
+- Gross merchandise value.
+- Platform revenue.
+- Doctor registrations.
+- Appointments.
+- Reports.
+
+Admin modules:
+
+1. User Management.
+2. Creator Management.
+3. Doctor Verification.
+4. Seller Management.
+5. Product Moderation.
+6. Post Moderation.
+7. Video Moderation.
+8. Question Moderation.
+9. Order Management.
+10. Appointment Management.
+11. Payment Management.
+12. Refund Management.
+13. Commission Management.
+14. Content Management.
+15. Categories.
+16. Reports.
+17. Analytics.
+18. System Settings.
+19. Audit Logs.
+
+Use role-based admin permissions.
+
+Provide a confirmation step for sensitive actions.
+
+==================================================
+PART 18: USER ROLES & PERMISSIONS
+==================================================
+
+Support these roles:
+
+1. Guest.
+2. Registered User.
+3. Mother / Parent.
+4. Creator.
+5. Doctor.
+6. Seller.
+7. Content Editor.
+8. Moderator.
+9. Administrator.
+10. Super Administrator.
+
+One user can have multiple approved roles.
+
+Use role-based and resource-based access control.
+
+Users must only edit or delete resources they own unless an authorised admin action applies.
+
+==================================================
+PART 19: DATABASE ARCHITECTURE
+==================================================
+
+Design a relational database.
+
+Preferred database: PostgreSQL.
+
+Use Prisma ORM if supported by the chosen stack.
+
+Create schemas and migrations for:
+
+IDENTITY:
+- users
+- user_profiles
+- roles
+- user_roles
+- permissions
+- user_settings
+- sessions
+
+SOCIAL:
+- posts
+- post_media
+- comments
+- comment_likes
+- post_likes
+- follows
+- saved_posts
+- hashtags
+- post_hashtags
+- collections
+- collection_items
+
+VIDEO:
+- videos
+- video_assets
+- video_views
+- video_likes
+- video_processing_jobs
+
+CREATORS:
+- creator_profiles
+- creator_analytics
+- creator_campaigns
+- affiliate_links
+- affiliate_conversions
+- creator_earnings
+
+COMMUNITY:
+- questions
+- answers
+- answer_replies
+- polls
+- poll_options
+- poll_votes
+
+HEALTHCARE:
+- doctors
+- doctor_qualifications
+- doctor_verifications
+- doctor_availability
+- appointments
+- consultations
+- doctor_reviews
+
+FAMILY:
+- family_profiles
+- baby_profiles
+- growth_logs
+- feeding_logs
+- sleep_logs
+- vaccination_records
+- reminders
+
+MARKETPLACE:
+- sellers
+- shops
+- products
+- product_variants
+- product_images
+- inventory
+- carts
+- cart_items
+- orders
+- seller_orders
+- order_items
+- payments
+- commissions
+- payouts
+- refunds
+- product_reviews
+
+MESSAGING:
+- conversations
+- conversation_members
+- messages
+- message_attachments
+
+SYSTEM:
+- notifications
+- reports
+- moderation_actions
+- audit_logs
+- categories
+- translations
+- content_pages
+
+Requirements:
+
+- Primary keys.
+- Foreign keys.
+- Appropriate indexes.
+- Unique constraints.
+- Timestamps.
+- Soft deletion where appropriate.
+- Transactional operations.
+- Database migrations.
+- Referential integrity.
+
+Avoid storing sensitive medical information unnecessarily.
+
+==================================================
+PART 20: BACKEND & API ARCHITECTURE
+==================================================
+
+Build a modular backend.
+
+Suggested modules:
+
+- Authentication.
+- Users.
+- Profiles.
+- Posts.
+- Feed.
+- Videos.
+- Comments.
+- Follows.
+- Creators.
+- Community.
+- Questions.
+- Doctors.
+- Appointments.
+- Guides.
+- Baby Tracker.
+- Products.
+- Sellers.
+- Orders.
+- Payments.
+- Commissions.
+- Messaging.
+- Notifications.
+- Search.
+- Admin.
+- Analytics.
+
+Use REST APIs with versioning.
+
+Base path:
+
+/api/v1
+
+Implement:
+
+- Request validation.
+- Authentication middleware.
+- Authorisation middleware.
+- Error handling.
+- Rate limiting.
+- Logging.
+- Pagination.
+- File upload authorisation.
+- API documentation.
+
+Use database transactions for orders, payment updates, appointments and payouts.
+
+Do not expose internal database credentials.
+
+==================================================
+PART 21: PAYMENT & BANGLADESH INTEGRATION
+==================================================
+
+Prepare payment integration for:
+
+- bKash.
+- Nagad.
+- Card payments.
+- Supported payment gateways.
+- Cash on Delivery.
+
+Use a properly authorised payment provider.
+
+Requirements:
+
+- Payment initiation.
+- Payment verification.
+- Webhook verification.
+- Payment status.
+- Refund handling.
+- Transaction history.
+- Seller settlement.
+- Commission deduction.
+
+Never trust a frontend payment-success message.
+
+Verify payment on the backend using provider responses and signed webhooks.
+
+Do not hardcode payment secrets.
+
+If credentials are unavailable, implement sandbox/demo payment workflows and clearly label them.
+
+==================================================
+PART 22: DELIVERY SYSTEM
+==================================================
+
+Build delivery management for Bangladesh.
+
+Features:
+
+- Customer address book.
+- District.
+- Upazila.
+- Area.
+- Postal code.
+- Delivery charge.
+- Seller-specific shipping.
+- Courier tracking reference.
+- Shipment status.
+- Delivery confirmation.
+- Return management.
+
+Prepare integration interfaces for third-party courier providers.
+
+Do not invent real courier tracking results.
+
+==================================================
+PART 23: SECURITY & PRIVACY
+==================================================
+
+Implement a security-first architecture.
+
+Required:
+
+- Secure authentication.
+- Strong password hashing.
+- Secure session management.
+- Role-based access control.
+- Input sanitisation.
+- File validation.
+- Rate limiting.
+- CSRF protection where applicable.
+- XSS prevention.
+- SQL injection prevention.
+- Secure HTTP configuration.
+- Secret management.
+- Audit logging.
+- Database backups.
+- Secure payment processing.
+- Private media controls.
+- Account deletion.
+
+Special privacy requirements:
+
+- Children's images and videos.
+- Pregnancy information.
+- Medical records.
+- Private consultations.
+- Family profiles.
+- Private messages.
+
+Use explicit consent and granular visibility controls.
+
+Create reporting, blocking and moderation tools.
+
+Provide mechanisms for users to request access, correction and deletion of personal data, subject to applicable legal requirements.
+
+==================================================
+PART 24: CONTENT MODERATION & TRUST
+==================================================
+
+Build a complete moderation system.
+
+Content moderation categories:
+
+- Spam.
+- Harassment.
+- Bullying.
+- Fake accounts.
+- Fake medical claims.
+- Dangerous advice.
+- Inappropriate content.
+- Fake products.
+- Copyright violations.
+- Child privacy violations.
+
+Features:
+
+- Report content.
+- Report user.
+- Block user.
+- Moderator review queue.
+- Warning.
+- Content removal.
+- Temporary suspension.
+- Permanent suspension.
+- Appeal workflow.
+- Audit trail.
+
+Use human review for sensitive medical and child-safety decisions.
+
+Do not allow AI moderation alone to make irreversible high-impact decisions.
+
+==================================================
+PART 25: PERFORMANCE & SCALABILITY
+==================================================
+
+Optimise the application for users with slower internet connections.
+
+Requirements:
+
+- Responsive images.
+- WebP or AVIF where supported.
+- Lazy loading.
+- Video adaptive streaming.
+- Pagination.
+- Database indexing.
+- Query optimisation.
+- Caching.
+- CDN delivery.
+- Background jobs.
+- Upload progress.
+- Retry mechanisms.
+- Error monitoring.
+
+Avoid loading all posts and videos at once.
+
+Prepare for growth without prematurely implementing expensive infrastructure.
+
+==================================================
+PART 26: ANALYTICS
+==================================================
+
+Create analytics for:
+
+USER:
+- Registrations.
+- Active users.
+- Retention.
+- Engagement.
+
+CONTENT:
+- Posts.
+- Views.
+- Video completion.
+- Likes.
+- Comments.
+- Shares.
+
+MARKETPLACE:
+- Orders.
+- Gross merchandise value.
+- Average order value.
+- Conversion rate.
+- Repeat purchases.
+- Refunds.
+
+CREATORS:
+- Views.
+- Followers.
+- Product clicks.
+- Affiliate conversions.
+
+DOCTORS:
+- Appointments.
+- Cancellations.
+- Consultation completion.
+
+Use privacy-conscious analytics.
+
+==================================================
+PART 27: PWA & MOBILE EXPERIENCE
+==================================================
+
+Make the website Progressive Web App ready.
+
+Features:
+
+- Installable application.
+- App manifest.
+- Appropriate icons.
+- Responsive navigation.
+- Mobile-friendly forms.
+- Touch interactions.
+- Optimised loading.
+- Offline-friendly static pages where appropriate.
+
+Do not claim full native Android or iOS functionality.
+
+==================================================
+PART 28: TESTING
+==================================================
+
+Implement testing at different levels.
+
+Unit testing:
+- Utility functions.
+- Business logic.
+- Validation.
+
+Integration testing:
+- Authentication.
+- Posts.
+- Comments.
+- Orders.
+- Payments.
+- Appointments.
+
+End-to-end testing:
+- User registration.
+- Content creation.
+- Video publishing.
+- Product purchase.
+- Seller order processing.
+- Doctor appointment booking.
+
+Security testing:
+- Permission checks.
+- Private data access.
+- File upload restrictions.
+- Payment verification.
+- Rate limits.
+
+Also test:
+
+- Bengali text rendering.
+- English language switching.
+- Mobile screen sizes.
+- Tablet layout.
+- Desktop layout.
+- Slow internet connections.
+
+==================================================
+PART 29: DEPLOYMENT & DEVOPS
+==================================================
+
+Prepare:
+
+- Development environment.
+- Staging environment.
+- Production environment.
+- Environment variable configuration.
+- Database migrations.
+- Database backups.
+- Error monitoring.
+- Deployment instructions.
+- Rollback instructions.
+- README documentation.
+
+Use a hosting architecture compatible with the selected application framework.
+
+Never place secrets in GitHub.
+
+Create a complete .env.example file with descriptions but no real credentials.
+
+==================================================
+PART 30: REQUIRED PROJECT DOCUMENTATION
+==================================================
+
+Generate:
+
+1. README.md
+2. PROJECT_ARCHITECTURE.md
+3. DATABASE_SCHEMA.md
+4. API_DOCUMENTATION.md
+5. USER_ROLES.md
+6. SECURITY_GUIDE.md
+7. DEPLOYMENT_GUIDE.md
+8. ENVIRONMENT_SETUP.md
+9. TESTING_GUIDE.md
+10. DEVELOPMENT_ROADMAP.md
+
+Explain setup instructions in simple English.
+
+==================================================
+PART 31: PROJECT DEVELOPMENT MANAGEMENT
+==================================================
+
+I am a beginner developer.
+
+You must guide me in simple language.
+
+Do not overwhelm me with unnecessary theory.
+
+Build the project in logical phases.
+
+Maintain a development checklist.
+
+For each phase:
+
+1. Explain the objective.
+2. Inspect the existing project.
+3. Implement the functionality.
+4. Create reusable components.
+5. Connect the backend.
+6. Connect the database.
+7. Test the functionality.
+8. Fix errors.
+9. Update documentation.
+10. Mark completion only after testing.
+
+Never delete working features when adding new ones.
+
+Never replace a working backend with fake static data.
+
+Never claim an integration works unless it has been tested.
+
+Do not create decorative buttons without functionality.
+
+If an external service needs API credentials, create a clearly documented integration placeholder and continue building the rest of the application.
+
+Do not invent API keys, payment credentials, doctor credentials, or real customer data.
+
+Maintain the same design system and architecture throughout the project.
+
+==================================================
+PART 32: SIX-MONTH DEVELOPMENT PRIORITY
+==================================================
+
+Prioritise the MVP in this order:
+
+MONTH 1:
+- Project architecture.
+- UI design.
+- Authentication.
+- Database.
+- Homepage.
+- Responsive navigation.
+
+MONTH 2:
+- Social feed.
+- Photo posts.
+- Profiles.
+- Likes.
+- Comments.
+- Follow system.
+
+MONTH 3:
+- Video upload.
+- Video player.
+- Creator profiles.
+- Discover feed.
+- Search.
+
+MONTH 4:
+- Motherhood community.
+- Questions and answers.
+- Doctor profiles.
+- Mother's Guide.
+
+MONTH 5:
+- Multi-vendor marketplace.
+- Seller dashboard.
+- Product management.
+- Cart.
+- Checkout.
+- Order management.
+
+MONTH 6:
+- Appointment booking.
+- Payment integration.
+- Admin dashboard.
+- Moderation.
+- Security.
+- Testing.
+- Beta deployment.
+
+Advanced features such as live streaming, sophisticated AI recommendations and native mobile applications can be implemented after MVP launch.
+
+==================================================
+PART 33: FINAL ACCEPTANCE REQUIREMENTS
+==================================================
+
+The project is not considered complete merely because the homepage looks good.
+
+The MVP must have:
+
+1. Working registration and login.
+2. Working user profiles.
+3. Working photo posting.
+4. Working comments and likes.
+5. Working follow system.
+6. Working discovery feed.
+7. Working video playback.
+8. Real video upload integration or a clearly labelled demo.
+9. Working creator profiles.
+10. Working questions and answers.
+11. Working Doctor Corner.
+12. Appointment booking workflow.
+13. Working seller registration.
+14. Product management.
+15. Cart and checkout.
+16. Order management.
+17. Admin moderation.
+18. Bengali and English support.
+19. Responsive mobile experience.
+20. Appropriate privacy and security controls.
+
+All features must be tested.
+
+==================================================
+PART 34: YOUR IMMEDIATE TASK
+==================================================
+
+Do not respond with only a theoretical explanation.
+
+Start working on the actual application inside the available Google AI Studio development environment.
+
+FIRST:
+
+1. Inspect the current project and available tools.
+2. Choose the most compatible full-stack architecture.
+3. Create the project structure.
+4. Establish the design system.
+5. Build the complete responsive homepage.
+6. Implement the RedNote-inspired masonry discovery feed.
+7. Implement the mobile navigation.
+8. Build the vertical short-video interface.
+9. Create reusable social post cards.
+10. Build the content creation interface.
+11. Implement the language switcher.
+12. Create realistic demo content.
+
+Then establish the backend and database architecture.
+
+Work incrementally. Preserve all existing working code.
+
+If the development environment cannot complete everything in one generation, maintain a clear task list and continue from the last completed phase in subsequent instructions.
+
+Do not stop after generating a beautiful static homepage.
+
+The ultimate goal is a working, secure, scalable, Bangladesh-focused Mother & Child social media and social commerce platform.
+
+Build it with the quality and attention to detail expected from a professional technology startup.
+
+START DEVELOPMENT NOW.

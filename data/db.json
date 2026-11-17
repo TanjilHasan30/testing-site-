@@ -1,0 +1,2835 @@
+{
+  "users": [
+    {
+      "uid": "demo_mother_1",
+      "displayName": "নুসরাত জাহান (Nusrat)",
+      "username": "nusrat_dhaka",
+      "bio": "First-time mother in Dhanmondi sharing newborn routines, homemade khichuri & calm nursery ideas.",
+      "avatarUrl": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+      "coverUrl": "/src/assets/images/feed_nursery_corner_1794921207506.jpg",
+      "roles": [
+        "registered",
+        "mother_parent",
+        "creator"
+      ],
+      "creatorCategory": "Mother Creator",
+      "isPrivate": false,
+      "followersCount": 1840,
+      "followingCount": 94,
+      "likesCount": 9420,
+      "location": "Dhaka"
+    },
+    {
+      "uid": "creator_farhana",
+      "displayName": "ডা. ফারহানা রহমান",
+      "username": "dr_farhana_bd",
+      "bio": "Paediatric consultant & nutrition educator helping Bangladesh parents with evidence-based baby care.",
+      "avatarUrl": "/src/assets/images/doctor_female_specialist_1794921209359.jpg",
+      "coverUrl": "/src/assets/images/guide_toddler_play_1794921210261.jpg",
+      "roles": [
+        "registered",
+        "doctor",
+        "creator"
+      ],
+      "creatorCategory": "Doctor Creator",
+      "isPrivate": false,
+      "followersCount": 6210,
+      "followingCount": 38,
+      "likesCount": 28400,
+      "location": "Banani, Dhaka"
+    },
+    {
+      "uid": "creator_tasnim",
+      "displayName": "তাসনিম করিম",
+      "username": "tasnim_weaning",
+      "bio": "Baby nutrition recipes, 6m+ weaning bowls & honest local baby product reviews.",
+      "avatarUrl": "/src/assets/images/feed_baby_food_1794921207142.jpg",
+      "coverUrl": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "roles": [
+        "registered",
+        "mother_parent",
+        "creator"
+      ],
+      "creatorCategory": "Nutrition Expert",
+      "isPrivate": false,
+      "followersCount": 3120,
+      "followingCount": 142,
+      "likesCount": 14200,
+      "location": "Chattogram"
+    },
+    {
+      "uid": "seller_user_1",
+      "displayName": "নরচার বেবি কেয়ার",
+      "username": "nurture_bd",
+      "bio": "Curated organic muslin swaddles & gentle cold-pressed baby oils crafted for humid weather.",
+      "avatarUrl": "/src/assets/images/product_muslin_swaddle_1794921206420.jpg",
+      "coverUrl": "/src/assets/images/product_organic_skincare_1794921208191.jpg",
+      "roles": [
+        "registered",
+        "seller"
+      ],
+      "isPrivate": false,
+      "followersCount": 2450,
+      "followingCount": 19,
+      "likesCount": 6100,
+      "location": "Uttara, Dhaka"
+    },
+    {
+      "uid": "guest_demo",
+      "displayName": "আয়েশা আক্তার (Demo Mother)",
+      "username": "ayesha_mom",
+      "bio": "Exploring gentle parenting, baby growth tracking & trusted baby essentials in Bangladesh.",
+      "avatarUrl": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "coverUrl": "/src/assets/images/guide_toddler_play_1794921210261.jpg",
+      "roles": [
+        "registered",
+        "mother_parent",
+        "creator",
+        "seller",
+        "admin"
+      ],
+      "creatorCategory": "Parenting Creator",
+      "isPrivate": false,
+      "followersCount": 412,
+      "followingCount": 68,
+      "likesCount": 1290,
+      "location": "Dhaka"
+    }
+  ],
+  "sellers": [
+    {
+      "id": "seller_1794929964536",
+      "userId": "guest_demo",
+      "shopName": "Sylhet Baby Boutique",
+      "shopSlug": "sylhet-baby-boutique",
+      "district": "Dhaka",
+      "businessType": "Baby Clothing & Newborn Essentials",
+      "phone": "",
+      "isApproved": false,
+      "rating": 5,
+      "followersCount": 0,
+      "commissionRatePct": 8
+    },
+    {
+      "id": "seller_1",
+      "userId": "seller_user_1",
+      "shopName": "Nurture Baby BD",
+      "shopSlug": "nurture-baby-bd",
+      "district": "Dhaka",
+      "isApproved": true,
+      "rating": 4.9,
+      "followersCount": 2450,
+      "commissionRatePct": 8
+    },
+    {
+      "id": "seller_2",
+      "userId": "creator_tasnim",
+      "shopName": "ShishuCraft Organics",
+      "shopSlug": "shishucraft-organics",
+      "district": "Chattogram",
+      "isApproved": true,
+      "rating": 4.8,
+      "followersCount": 1180,
+      "commissionRatePct": 8
+    }
+  ],
+  "brands": [
+    {
+      "id": "brand_1",
+      "slug": "nurture-baby-bd",
+      "nameEn": "Nurture Baby BD (Sample Partner)",
+      "nameBn": "নরচার বেবি বিডি (নমুনা পার্টনার)",
+      "taglineEn": "Breathable organic cotton & gentle botanical baby care for humid weather.",
+      "taglineBn": "বাংলাদেশের আবহাওয়ার উপযোগী অর্গানিক কটন ও প্রাকৃতিক শিশুর যত্ন।",
+      "logoUrl": "/src/assets/images/product_muslin_swaddle_1794921206420.jpg",
+      "bannerUrl": "/src/assets/images/hero_mother_baby_campaign_1794929083239.jpg",
+      "isDemoPartner": true,
+      "rating": 4.9,
+      "followersCount": 2450
+    },
+    {
+      "id": "brand_2",
+      "slug": "shishucraft-organics",
+      "nameEn": "ShishuCraft Organics (Sample Partner)",
+      "nameBn": "শিশুক্রাফট অর্গানিকস (নমুনা পার্টনার)",
+      "taglineEn": "Handcrafted neem wood Montessori toys and BPA-free bamboo tableware.",
+      "taglineBn": "হাতে তৈরি নিম কাঠের মন্টেসরি খেলনা ও বিপিএ-মুক্ত বাঁশের ফিডিং সেট।",
+      "logoUrl": "/src/assets/images/guide_toddler_play_1794921210261.jpg",
+      "bannerUrl": "/src/assets/images/feed_baby_food_1794921207142.jpg",
+      "isDemoPartner": true,
+      "rating": 4.8,
+      "followersCount": 1520
+    },
+    {
+      "id": "brand_3",
+      "slug": "dhaka-little-looms",
+      "nameEn": "Dhaka Little Looms (Sample Partner)",
+      "nameBn": "ঢাকা লিটল লুমস (নমুনা পার্টনার)",
+      "taglineEn": "Handloom cotton maternity dresses, nursing kurtis & newborn rompers.",
+      "taglineBn": "তাঁতের নরম সুতি ম্যাটারনিটি ড্রেস, নার্সিং কুর্তি ও নবজাতকের পোশাক।",
+      "logoUrl": "/src/assets/images/product_maternity_fashion_1794929084481.jpg",
+      "bannerUrl": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+      "isDemoPartner": true,
+      "rating": 4.9,
+      "followersCount": 1890
+    },
+    {
+      "id": "brand_4",
+      "slug": "deshimom-care",
+      "nameEn": "DeshiMom Wellness (Sample Partner)",
+      "nameBn": "দেশিমম ওয়েলনেস (নমুনা পার্টনার)",
+      "taglineEn": "Ergonomic baby strollers, carriers, safety gates & postpartum kits.",
+      "taglineBn": "নিরাপদ বেবি স্ট্রলার, ক্যারিয়ার ও মায়ের প্রসব পরবর্তী যত্ন কিট।",
+      "logoUrl": "/src/assets/images/product_baby_stroller_gear_1794929083647.jpg",
+      "bannerUrl": "/src/assets/images/feed_nursery_corner_1794921207506.jpg",
+      "isDemoPartner": true,
+      "rating": 4.7,
+      "followersCount": 1340
+    }
+  ],
+  "categories": [
+    {
+      "slug": "baby_clothing",
+      "nameEn": "Baby Clothing",
+      "nameBn": "শিশুর পোশাক",
+      "imageUrl": "/src/assets/images/product_muslin_swaddle_1794921206420.jpg",
+      "subCategories": [
+        "Muslin Swaddles",
+        "Rompers",
+        "Cotton Sets"
+      ],
+      "isActive": true
+    },
+    {
+      "slug": "diapers_wipes",
+      "nameEn": "Diapers & Wipes",
+      "nameBn": "ডায়াপার ও ওয়াইপস",
+      "imageUrl": "/src/assets/images/product_diapers_feeding_set_1794929083295.jpg",
+      "subCategories": [
+        "Newborn Diapers",
+        "Organic Wipes",
+        "Rash Cream"
+      ],
+      "isActive": true
+    },
+    {
+      "slug": "feeding_products",
+      "nameEn": "Feeding & Nursing",
+      "nameBn": "ফিডিং ও নার্সিং",
+      "imageUrl": "/src/assets/images/feed_baby_food_1794921207142.jpg",
+      "subCategories": [
+        "Weaning Bowls",
+        "Glass Bottles",
+        "Nursing Pillows"
+      ],
+      "isActive": true
+    },
+    {
+      "slug": "baby_gear",
+      "nameEn": "Baby Gear",
+      "nameBn": "বেবি গিয়ার",
+      "imageUrl": "/src/assets/images/product_baby_stroller_gear_1794929083647.jpg",
+      "subCategories": [
+        "Strollers",
+        "Ergonomic Carriers",
+        "Travel Bags"
+      ],
+      "isActive": true
+    },
+    {
+      "slug": "baby_toys",
+      "nameEn": "Toys",
+      "nameBn": "খেলনা",
+      "imageUrl": "/src/assets/images/guide_toddler_play_1794921210261.jpg",
+      "subCategories": [
+        "Montessori Wood",
+        "Sensory Rattles",
+        "Soft Plush"
+      ],
+      "isActive": true
+    },
+    {
+      "slug": "books",
+      "nameEn": "Books",
+      "nameBn": "বই ও শেখার উপকরণ",
+      "imageUrl": "/src/assets/images/guide_toddler_play_1794921210261.jpg",
+      "subCategories": [
+        "Cloth Books",
+        "Bengali Rhymes",
+        "Flashcards"
+      ],
+      "isActive": true
+    },
+    {
+      "slug": "baby_skincare",
+      "nameEn": "Baby Skincare",
+      "nameBn": "শিশুর স্কিনকেয়ার",
+      "imageUrl": "/src/assets/images/product_organic_skincare_1794921208191.jpg",
+      "subCategories": [
+        "Massage Oil",
+        "Barrier Balm",
+        "Gentle Wash"
+      ],
+      "isActive": true
+    },
+    {
+      "slug": "nursery",
+      "nameEn": "Nursery",
+      "nameBn": "নার্সারি ও ফার্নিচার",
+      "imageUrl": "/src/assets/images/feed_nursery_corner_1794921207506.jpg",
+      "subCategories": [
+        "Crib Canopies",
+        "Cot Bedding",
+        "Storage Baskets"
+      ],
+      "isActive": true
+    },
+    {
+      "slug": "safety_products",
+      "nameEn": "Safety Products",
+      "nameBn": "সুরক্ষা পণ্য",
+      "imageUrl": "/src/assets/images/product_baby_stroller_gear_1794929083647.jpg",
+      "subCategories": [
+        "Corner Guards",
+        "Baby Monitors",
+        "Mosquito Nets"
+      ],
+      "isActive": true
+    },
+    {
+      "slug": "maternity_wear",
+      "nameEn": "Maternity Wear",
+      "nameBn": "ম্যাটারনিটি পোশাক",
+      "imageUrl": "/src/assets/images/product_maternity_fashion_1794929084481.jpg",
+      "subCategories": [
+        "Nursing Kurtis",
+        "Linen Dresses",
+        "Support Belts"
+      ],
+      "isActive": true
+    },
+    {
+      "slug": "mother_care",
+      "nameEn": "Mother Care",
+      "nameBn": "মায়ের যত্ন",
+      "imageUrl": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "subCategories": [
+        "Postpartum Recovery",
+        "Breast Pads",
+        "Herbal Teas"
+      ],
+      "isActive": true
+    },
+    {
+      "slug": "educational_products",
+      "nameEn": "Educational Products",
+      "nameBn": "শিক্ষামূলক পণ্য",
+      "imageUrl": "/src/assets/images/guide_toddler_play_1794921210261.jpg",
+      "subCategories": [
+        "Shape Sorters",
+        "Alphabet Blocks",
+        "Activity Kits"
+      ],
+      "isActive": true
+    }
+  ],
+  "coupons": [
+    {
+      "code": "WELCOME10",
+      "discountType": "percent",
+      "value": 10,
+      "minSubtotalBdt": 1000,
+      "maxDiscountBdt": 400,
+      "descriptionEn": "10% off orders ৳1,000+ (up to ৳400)",
+      "descriptionBn": "৳১,০০০+ অর্ডারে ১০% ছাড় (সর্বোচ্চ ৳৪০০)",
+      "isActive": true
+    },
+    {
+      "code": "NEWBORN15",
+      "discountType": "percent",
+      "value": 15,
+      "minSubtotalBdt": 1800,
+      "maxDiscountBdt": 600,
+      "descriptionEn": "15% off Newborn & Maternity bundles ৳1,800+",
+      "descriptionBn": "৳১,৮০০+ নবজাতক ও ম্যাটারনিটি অর্ডারে ১৫% ছাড়",
+      "isActive": true
+    },
+    {
+      "code": "SAVE200",
+      "discountType": "fixed",
+      "value": 200,
+      "minSubtotalBdt": 1500,
+      "descriptionEn": "Flat ৳200 off orders ৳1,500+",
+      "descriptionBn": "৳১,৫০০+ অর্ডারে সরাসরি ৳২০০ ছাড়",
+      "isActive": true
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "camp_1",
+      "type": "flash",
+      "titleEn": "Dhaka Summer Cotton & Skincare Deals",
+      "titleBn": "গরমের আরামদায়ক কটন ও স্কিনকেয়ার অফার",
+      "subtitleEn": "Up to 18% off breathable muslin wraps & chamomile oils with code WELCOME10.",
+      "subtitleBn": "WELCOME10 কোডে মসলিন সোয়াডল ও বেবি অয়েলে আকর্ষণীয় ছাড়।",
+      "badgeEn": "Offer · WELCOME10",
+      "badgeBn": "অফার · WELCOME10",
+      "couponCode": "WELCOME10",
+      "productIds": [
+        "prod_1",
+        "prod_2",
+        "prod_6"
+      ],
+      "imageUrl": "/src/assets/images/product_muslin_swaddle_1794921206420.jpg"
+    },
+    {
+      "id": "camp_2",
+      "type": "bundle",
+      "titleEn": "Newborn & Maternity Hospital Bag Bundle",
+      "titleBn": "নবজাতক ও হসপিটাল ব্যাগ স্পেশাল বান্ডেল",
+      "subtitleEn": "Save 15% on orders ৳1,800+ across Maternity Wear & Newborn essentials.",
+      "subtitleBn": "৳১,৮০০+ অর্ডারে NEWBORN15 কোডে ১৫% ছাড়।",
+      "badgeEn": "Bundle · NEWBORN15",
+      "badgeBn": "বান্ডেল · NEWBORN15",
+      "couponCode": "NEWBORN15",
+      "productIds": [
+        "prod_8",
+        "prod_9",
+        "prod_1"
+      ],
+      "imageUrl": "/src/assets/images/product_maternity_fashion_1794929084481.jpg"
+    },
+    {
+      "id": "camp_3",
+      "type": "seasonal",
+      "titleEn": "Screen-Free Montessori & Weaning Kit",
+      "titleBn": "স্ক্রিন-মুক্ত মন্টেসরি ও সলিড ফুড সেট",
+      "subtitleEn": "Flat ৳200 off orders ৳1,500+ on wooden toys, bamboo bowls & bilingual books.",
+      "subtitleBn": "কাঠের খেলনা ও বাংলা ছড়ার বইয়ে SAVE200 কোডে ৳২০০ ছাড়।",
+      "badgeEn": "Seasonal · SAVE200",
+      "badgeBn": "সিজনাল · SAVE200",
+      "couponCode": "SAVE200",
+      "productIds": [
+        "prod_3",
+        "prod_4",
+        "prod_11"
+      ],
+      "imageUrl": "/src/assets/images/guide_toddler_play_1794921210261.jpg"
+    }
+  ],
+  "posts": [
+    {
+      "id": "post_1794935566163",
+      "authorId": "guest_demo",
+      "authorName": "আয়েশা আক্তার (Demo Mother)",
+      "authorUsername": "ayesha_mom",
+      "authorAvatar": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "type": "short_video",
+      "category": "baby_care",
+      "titleEn": "Verified Dhaka Newborn Reel",
+      "titleBn": "Verified Dhaka Newborn Reel",
+      "captionEn": "End-to-end verified upload playing live on /videos.",
+      "captionBn": "End-to-end verified upload playing live on /videos.",
+      "mediaUrls": [
+        "/uploads/videos/vid_1794935564907.mp4",
+        "/src/assets/images/feed_mother_newborn_1794921207230.jpg"
+      ],
+      "aspectRatio": "9:16",
+      "isVideo": true,
+      "videoDurationSec": 45,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "motherhood",
+        "bangladesh"
+      ],
+      "taggedProductIds": [],
+      "location": "Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 0,
+      "commentsCount": 0,
+      "savesCount": 0,
+      "viewsCount": 1,
+      "createdAt": "2026-11-17T17:12:46.163Z"
+    },
+    {
+      "id": "post_1794935326508",
+      "authorId": "guest_demo",
+      "authorName": "আয়েশা আক্তার (Demo Mother)",
+      "authorUsername": "ayesha_mom",
+      "authorAvatar": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "type": "short_video",
+      "category": "baby_care",
+      "titleEn": "Dhaka Newborn Bedtime Clip",
+      "titleBn": "Dhaka Newborn Bedtime Clip",
+      "captionEn": "Real verified video upload from mobile creation studio.",
+      "captionBn": "Real verified video upload from mobile creation studio.",
+      "mediaUrls": [
+        "/uploads/videos/vid_1794935325011.mp4",
+        "/src/assets/images/feed_mother_newborn_1794921207230.jpg"
+      ],
+      "aspectRatio": "9:16",
+      "isVideo": true,
+      "videoDurationSec": 45,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "motherhood",
+        "bangladesh"
+      ],
+      "taggedProductIds": [],
+      "location": "Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 0,
+      "commentsCount": 0,
+      "savesCount": 0,
+      "viewsCount": 1,
+      "createdAt": "2026-11-17T17:08:46.508Z"
+    },
+    {
+      "id": "post_1794935250865",
+      "authorId": "guest_demo",
+      "authorName": "আয়েশা আক্তার (Demo Mother)",
+      "authorUsername": "ayesha_mom",
+      "authorAvatar": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "type": "short_video",
+      "category": "baby_care",
+      "titleEn": "Gentle Dhaka Newborn Evening Routine",
+      "titleBn": "Gentle Dhaka Newborn Evening Routine",
+      "captionEn": "Real verified video upload from mobile creation studio.",
+      "captionBn": "Real verified video upload from mobile creation studio.",
+      "mediaUrls": [
+        "/uploads/videos/vid_1794935249356.mp4",
+        "/src/assets/images/feed_mother_newborn_1794921207230.jpg"
+      ],
+      "aspectRatio": "9:16",
+      "isVideo": true,
+      "videoDurationSec": 45,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "motherhood",
+        "bangladesh"
+      ],
+      "taggedProductIds": [],
+      "location": "Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 0,
+      "commentsCount": 0,
+      "savesCount": 0,
+      "viewsCount": 1,
+      "createdAt": "2026-11-17T17:07:30.865Z"
+    },
+    {
+      "id": "post_1794935159245",
+      "authorId": "guest_demo",
+      "authorName": "আয়েশা আক্তার (Demo Mother)",
+      "authorUsername": "ayesha_mom",
+      "authorAvatar": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "type": "short_video",
+      "category": "baby_care",
+      "titleEn": "Gentle Dhaka Newborn Evening Routine",
+      "titleBn": "Gentle Dhaka Newborn Evening Routine",
+      "captionEn": "Real verified video upload from mobile creation studio.",
+      "captionBn": "Real verified video upload from mobile creation studio.",
+      "mediaUrls": [
+        "/uploads/videos/vid_1794935157750.mp4",
+        "/src/assets/images/feed_mother_newborn_1794921207230.jpg"
+      ],
+      "aspectRatio": "9:16",
+      "isVideo": true,
+      "videoDurationSec": 45,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "motherhood",
+        "bangladesh"
+      ],
+      "taggedProductIds": [],
+      "location": "Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 0,
+      "commentsCount": 0,
+      "savesCount": 0,
+      "viewsCount": 1,
+      "createdAt": "2026-11-17T17:05:59.245Z"
+    },
+    {
+      "id": "post_1794922064351",
+      "authorId": "guest_demo",
+      "authorName": "আয়েশা আক্তার (Demo Mother)",
+      "authorUsername": "ayesha_mom",
+      "authorAvatar": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "type": "photo",
+      "category": "baby_care",
+      "titleEn": "Dhaka Evening Stroller Routine",
+      "titleBn": "Dhaka Evening Stroller Routine",
+      "captionEn": "Sharing our calm 20-minute evening walk routine in Dhanmondi park with muslin cover.",
+      "captionBn": "Sharing our calm 20-minute evening walk routine in Dhanmondi park with muslin cover.",
+      "mediaUrls": [
+        "/src/assets/images/feed_mother_newborn_1794921207230.jpg"
+      ],
+      "aspectRatio": "4:3",
+      "isVideo": false,
+      "hashtags": [
+        "motherhood",
+        "bangladesh"
+      ],
+      "taggedProductIds": [],
+      "location": "Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 0,
+      "commentsCount": 0,
+      "savesCount": 0,
+      "viewsCount": 1,
+      "createdAt": "2026-11-17T13:27:44.351Z"
+    },
+    {
+      "id": "post_1",
+      "authorId": "demo_mother_1",
+      "authorName": "নুসরাত জাহান",
+      "authorUsername": "nusrat_dhaka",
+      "authorAvatar": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+      "authorBadge": "New Mom",
+      "type": "photo",
+      "category": "newborn",
+      "titleEn": "Morning skin-to-skin & soft cotton swaddle routine",
+      "titleBn": "সকালের রোদে নবজাতকের সাথে প্রশান্তির মুহূর্ত ও মসলিন রুটিন",
+      "captionEn": "Switching to breathable double-gauze muslin kept my 3-week-old comfortable without overheating in Dhaka.",
+      "captionBn": "ঢাকার গরম ও আর্দ্র আবহাওয়ায় পাতলা সুতি মসলিন কাঁথায় আমার বাবু অনেক আরামে ঘুমায়। প্রথম মাসের অভিজ্ঞতা শেয়ার করলাম।",
+      "mediaUrls": [
+        "/src/assets/images/feed_mother_newborn_1794921207230.jpg"
+      ],
+      "aspectRatio": "3:4",
+      "isVideo": false,
+      "hashtags": [
+        "newborn",
+        "dhakamom",
+        "muslinswaddle"
+      ],
+      "taggedProductIds": [
+        "prod_1"
+      ],
+      "location": "Dhanmondi, Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 342,
+      "commentsCount": 2,
+      "savesCount": 118,
+      "viewsCount": 2890,
+      "createdAt": "2026-11-17T11:26:13.829Z"
+    },
+    {
+      "id": "post_2",
+      "authorId": "creator_tasnim",
+      "authorName": "তাসনিম করিম",
+      "authorUsername": "tasnim_weaning",
+      "authorAvatar": "/src/assets/images/feed_baby_food_1794921207142.jpg",
+      "authorBadge": "Nutrition",
+      "type": "short_video",
+      "category": "baby_food",
+      "titleEn": "6-month baby moong dal khichuri & sweet potato puree",
+      "titleBn": "৬ মাস+ শিশুর জন্য মুগ ডালের নরম খিচুড়ি ও মিষ্টি আলুর পিউরি",
+      "captionEn": "Zero salt, zero sugar — just slow-simmered yellow moong dal, gobindobhog rice, and roasted sweet potato.",
+      "captionBn": "কোনো লবণ বা চিনি ছাড়া ঘরে তৈরি পুষ্টিকর নরম খিচুড়ি ও গাজর পিউরি। ভিডিওতে দেখে নিন সহজ রেসিপি।",
+      "mediaUrls": [
+        "/videos/baby-food.mp4",
+        "/src/assets/images/feed_baby_food_1794921207142.jpg"
+      ],
+      "aspectRatio": "4:3",
+      "isVideo": true,
+      "videoDurationSec": 54,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "babyfood",
+        "weaningbd",
+        "khichuri"
+      ],
+      "taggedProductIds": [
+        "prod_4"
+      ],
+      "location": "Chattogram",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 518,
+      "commentsCount": 1,
+      "savesCount": 264,
+      "viewsCount": 6410,
+      "createdAt": "2026-11-17T09:26:13.829Z"
+    },
+    {
+      "id": "post_3",
+      "authorId": "demo_mother_1",
+      "authorName": "নুসরাত জাহান",
+      "authorUsername": "nusrat_dhaka",
+      "authorAvatar": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+      "type": "carousel",
+      "category": "baby_care",
+      "titleEn": "Calm sage & cream nursery corner setup on a budget",
+      "titleBn": "খুব অল্প জায়গায় সাজানো শান্ত ও ছিমছাম বেবি নার্সারি কর্নার",
+      "captionEn": "Used a simple wooden crib, breathable cotton canopy, and woven storage basket for diapers and muslin cloths.",
+      "captionBn": "আলাদা বড় রুম না থাকলেও ঘরের এক কোণে কাঠের ক্রিব আর কটন ক্যানোপি দিয়ে শিশুর জন্য নিরাপদ ঘুমের জায়গা তৈরি করা যায়।",
+      "mediaUrls": [
+        "/src/assets/images/feed_nursery_corner_1794921207506.jpg",
+        "/src/assets/images/product_muslin_swaddle_1794921206420.jpg"
+      ],
+      "aspectRatio": "3:4",
+      "isVideo": false,
+      "hashtags": [
+        "nurserydecor",
+        "babyroom",
+        "parentingbd"
+      ],
+      "taggedProductIds": [
+        "prod_5"
+      ],
+      "location": "Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 289,
+      "commentsCount": 1,
+      "savesCount": 195,
+      "viewsCount": 2150,
+      "createdAt": "2026-11-17T06:26:13.829Z"
+    },
+    {
+      "id": "post_4",
+      "authorId": "creator_farhana",
+      "authorName": "ডা. ফারহানা রহমান",
+      "authorUsername": "dr_farhana_bd",
+      "authorAvatar": "/src/assets/images/doctor_female_specialist_1794921209359.jpg",
+      "authorBadge": "Paediatrician",
+      "type": "short_video",
+      "category": "doctor_advice",
+      "titleEn": "When does a newborn actually need water? Doctor explains",
+      "titleBn": "৬ মাসের আগে শিশুকে কি পানি খাওয়ানো উচিত? ডাক্তারের পরামর্শ",
+      "captionEn": "Exclusive breastmilk provides over 80% water — giving extra water before 6 months can lower nutrient absorption.",
+      "captionBn": "প্রথম ৬ মাস শুধুমাত্র মায়ের বুকের দুধই শিশুর পানির চাহিদা পূরণ করে। বিস্তারিত জানতে রিলটি দেখুন।",
+      "mediaUrls": [
+        "/videos/doctor-advice.mp4",
+        "/src/assets/images/doctor_female_specialist_1794921209359.jpg"
+      ],
+      "aspectRatio": "3:4",
+      "isVideo": true,
+      "videoDurationSec": 78,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "doctorexplains",
+        "newborncare",
+        "breastfeeding"
+      ],
+      "taggedProductIds": [],
+      "location": "Banani, Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 812,
+      "commentsCount": 2,
+      "savesCount": 490,
+      "viewsCount": 11200,
+      "createdAt": "2026-11-17T04:26:13.829Z"
+    },
+    {
+      "id": "post_5",
+      "authorId": "guest_demo",
+      "authorName": "আয়েশা আক্তার",
+      "authorUsername": "ayesha_mom",
+      "authorAvatar": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "type": "photo",
+      "category": "pregnancy",
+      "titleEn": "Second-trimester gentle breathing & back relief routine",
+      "titleBn": "গর্ভাবস্থার দ্বিতীয় ত্রৈমাসিকে ১০ মিনিটের হালকা শ্বাস-প্রশ্বাস ব্যায়াম",
+      "captionEn": "Ten quiet minutes near morning sunlight helped my lower-back stiffness and sleep quality tremendously.",
+      "captionBn": "সকালের রোদে বসে ১০ মিনিট গভীর শ্বাস-প্রশ্বাস আর হালকা স্ট্রেচিং কোমরের ব্যথা কমাতে দারুণ সাহায্য করেছে।",
+      "mediaUrls": [
+        "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg"
+      ],
+      "aspectRatio": "3:4",
+      "isVideo": false,
+      "hashtags": [
+        "pregnancyjourney",
+        "prenatalwellness",
+        "mothercare"
+      ],
+      "taggedProductIds": [],
+      "location": "Uttara, Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 214,
+      "commentsCount": 0,
+      "savesCount": 92,
+      "viewsCount": 1840,
+      "createdAt": "2026-11-17T02:26:13.829Z"
+    },
+    {
+      "id": "post_6",
+      "authorId": "seller_user_1",
+      "authorName": "নরচার বেবি কেয়ার",
+      "authorUsername": "nurture_bd",
+      "authorAvatar": "/src/assets/images/product_muslin_swaddle_1794921206420.jpg",
+      "authorBadge": "Partner Brand",
+      "type": "review",
+      "category": "product_reviews",
+      "titleEn": "Evening chamomile massage ritual before bedtime",
+      "titleBn": "ঘুমানোর আগে ক্যামোমাইল অয়েল ম্যাসাজ ও ত্বকের যত্ন",
+      "captionEn": "Sponsored showcase: Pair lukewarm bath time with 4 drops of cold-pressed chamomile oil for restful newborn sleep.",
+      "captionBn": "স্পনসর্ড: হালকা কুসুম গরম পানিতে গোসলের পর কোল্ড-প্রেসড ক্যামোমাইল বেবি অয়েল ম্যাসাজ শিশুর ত্বক কোমল রাখে।",
+      "mediaUrls": [
+        "/src/assets/images/product_organic_skincare_1794921208191.jpg"
+      ],
+      "aspectRatio": "4:3",
+      "isVideo": false,
+      "hashtags": [
+        "babyskincare",
+        "massageritual",
+        "nurturebd"
+      ],
+      "taggedProductIds": [
+        "prod_2"
+      ],
+      "location": "Dhaka",
+      "isSponsored": true,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 175,
+      "commentsCount": 0,
+      "savesCount": 64,
+      "viewsCount": 1920,
+      "createdAt": "2026-11-16T23:26:13.829Z"
+    },
+    {
+      "id": "post_7",
+      "authorId": "creator_tasnim",
+      "authorName": "তাসনিম করিম",
+      "authorUsername": "tasnim_weaning",
+      "authorAvatar": "/src/assets/images/feed_baby_food_1794921207142.jpg",
+      "type": "short_video",
+      "category": "baby_development",
+      "titleEn": "Screen-free wooden stacking play for 12-month toddlers",
+      "titleBn": "১২ মাস বয়সী শিশুর সাথে স্ক্রিন-মুক্ত কাঠের খেলনার খেলা",
+      "captionEn": "Fifteen minutes of guided ring-stacking builds pincer grasp, patience, and color recognition without screens.",
+      "captionBn": "মোবাইল স্ক্রিন ছাড়াই কাঠের স্ট্যাকিং খেলনার মাধ্যমে শিশুর মনোযোগ ও মোটর স্কিল বাড়ানোর সহজ উপায়।",
+      "mediaUrls": [
+        "/videos/baby-play.mp4",
+        "/src/assets/images/guide_toddler_play_1794921210261.jpg"
+      ],
+      "aspectRatio": "16:9",
+      "isVideo": true,
+      "videoDurationSec": 64,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "montessoribd",
+        "toddlerplay",
+        "screenfree"
+      ],
+      "taggedProductIds": [
+        "prod_3"
+      ],
+      "location": "Chattogram",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 396,
+      "commentsCount": 0,
+      "savesCount": 211,
+      "viewsCount": 4820,
+      "createdAt": "2026-11-16T19:26:13.829Z"
+    },
+    {
+      "id": "post_8",
+      "authorId": "demo_mother_1",
+      "authorName": "নুসরাত জাহান",
+      "authorUsername": "nusrat_dhaka",
+      "authorAvatar": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+      "type": "review",
+      "category": "product_reviews",
+      "titleEn": "Honest 30-day review: 3-pack cotton muslin wraps after washing",
+      "titleBn": "৩০ দিন ব্যবহারের পর মসলিন সোয়াডল সেটের আসল রিভিউ",
+      "captionEn": "Washed six times in mild liquid detergent — zero shrinkage and the fabric actually gets softer.",
+      "captionBn": "৬ বার ধোয়ার পরও কাপড় একটুও শক্ত হয়নি বরং আরও নরম হয়েছে। গরমের জন্য সত্যিই সেরা।",
+      "mediaUrls": [
+        "/src/assets/images/product_muslin_swaddle_1794921206420.jpg"
+      ],
+      "aspectRatio": "4:3",
+      "isVideo": false,
+      "hashtags": [
+        "productreview",
+        "muslin",
+        "newbornessentials"
+      ],
+      "taggedProductIds": [
+        "prod_1"
+      ],
+      "location": "Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 247,
+      "commentsCount": 0,
+      "savesCount": 132,
+      "viewsCount": 2340,
+      "createdAt": "2026-11-16T15:26:13.829Z"
+    },
+    {
+      "id": "post_9",
+      "authorId": "demo_mother_1",
+      "authorName": "নুসরাত জাহান",
+      "authorUsername": "nusrat_dhaka",
+      "authorAvatar": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+      "authorBadge": "New Mom",
+      "type": "short_video",
+      "category": "newborn",
+      "titleEn": "5 Things Every New Mom Should Know Before Hospital Bag Packing",
+      "titleBn": "৫টি জিনিস যা প্রত্যেক New Mom-এর জানা উচিত!",
+      "captionEn": "Breathable muslin swaddles, soft cotton vests, and baby wipes — skip overpacking and focus on newborn comfort.",
+      "captionBn": "হসপিটাল ব্যাগে অপ্রয়োজনীয় জিনিস না ভরে পাতলা মসলিন কাঁথা, সুতি জামা আর স্কিনকেয়ার রাখুন।",
+      "mediaUrls": [
+        "/videos/newborn.mp4",
+        "/src/assets/images/feed_mother_newborn_1794921207230.jpg"
+      ],
+      "aspectRatio": "9:16",
+      "isVideo": true,
+      "videoDurationSec": 48,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "newmom",
+        "newborncare",
+        "hospitalbag"
+      ],
+      "taggedProductIds": [
+        "prod_1"
+      ],
+      "location": "Dhanmondi, Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 940,
+      "commentsCount": 14,
+      "savesCount": 513,
+      "viewsCount": 14800,
+      "createdAt": "2026-11-17T16:00:50.388Z"
+    },
+    {
+      "id": "post_10",
+      "authorId": "creator_tasnim",
+      "authorName": "তাসনিম করিম",
+      "authorUsername": "tasnim_weaning",
+      "authorAvatar": "/src/assets/images/feed_baby_food_1794921207142.jpg",
+      "authorBadge": "Nutrition",
+      "type": "short_video",
+      "category": "baby_food",
+      "titleEn": "Have You Tried These First Foods for Your 6-Month-Old?",
+      "titleBn": "৬ মাসের শিশুর জন্য এই খাবারগুলো দেখেছেন?",
+      "captionEn": "Iron-rich masoor dal, sweet potato mash, and suction bamboo bowls make messy self-feeding calm and fun.",
+      "captionBn": "বাঁশের সাকশন বাটিতে ৬ মাসের বাবুর প্রথম সলিড খাবার শুরু করার সহজ ও পুষ্টিকর ৩টি আইডিয়া।",
+      "mediaUrls": [
+        "/videos/baby-food.mp4",
+        "/src/assets/images/feed_baby_food_1794921207142.jpg"
+      ],
+      "aspectRatio": "9:16",
+      "isVideo": true,
+      "videoDurationSec": 42,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "6monthbaby",
+        "babyfoodbd",
+        "weaning"
+      ],
+      "taggedProductIds": [
+        "prod_4"
+      ],
+      "location": "Chattogram",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 730,
+      "commentsCount": 9,
+      "savesCount": 410,
+      "viewsCount": 9850,
+      "createdAt": "2026-11-17T14:00:50.388Z"
+    },
+    {
+      "id": "post_11",
+      "authorId": "creator_farhana",
+      "authorName": "ডা. ফারহানা রহমান",
+      "authorUsername": "dr_farhana_bd",
+      "authorAvatar": "/src/assets/images/doctor_female_specialist_1794921209359.jpg",
+      "authorBadge": "Paediatrician",
+      "type": "short_video",
+      "category": "motherhood",
+      "titleEn": "3 Essential Postpartum & Early Motherhood Tips Nobody Tells You",
+      "titleBn": "নতুন মায়েদের জন্য ৩টি জরুরি পরামর্শ",
+      "captionEn": "Rest in 20-minute bursts, hydrate with warm fluids, and lean on family & verified postpartum care.",
+      "captionBn": "ডেলিভারির পর নিজের বিশ্রাম, সঠিক খাবার ও মানসিক স্বাস্থ্যের যত্ন নেওয়া শিশুর মতোই গুরুত্বপূর্ণ।",
+      "mediaUrls": [
+        "/videos/motherhood.mp4",
+        "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg"
+      ],
+      "aspectRatio": "9:16",
+      "isVideo": true,
+      "videoDurationSec": 62,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "motherhood",
+        "postpartumcare",
+        "bdmoms"
+      ],
+      "taggedProductIds": [
+        "prod_9"
+      ],
+      "location": "Banani, Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 865,
+      "commentsCount": 11,
+      "savesCount": 478,
+      "viewsCount": 12100,
+      "createdAt": "2026-11-17T12:00:50.388Z"
+    },
+    {
+      "id": "post_12",
+      "authorId": "demo_mother_1",
+      "authorName": "নুসরাত জাহান",
+      "authorUsername": "nusrat_dhaka",
+      "authorAvatar": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+      "authorBadge": "New Mom",
+      "type": "short_video",
+      "category": "product_reviews",
+      "titleEn": "Watch Before Buying These Daily Baby Essentials!",
+      "titleBn": "এই Baby Essentials গুলো কেনার আগে দেখুন!",
+      "captionEn": "Real comparison of breathable bamboo diapers and cold-pressed chamomile massage oil after 3 weeks of daily use.",
+      "captionBn": "বাম্বু ডায়াপার ও ক্যামোমাইল বেবি অয়েল ৩ সপ্তাহ ব্যবহারের পর আসল অভিজ্ঞতা শেয়ার করলাম।",
+      "mediaUrls": [
+        "/videos/product-review.mp4",
+        "/src/assets/images/product_diapers_feeding_set_1794929083295.jpg"
+      ],
+      "aspectRatio": "9:16",
+      "isVideo": true,
+      "videoDurationSec": 51,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "babyessentials",
+        "productreview",
+        "diapersbd"
+      ],
+      "taggedProductIds": [
+        "prod_6",
+        "prod_2"
+      ],
+      "location": "Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 642,
+      "commentsCount": 8,
+      "savesCount": 355,
+      "viewsCount": 8420,
+      "createdAt": "2026-11-17T11:00:50.388Z"
+    },
+    {
+      "id": "post_13",
+      "authorId": "guest_demo",
+      "authorName": "আয়েশা আক্তার",
+      "authorUsername": "ayesha_mom",
+      "authorAvatar": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "authorBadge": "Expecting",
+      "type": "short_video",
+      "category": "pregnancy",
+      "titleEn": "Comfortable Maternity Linen Dress & Trimester Stretch Routine",
+      "titleBn": "গর্ভাবস্থায় আরামদায়ক পোশাক ও সকালের হালকা স্ট্রেচিং রুটিন",
+      "captionEn": "Stay cool during Dhaka afternoons with breathable linen nursing dresses and 10-minute gentle breathing.",
+      "captionBn": "গর্ভাবস্থার শেষ কয়েক মাসে আরামদায়ক নার্সিং ড্রেস আর হালকা হাঁটাচলার রুটিন।",
+      "mediaUrls": [
+        "/videos/pregnancy.mp4",
+        "/src/assets/images/product_maternity_fashion_1794929084481.jpg"
+      ],
+      "aspectRatio": "9:16",
+      "isVideo": true,
+      "videoDurationSec": 46,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "pregnancyjourney",
+        "maternitywear",
+        "expectingbd"
+      ],
+      "taggedProductIds": [
+        "prod_8"
+      ],
+      "location": "Uttara, Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 510,
+      "commentsCount": 6,
+      "savesCount": 280,
+      "viewsCount": 6900,
+      "createdAt": "2026-11-17T09:00:50.388Z"
+    },
+    {
+      "id": "post_14",
+      "authorId": "demo_mother_1",
+      "authorName": "নুসরাত জাহান",
+      "authorUsername": "nusrat_dhaka",
+      "authorAvatar": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+      "type": "short_video",
+      "category": "baby_care",
+      "titleEn": "Nighttime Baby Bath, Chamomile Massage & Mosquito-Safe Sleep",
+      "titleBn": "রাতের বেবি বাথ, ক্যামোমাইল ম্যাসাজ ও নিরাপদ ঘুমের রুটিন",
+      "captionEn": "A predictable 20-minute wind-down routine helps infants settle faster before bedtime.",
+      "captionBn": "ঘুমানোর আগে কুসুম গরম পানি ও হালকা ম্যাসাজ শিশুকে তাড়াতাড়ি ঘুমাতে সাহায্য করে।",
+      "mediaUrls": [
+        "/videos/baby-care.mp4",
+        "/src/assets/images/product_organic_skincare_1794921208191.jpg"
+      ],
+      "aspectRatio": "9:16",
+      "isVideo": true,
+      "videoDurationSec": 58,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "babycare",
+        "bedtimeroutine",
+        "babysleep"
+      ],
+      "taggedProductIds": [
+        "prod_2",
+        "prod_12"
+      ],
+      "location": "Dhaka",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 590,
+      "commentsCount": 7,
+      "savesCount": 320,
+      "viewsCount": 7300,
+      "createdAt": "2026-11-17T07:00:50.388Z"
+    },
+    {
+      "id": "post_15",
+      "authorId": "creator_tasnim",
+      "authorName": "তাসনিম করিম",
+      "authorUsername": "tasnim_weaning",
+      "authorAvatar": "/src/assets/images/feed_baby_food_1794921207142.jpg",
+      "type": "short_video",
+      "category": "parenting",
+      "titleEn": "Screen-Free Bengali Rhymes & Wooden Play Corner Ideas",
+      "titleBn": "মোবাইল স্ক্রিন ছাড়াই শিশুর সাথে ছড়া ও খেলার চমৎকার আইডিয়া",
+      "captionEn": "Swap screen time for soft cloth Bengali rhyme books and tactile neem-wood stacking rings.",
+      "captionBn": "বাংলা ও ইংরেজি সফট বুক এবং কাঠের খেলনা দিয়ে শিশুর ভাষা ও মনোযোগ বাড়ানোর সহজ কৌশল।",
+      "mediaUrls": [
+        "/videos/parenting.mp4",
+        "/src/assets/images/guide_toddler_play_1794921210261.jpg"
+      ],
+      "aspectRatio": "9:16",
+      "isVideo": true,
+      "videoDurationSec": 49,
+      "videoStatus": "ready",
+      "videoDemoMode": false,
+      "hashtags": [
+        "parentingtips",
+        "screenfree",
+        "bilingualkids"
+      ],
+      "taggedProductIds": [
+        "prod_11",
+        "prod_3"
+      ],
+      "location": "Chattogram",
+      "isSponsored": false,
+      "language": "both",
+      "moderationStatus": "approved",
+      "likesCount": 485,
+      "commentsCount": 5,
+      "savesCount": 295,
+      "viewsCount": 6150,
+      "createdAt": "2026-11-17T05:00:50.388Z"
+    }
+  ],
+  "comments": {
+    "post_1": [
+      {
+        "id": "c1",
+        "postId": "post_1",
+        "authorId": "creator_tasnim",
+        "authorName": "তাসনিম করিম",
+        "authorAvatar": "/src/assets/images/feed_baby_food_1794921207142.jpg",
+        "content": "মসলিন কাঁথা সত্যিই ঢাকার গরমের জন্য অসাধারণ! খুব সুন্দর ছবি।",
+        "likesCount": 12,
+        "createdAt": "2026-11-17T12:26:13.829Z"
+      },
+      {
+        "id": "c2",
+        "postId": "post_1",
+        "authorId": "guest_demo",
+        "authorName": "আয়েশা আক্তার",
+        "authorAvatar": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+        "content": "Which detergent do you use for washing newborn muslin cloths?",
+        "likesCount": 5,
+        "createdAt": "2026-11-17T12:56:13.829Z"
+      }
+    ],
+    "post_2": [
+      {
+        "id": "c3",
+        "postId": "post_2",
+        "authorId": "demo_mother_1",
+        "authorName": "নুসরাত জাহান",
+        "authorAvatar": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+        "content": "আমার বাবুর ৬ মাস পূর্ণ হলেই এই খিচুড়ি রেসিপি ট্রাই করব!",
+        "likesCount": 9,
+        "createdAt": "2026-11-17T10:26:13.829Z"
+      }
+    ],
+    "post_4": [
+      {
+        "id": "cmt_1794922031316",
+        "postId": "post_4",
+        "authorId": "guest_demo",
+        "authorName": "আয়েশা আক্তার (Demo Mother)",
+        "authorAvatar": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+        "content": "Very helpful tip for Dhaka moms!",
+        "likesCount": 0,
+        "createdAt": "2026-11-17T13:27:11.316Z"
+      },
+      {
+        "id": "c4",
+        "postId": "post_4",
+        "authorId": "guest_demo",
+        "authorName": "আয়েশা আক্তার",
+        "authorAvatar": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+        "content": "Thank you Doctor! Very helpful clarification for our whole family.",
+        "likesCount": 18,
+        "createdAt": "2026-11-17T07:26:13.829Z"
+      }
+    ],
+    "post_1794922064351": [],
+    "post_1794935159245": [],
+    "post_1794935250865": [],
+    "post_1794935326508": [],
+    "post_1794935566163": []
+  },
+  "likedPostIdsByUser": {
+    "guest_demo": [
+      "post_1"
+    ]
+  },
+  "savedPostIdsByUser": {
+    "guest_demo": [
+      "post_2",
+      "post_4",
+      "post_9"
+    ]
+  },
+  "followedIdsByUser": {
+    "guest_demo": [
+      "demo_mother_1",
+      "creator_farhana"
+    ]
+  },
+  "blockedIdsByUser": {},
+  "questions": [
+    {
+      "id": "q1",
+      "authorId": "demo_mother_1",
+      "authorDisplayName": "নাম গোপন রাখা হয়েছে (Anonymous Mother)",
+      "isAnonymous": true,
+      "category": "breastfeeding",
+      "titleEn": "Low evening milk supply feeling at 5 weeks postpartum — is it normal?",
+      "titleBn": "সন্তান জন্মের ৫ সপ্তাহ পর সন্ধ্যায় বুকের দুধ কম মনে হচ্ছে — এটা কি স্বাভাবিক?",
+      "bodyEn": "My baby clusters feeds every evening from 6 PM to 9 PM and seems fussy. Diaper output is 7+ wet diapers a day. Should I worry?",
+      "bodyBn": "প্রতিদিন সন্ধ্যা ৬টা থেকে ৯টা পর্যন্ত বাবু বারবার দুধ খেতে চায় ও একটু অস্থির থাকে। সারাদিনে ৭+ ভেজা ডায়াপার হচ্ছে। এতে কি চিন্তার কিছু আছে?",
+      "bestAnswerId": "a1",
+      "likesCount": 46,
+      "answersCount": 2,
+      "moderationStatus": "approved",
+      "answers": [
+        {
+          "id": "a1",
+          "questionId": "q1",
+          "authorId": "creator_farhana",
+          "authorName": "ডা. ফারহানা রহমান",
+          "isDoctorVerified": true,
+          "body": "7+ wet diapers daily is a strong reassurance of adequate intake. Evening cluster feeding around 5–6 weeks is very common during growth spurts. Keep nursing on demand, stay hydrated, and consult your paediatrician if weight gain slows.",
+          "likesCount": 38,
+          "createdAt": "2026-11-17T08:26:13.829Z"
+        },
+        {
+          "id": "a2",
+          "questionId": "q1",
+          "authorId": "creator_tasnim",
+          "authorName": "তাসনিম করিম",
+          "isDoctorVerified": false,
+          "body": "Same thing happened with my daughter at week 5! Warm oats and plenty of water helped me stay relaxed during evening cluster feeds.",
+          "likesCount": 11,
+          "createdAt": "2026-11-17T09:26:13.829Z"
+        }
+      ],
+      "createdAt": "2026-11-17T05:26:13.829Z"
+    },
+    {
+      "id": "q2",
+      "authorId": "guest_demo",
+      "authorDisplayName": "আয়েশা আক্তার",
+      "isAnonymous": false,
+      "category": "baby_sleep",
+      "titleEn": "Safe sleeping temperature and fan speed for newborns in Dhaka",
+      "titleBn": "নবজাতকের ঘরে এসি বা ফ্যানের তাপমাত্রা কত রাখা নিরাপদ?",
+      "bodyEn": "What room temperature works best at night so our baby does not catch a chill or get heat rash?",
+      "bodyBn": "রাতে ঘরের তাপমাত্রা কত রাখলে বাবুর ঠান্ডাও লাগবে না আবার ঘামাচিও হবে না?",
+      "likesCount": 29,
+      "answersCount": 1,
+      "moderationStatus": "approved",
+      "answers": [
+        {
+          "id": "a3",
+          "questionId": "q2",
+          "authorId": "creator_farhana",
+          "authorName": "ডা. ফারহানা রহমান",
+          "isDoctorVerified": true,
+          "body": "Aim for 24°C–26°C with gentle indirect airflow (avoid pointing a fan or AC vent directly at the crib) and dress baby in a single breathable cotton layer.",
+          "likesCount": 24,
+          "createdAt": "2026-11-17T03:26:13.829Z"
+        }
+      ],
+      "createdAt": "2026-11-17T01:26:13.829Z"
+    }
+  ],
+  "polls": [
+    {
+      "id": "poll_1",
+      "authorId": "creator_tasnim",
+      "authorName": "তাসনিম করিম",
+      "category": "baby_food",
+      "questionEn": "What was your baby’s favorite first solid food at 6 months?",
+      "questionBn": "৬ মাস বয়সে আপনার শিশুর প্রথম প্রিয় সলিড খাবার কোনটি ছিল?",
+      "options": [
+        {
+          "id": "opt1",
+          "labelEn": "Soft Moong Dal Khichuri",
+          "labelBn": "নরম মুগ ডালের খিচুড়ি",
+          "votes": 84
+        },
+        {
+          "id": "opt2",
+          "labelEn": "Mashed Sweet Potato",
+          "labelBn": "মিষ্টি আলু ম্যাশ",
+          "votes": 42
+        },
+        {
+          "id": "opt3",
+          "labelEn": "Steamed Apple / Pear Puree",
+          "labelBn": "ভাপানো আপেল/নাশপাতি পিউরি",
+          "votes": 31
+        }
+      ],
+      "totalVotes": 157,
+      "createdAt": "2026-11-16T21:26:13.829Z"
+    }
+  ],
+  "doctors": [
+    {
+      "id": "doc_1",
+      "userId": "creator_farhana",
+      "nameEn": "Dr. Farhana Rahman (Demo Profile)",
+      "nameBn": "ডা. ফারহানা রহমান (ডেমো প্রোফাইল)",
+      "specialisation": "Paediatrician",
+      "qualifications": "MBBS, FCPS (Paediatrics)",
+      "bmdcRegNote": "Demo directory entry — admin verification required before live clinic use",
+      "experienceYears": 9,
+      "hospitalEn": "Banani Mother & Child Care Clinic, Dhaka",
+      "hospitalBn": "বনানী মাদার অ্যান্ড চাইল্ড কেয়ার ক্লিনিক, ঢাকা",
+      "consultationFeeBdt": 800,
+      "languages": [
+        "বাংলা",
+        "English"
+      ],
+      "avatarUrl": "/src/assets/images/doctor_female_specialist_1794921209359.jpg",
+      "isVerified": false,
+      "availableSlots": [
+        "10:00 AM",
+        "10:30 AM",
+        "11:30 AM",
+        "04:30 PM",
+        "05:30 PM"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 64
+    },
+    {
+      "id": "doc_2",
+      "userId": "doc_user_2",
+      "nameEn": "Dr. Nusrat Chowdhury (Demo Profile)",
+      "nameBn": "ডা. নুসরাত চৌধুরী (ডেমো প্রোফাইল)",
+      "specialisation": "Gynaecologist",
+      "qualifications": "MBBS, MS (Obs & Gynae)",
+      "bmdcRegNote": "Demo directory entry — pending admin document approval",
+      "experienceYears": 11,
+      "hospitalEn": "Dhanmondi Women’s Wellness Center, Dhaka",
+      "hospitalBn": "ধানমন্ডি উইমেন্স ওয়েলনেস সেন্টার, ঢাকা",
+      "consultationFeeBdt": 1000,
+      "languages": [
+        "বাংলা",
+        "English"
+      ],
+      "avatarUrl": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "isVerified": false,
+      "availableSlots": [
+        "11:00 AM",
+        "12:00 PM",
+        "06:00 PM",
+        "07:00 PM"
+      ],
+      "rating": 4.8,
+      "reviewsCount": 49
+    },
+    {
+      "id": "doc_3",
+      "userId": "doc_user_3",
+      "nameEn": "Dr. Tahmid Hasan (Demo Profile)",
+      "nameBn": "ডা. তাহমিদ হাসান (ডেমো প্রোফাইল)",
+      "specialisation": "Nutritionist",
+      "qualifications": "MSc Clinical Nutrition (DU)",
+      "bmdcRegNote": "Demo directory entry — pediatric & maternal nutrition specialist",
+      "experienceYears": 7,
+      "hospitalEn": "Chattogram Family Nutrition Hub",
+      "hospitalBn": "চট্টগ্রাম ফ্যামিলি নিউট্রিশন হাব",
+      "consultationFeeBdt": 600,
+      "languages": [
+        "বাংলা",
+        "English"
+      ],
+      "avatarUrl": "/src/assets/images/feed_baby_food_1794921207142.jpg",
+      "isVerified": false,
+      "availableSlots": [
+        "03:00 PM",
+        "04:00 PM",
+        "08:00 PM"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 38
+    },
+    {
+      "id": "doc_4",
+      "userId": "doc_user_4",
+      "nameEn": "Dr. Sabrina Karim (Demo Profile)",
+      "nameBn": "ডা. সাবরিনা করিম (ডেমো প্রোফাইল)",
+      "specialisation": "Neonatologist",
+      "qualifications": "MBBS, MD (Neonatology)",
+      "bmdcRegNote": "Demo directory entry — newborn & NICU follow-up specialist",
+      "experienceYears": 10,
+      "hospitalEn": "Uttara Neonatal & Child Care Unit, Dhaka",
+      "hospitalBn": "উত্তরা নিওনেটাল অ্যান্ড চাইল্ড কেয়ার, ঢাকা",
+      "consultationFeeBdt": 1100,
+      "languages": [
+        "বাংলা",
+        "English"
+      ],
+      "avatarUrl": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+      "isVerified": false,
+      "availableSlots": [
+        "09:30 AM",
+        "11:00 AM",
+        "05:00 PM"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 42
+    },
+    {
+      "id": "doc_5",
+      "userId": "doc_user_5",
+      "nameEn": "Dr. Maliha Hossain (Demo Profile)",
+      "nameBn": "ডা. মালিহা হোসেন (ডেমো প্রোফাইল)",
+      "specialisation": "Dermatologist",
+      "qualifications": "MBBS, DDV (Paediatric Skin)",
+      "bmdcRegNote": "Demo directory entry — baby eczema & maternal skin specialist",
+      "experienceYears": 8,
+      "hospitalEn": "Gulshan Skin & Family Clinic, Dhaka",
+      "hospitalBn": "গুলশান স্কিন অ্যান্ড ফ্যামিলি ক্লিনিক, ঢাকা",
+      "consultationFeeBdt": 900,
+      "languages": [
+        "বাংলা",
+        "English"
+      ],
+      "avatarUrl": "/src/assets/images/product_organic_skincare_1794921208191.jpg",
+      "isVerified": false,
+      "availableSlots": [
+        "02:00 PM",
+        "03:30 PM",
+        "06:30 PM"
+      ],
+      "rating": 4.8,
+      "reviewsCount": 31
+    },
+    {
+      "id": "doc_6",
+      "userId": "doc_user_6",
+      "nameEn": "Dr. Rafia Sultana (Demo Profile)",
+      "nameBn": "ডা. রাফিয়া সুলতানা (ডেমো প্রোফাইল)",
+      "specialisation": "Child Development Specialist",
+      "qualifications": "MBBS, MPhil (Child Development)",
+      "bmdcRegNote": "Demo directory entry — speech, motor & early milestone specialist",
+      "experienceYears": 9,
+      "hospitalEn": "Mirpur Early Milestones Center, Dhaka",
+      "hospitalBn": "মিরপুর আর্লি মাইলস্টোনস সেন্টার, ঢাকা",
+      "consultationFeeBdt": 850,
+      "languages": [
+        "বাংলা",
+        "English"
+      ],
+      "avatarUrl": "/src/assets/images/guide_toddler_play_1794921210261.jpg",
+      "isVerified": false,
+      "availableSlots": [
+        "10:30 AM",
+        "01:00 PM",
+        "04:00 PM"
+      ],
+      "rating": 4.9,
+      "reviewsCount": 27
+    }
+  ],
+  "appointments": [
+    {
+      "id": "appt_1794929692723",
+      "patientId": "guest_demo",
+      "patientName": "আয়েশা আক্তার (Demo Mother)",
+      "doctorId": "doc_1",
+      "doctorName": "ডা. ফারহানা রহমান (ডেমো প্রোফাইল)",
+      "date": "2026-11-23",
+      "slot": "11:30 AM",
+      "consultationType": "video",
+      "feeBdt": 800,
+      "paymentMethod": "bkash_sandbox",
+      "paymentStatus": "paid_sandbox",
+      "status": "confirmed",
+      "createdAt": "2026-11-17T15:34:52.723Z"
+    },
+    {
+      "id": "appt_1794922153435",
+      "patientId": "guest_demo",
+      "patientName": "আয়েশা আক্তার (Demo Mother)",
+      "doctorId": "doc_1",
+      "doctorName": "ডা. ফারহানা রহমান (ডেমো প্রোফাইল)",
+      "date": "2026-11-23",
+      "slot": "10:00 AM",
+      "consultationType": "video",
+      "feeBdt": 800,
+      "paymentMethod": "bkash_sandbox",
+      "paymentStatus": "paid_sandbox",
+      "status": "confirmed",
+      "createdAt": "2026-11-17T13:29:13.435Z"
+    },
+    {
+      "id": "appt_1",
+      "patientId": "guest_demo",
+      "patientName": "আয়েশা আক্তার",
+      "doctorId": "doc_1",
+      "doctorName": "ডা. ফারহানা রহমান (ডেমো প্রোফাইল)",
+      "date": "2026-11-22",
+      "slot": "10:30 AM",
+      "consultationType": "video",
+      "feeBdt": 800,
+      "paymentMethod": "bkash_sandbox",
+      "paymentStatus": "paid_sandbox",
+      "status": "confirmed",
+      "notes": "6-month solid food & vaccination schedule review",
+      "createdAt": "2026-11-16T17:26:13.829Z"
+    }
+  ],
+  "guides": [
+    {
+      "id": "guide_1",
+      "slug": "second-trimester-nutrition-bd",
+      "category": "pregnancy",
+      "titleEn": "Second Trimester Nutrition Guide for Expectant Mothers in Bangladesh",
+      "titleBn": "গর্ভাবস্থার দ্বিতীয় ত্রৈমাসিকে মায়ের সুষম পুষ্টি গাইড",
+      "summaryEn": "Practical iron, calcium, and folate-rich local meals using spinach, small fish, lentils, and seasonal fruits.",
+      "summaryBn": "দেশীয় শাকসবজি, ছোট মাছ, ডাল ও মৌসুমি ফলের মাধ্যমে আয়রন, ক্যালসিয়াম ও ফলিক অ্যাসিডের চাহিদা পূরণ।",
+      "bodyEn": "During weeks 14–27, fetal bone and brain development accelerates. Include daily protein (lentils, eggs, fish), dark leafy greens (palong shak, lal shak), and adequate hydration. Always take prescribed iron-folate supplements after consulting your obstetrician, avoiding tea/coffee right around iron meals.",
+      "bodyBn": "গর্ভাবস্থার ১৪ থেকে ২৭ সপ্তাহে শিশুর হাড় ও মস্তিষ্কের দ্রুত বিকাশ ঘটে। প্রতিদিনের খাদ্যতালিকায় ডাল, ডিম, ছোট মাছ, পালং বা লাল শাক ও পর্যাপ্ত বিশুদ্ধ পানি রাখুন। ডাক্তারের পরামর্শ অনুযায়ী আয়রন ও ক্যালসিয়াম ট্যাবলেট নিয়মিত গ্রহণ করুন এবং আয়রন ট্যাবলেটের সাথে চা-কফি এড়িয়ে চলুন।",
+      "authorName": "Mother & Child Editorial Team",
+      "medicalReviewerName": "Dr. Farhana Rahman (Demo Reviewer)",
+      "isMedicallyReviewed": true,
+      "references": [
+        "WHO Antenatal Care Recommendations",
+        "DGHS Bangladesh Maternal Nutrition Guidelines"
+      ],
+      "imageUrl": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "readTimeMin": 5,
+      "publishedAt": "2026-11-01",
+      "updatedAt": "2026-11-15",
+      "topicKey": "pregnancy-nutrition"
+    },
+    {
+      "id": "guide_2",
+      "slug": "newborn-sleep-safe-care",
+      "category": "baby_care",
+      "titleEn": "Safe Newborn Sleep & Umbilical Cord Hygiene",
+      "titleBn": "নবজাতকের নিরাপদ ঘুম ও নাভির যত্ন",
+      "summaryEn": "Back-to-sleep positioning, breathable cotton layers, and keeping the umbilical stump clean and dry.",
+      "summaryBn": "চিত করে শোয়ানো, পাতলা সুতি পোশাক এবং নাভি পরিষ্কার ও শুষ্ক রাখার সঠিক নিয়ম।",
+      "bodyEn": "Always place your newborn flat on their back on a firm mattress without loose pillows or heavy blankets. Keep the umbilical cord stump clean and dry, folding the diaper edge below the navel. Seek prompt medical care if you notice redness, swelling, or fever.",
+      "bodyBn": "নবজাতককে সবসময় শক্ত ও সমতল বিছানায় চিত করে শোয়ান এবং কাছে অতিরিক্ত বালিশ বা ভারী কম্বল রাখবেন না। নাভির গোড়া পরিষ্কার ও শুষ্ক রাখুন এবং ডায়াপার নাভির নিচে পরান। লালচে ভাব বা জ্বর দেখা দিলে দ্রুত চিকিৎসকের পরামর্শ নিন।",
+      "authorName": "Mother & Child Editorial Team",
+      "medicalReviewerName": "Dr. Farhana Rahman (Demo Reviewer)",
+      "isMedicallyReviewed": true,
+      "references": [
+        "WHO Postnatal Care Guidelines"
+      ],
+      "imageUrl": "/src/assets/images/feed_nursery_corner_1794921207506.jpg",
+      "readTimeMin": 4,
+      "publishedAt": "2026-11-04",
+      "updatedAt": "2026-11-14",
+      "topicKey": "new-mother-guide"
+    },
+    {
+      "id": "guide_3",
+      "slug": "montessori-play-12-months",
+      "category": "child_development",
+      "titleEn": "12-Month Milestones & Screen-Free Home Activities",
+      "titleBn": "১২ মাস বয়সী শিশুর বিকাশ ও ঘরে বসে খেলার অনুশীলন",
+      "summaryEn": "Encouraging first words, pincer grasp, and cruising safely using everyday household toys.",
+      "summaryBn": "প্রথম শব্দ বলা, হাতের আঙুলের দক্ষতা ও নিরাপদে হাঁটার অভ্যাস গড়ে তোলার সহজ খেলা।",
+      "bodyEn": "At 12 months, most toddlers respond to their name, stack two objects, and pull up to stand. Narrate daily routines in warm Bengali or English, sing rhymes, and offer wooden rings or safe cups instead of phone screens.",
+      "bodyBn": "১২ মাস বয়সে শিশুরা নিজের নামে সাড়া দেয়, দুটি জিনিস একসাথে রাখে এবং ধরে দাঁড়াতে শুরু করে। প্রতিদিন শিশুর সাথে গল্প করুন, ছড়া শোনান এবং মোবাইল স্ক্রিনের বদলে কাঠের খেলনা দিন।",
+      "authorName": "Tasnim Karim (Community Contributor)",
+      "isMedicallyReviewed": false,
+      "references": [
+        "WHO Child Development Indicators"
+      ],
+      "imageUrl": "/src/assets/images/guide_toddler_play_1794921210261.jpg",
+      "readTimeMin": 4,
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-16",
+      "topicKey": "child_development"
+    },
+    {
+      "id": "guide_4",
+      "slug": "postpartum-mother-recovery",
+      "category": "mother_care",
+      "titleEn": "Postpartum Rest, Hydration & Maternal Mental Wellbeing",
+      "titleBn": "প্রসব পরবর্তী মায়ের বিশ্রাম, পুষ্টি ও মানসিক সুস্থতা",
+      "summaryEn": "Recognising normal baby blues vs when to reach out for supportive family and professional care.",
+      "summaryBn": "সন্তান জন্মের পর মায়ের শরীরের যত্ন এবং মানসিক চাপ কমাতে পরিবারের ভূমিকা।",
+      "bodyEn": "New mothers need nutritious warm meals, gentle pelvic rest, and shared night-time help from family members. If sadness or anxiety lasts beyond two weeks, speaking confidentially with a healthcare professional makes recovery far smoother.",
+      "bodyBn": "প্রসবের পর মায়ের পর্যাপ্ত বিশ্রাম, উষ্ণ পুষ্টিকর খাবার এবং পরিবারের সহযোগিতা অপরিহার্য। দুই সপ্তাহের বেশি মন খারাপ বা অতিরিক্ত উদ্বেগ থাকলে নির্দ্বিধায় চিকিৎসকের পরামর্শ নিন।",
+      "authorName": "Mother & Child Editorial Team",
+      "medicalReviewerName": "Dr. Nusrat Chowdhury (Demo Reviewer)",
+      "isMedicallyReviewed": true,
+      "references": [
+        "WHO Maternal Mental Health Guide"
+      ],
+      "imageUrl": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+      "readTimeMin": 6,
+      "publishedAt": "2026-11-06",
+      "updatedAt": "2026-11-15",
+      "topicKey": "postpartum-recovery"
+    },
+    {
+      "id": "guide_5",
+      "slug": "pregnancy-week-by-week",
+      "category": "pregnancy",
+      "topicKey": "pregnancy-week-by-week",
+      "ageGroups": [
+        "pregnancy"
+      ],
+      "titleEn": "Pregnancy Week by Week: Baby Growth & Antenatal Milestones",
+      "titleBn": "গর্ভাবস্থার সপ্তাহভিত্তিক গাইড: শিশুর বিকাশ ও চেকআপ সূচি",
+      "summaryEn": "Follow fetal milestones from week 4 heartbeat detection to week 38 birth readiness.",
+      "summaryBn": "৪ সপ্তাহ থেকে ৪০ সপ্তাহ পর্যন্ত প্রতিটি ধাপে শিশুর বৃদ্ধি ও প্রয়োজনীয় মেডিকেল চেকআপ।",
+      "bodyEn": "Weeks 1–12 establish vital organ formation and neural tube protection with folic acid. Weeks 13–27 bring fetal movement, anomaly scan around week 20, and steady energy. Weeks 28–40 focus on kick-count awareness, iron checks, and preparing your hospital plan with your OB/GYN.",
+      "bodyBn": "প্রথম ১২ সপ্তাহে ফলিক অ্যাসিড ও প্রাথমিক আল্ট্রাসাউন্ড অত্যন্ত জরুরি। ১৩–২৭ সপ্তাহে শিশুর নড়াচড়া শুরু হয় এবং ২০ সপ্তাহে অ্যানোমালি স্ক্যান করা হয়। ২৮–৪০ সপ্তাহে শিশুর নড়াচড়া গণনা ও ডেলিভারির প্রস্তুতি নিতে হয়।",
+      "authorName": "Mother & Child Editorial Team",
+      "medicalReviewerName": "Dr. Nusrat Chowdhury (Demo Reviewer)",
+      "isMedicallyReviewed": true,
+      "references": [
+        "WHO Antenatal Care Framework"
+      ],
+      "imageUrl": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "readTimeMin": 7,
+      "publishedAt": "2026-11-08",
+      "updatedAt": "2026-11-16"
+    },
+    {
+      "id": "guide_6",
+      "slug": "trimester-guide-complete",
+      "category": "pregnancy",
+      "topicKey": "trimester-guide",
+      "ageGroups": [
+        "pregnancy"
+      ],
+      "titleEn": "Complete Trimester Guide: Symptoms, Scans & Self-Care",
+      "titleBn": "ত্রৈমাসিক গর্ভাবস্থা গাইড: ১ম, ২য় ও ৩য় ত্রৈমাসিকের যত্ন",
+      "summaryEn": "What changes in each trimester, recommended blood tests, and safe comfort strategies.",
+      "summaryBn": "প্রতিটি ত্রৈমাসিকে শরীরের পরিবর্তন, পরীক্ষা-নিরীক্ষা এবং আরামদায়ক জীবনযাপন।",
+      "bodyEn": "First trimester tips: small frequent meals for morning nausea and avoiding unprescribed medicines. Second trimester: monitor blood pressure and gestational diabetes screening at 24–28 weeks. Third trimester: side-sleeping with pillow support and packing essentials by week 35.",
+      "bodyBn": "১ম ত্রৈমাসিকে বমি ভাব কমাতে অল্প করে বারবার খাবার খান। ২য় ত্রৈমাসিকে ২৪–২৮ সপ্তাহে ব্লাড সুগার ও রক্তচাপ পরীক্ষা করুন। ৩য় ত্রৈমাসিকে বাম কাত হয়ে ঘুমান এবং ৩৫ সপ্তাহের মধ্যে ডেলিভারি ব্যাগ গুছিয়ে রাখুন।",
+      "authorName": "Mother & Child Editorial Team",
+      "medicalReviewerName": "Dr. Nusrat Chowdhury (Demo Reviewer)",
+      "isMedicallyReviewed": true,
+      "references": [
+        "ACOG & DGHS Antenatal Guidelines"
+      ],
+      "imageUrl": "/src/assets/images/product_maternity_fashion_1794929084481.jpg",
+      "readTimeMin": 6,
+      "publishedAt": "2026-11-09",
+      "updatedAt": "2026-11-16"
+    },
+    {
+      "id": "guide_7",
+      "slug": "hospital-bag-checklist-bd",
+      "category": "pregnancy",
+      "topicKey": "hospital-bag-checklist",
+      "ageGroups": [
+        "pregnancy",
+        "new_mother"
+      ],
+      "titleEn": "Hospital Bag Checklist for Mothers, Newborns & Birth Partners",
+      "titleBn": "ডেলিভারির জন্য সম্পূর্ণ হসপিটাল ব্যাগ চেকলিস্ট",
+      "summaryEn": "A practical Bangladesh checklist covering medical files, nursing wear, muslin swaddles, and hygiene essentials.",
+      "summaryBn": "মেডিকেল রিপোর্ট, মায়ের পোশাক, নবজাতকের মসলিন কাঁথা ও পরিচ্ছন্নতা সামগ্রীর পূর্ণাঙ্গ তালিকা।",
+      "bodyEn": "Pack two neat bags at 35 weeks: 1) Documents & Mother Bag: antenatal card, blood reports, 3 front-open cotton nursing kurtis, maternity pads, slippers, lip balm, and hydration bottle. 2) Newborn Bag: 4 pre-washed cotton vests, 3 breathable muslin swaddles, cotton cap, newborn diapers, and unscented water wipes.",
+      "bodyBn": "৩৫ সপ্তাহে দুটি ব্যাগ গুছিয়ে রাখুন: ১) মায়ের ব্যাগ: মেডিকেল ফাইল, এনআইডি, ৩টি সামনে খোলা সুতি নার্সিং পোশাক, ম্যাটারনিটি প্যাড ও স্যান্ডেল। ২) নবজাতকের ব্যাগ: ধোয়া ৪টি সুতি জামা, ৩টি মসলিন সোয়াডল কাঁথা, সুতি টুপি, নিউবর্ন ডায়াপার ও পানির ওয়াইপস।",
+      "authorName": "Mother & Child Editorial Team",
+      "medicalReviewerName": "Dr. Farhana Rahman (Demo Reviewer)",
+      "isMedicallyReviewed": true,
+      "references": [
+        "Bangladesh Maternal Care Checklist"
+      ],
+      "imageUrl": "/src/assets/images/product_muslin_swaddle_1794921206420.jpg",
+      "readTimeMin": 4,
+      "publishedAt": "2026-11-10",
+      "updatedAt": "2026-11-16"
+    },
+    {
+      "id": "guide_8",
+      "slug": "labour-delivery-preparation",
+      "category": "pregnancy",
+      "topicKey": "labour-delivery",
+      "ageGroups": [
+        "pregnancy"
+      ],
+      "titleEn": "Labour & Delivery Preparation: Signs to Go to the Hospital",
+      "titleBn": "প্রসবের লক্ষণ ও ডেলিভারি প্রস্তুতি: কখন হাসপাতালে যাবেন",
+      "summaryEn": "Learn true labour contractions vs Braxton Hicks, breathing rhythm, and urgent warning signs.",
+      "summaryBn": "সত্যিকারের প্রসব বেদনা চেনার উপায়, শ্বাস-প্রশ্বাসের কৌশল এবং জরুরি সতর্কতা।",
+      "bodyEn": "Call your doctor or head to the hospital immediately if contractions become regular every 5 minutes, your water breaks, you notice vaginal bleeding, or baby movements decrease noticeably. Practice slow 4-second inhale / 6-second exhale breathing between contractions.",
+      "bodyBn": "প্রতি ৫ মিনিট পরপর নিয়মিত ব্যথা হলে, পানি ভেঙে গেলে, রক্তপাত হলে বা শিশুর নড়াচড়া কমে গেলে দ্রুত হাসপাতালে যান। ব্যথার মাঝে ধীরে শ্বাস নেওয়া ও ছাড়া শরীরকে শান্ত রাখতে সাহায্য করে।",
+      "authorName": "Mother & Child Editorial Team",
+      "medicalReviewerName": "Dr. Nusrat Chowdhury (Demo Reviewer)",
+      "isMedicallyReviewed": true,
+      "references": [
+        "WHO Intrapartum Care Guidelines"
+      ],
+      "imageUrl": "/src/assets/images/hero_mother_baby_campaign_1794929083239.jpg",
+      "readTimeMin": 5,
+      "publishedAt": "2026-11-11",
+      "updatedAt": "2026-11-16"
+    },
+    {
+      "id": "guide_9",
+      "slug": "breastfeeding-latch-guide",
+      "category": "mother_care",
+      "topicKey": "breastfeeding",
+      "ageGroups": [
+        "newborn",
+        "new_mother"
+      ],
+      "titleEn": "Breastfeeding Guide: Comfortable Latch, Hunger Cues & Hydration",
+      "titleBn": "ব্রেস্টফিডিং গাইড: সঠিক পজিশন, ক্ষুধার লক্ষণ ও মায়ের খাবার",
+      "summaryEn": "Supportive positioning tips for deep latch, soothing sore nipples, and recognising wet-diaper reassurance.",
+      "summaryBn": "সঠিক ল্যাচিং কৌশল, বাবুর ক্ষুধার প্রাথমিক সংকেত বোঝা ও মায়ের পর্যাপ্ত পানি পান।",
+      "bodyEn": "Watch for early hunger cues like rooting or hand-to-mouth movements before crying starts. Bring baby belly-to-belly to your chest rather than leaning forward, ensuring mouth covers much of the lower areola. Consult a lactation counselor or paediatrician early if pain persists.",
+      "bodyBn": "শিশু কান্নার আগেই হাত মুখের কাছে নেওয়া বা মাথা ঘোরানোর মতো ক্ষুধার সংকেত দেখলে দুধ দিন। বাবুর পেট মায়ের পেটের সাথে লাগিয়ে আরামদায়ক ভঙ্গিতে ধরুন। অতিরিক্ত ব্যথা হলে চিকিৎসক বা ল্যাকটেশন পরামর্শকের সহায়তা নিন।",
+      "authorName": "Mother & Child Editorial Team",
+      "medicalReviewerName": "Dr. Farhana Rahman (Demo Reviewer)",
+      "isMedicallyReviewed": true,
+      "references": [
+        "WHO & UNICEF Breastfeeding Counselling"
+      ],
+      "imageUrl": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+      "readTimeMin": 5,
+      "publishedAt": "2026-11-12",
+      "updatedAt": "2026-11-16"
+    },
+    {
+      "id": "guide_10",
+      "slug": "mother-wellness-self-care",
+      "category": "mother_care",
+      "topicKey": "mother-wellness",
+      "ageGroups": [
+        "new_mother",
+        "pregnancy"
+      ],
+      "titleEn": "Mother Wellness: Gentle Recovery Stretches, Iron & Daily Self-Care",
+      "titleBn": "মায়ের সুস্থতা: দৈনন্দিন যত্ন, আয়রন ও মানসিক প্রশান্তি",
+      "summaryEn": "Sustainable hydration, anemia recovery, and asking family for practical daily support.",
+      "summaryBn": "পর্যাপ্ত পানি, রক্তস্বল্পতা প্রতিরোধে পুষ্টি ও পরিবারের সাথে কাজের দায়িত্ব ভাগ করে নেওয়া।",
+      "bodyEn": "Motherhood recovery is a marathon, not a sprint. Keep a bottle of water within reach during every feeding, include vitamin-C rich lemon with iron-heavy greens, and prioritize 20-minute afternoon rests whenever family members can hold the baby.",
+      "bodyBn": "প্রতিবার শিশুকে খাওয়ানোর সময় পাশে পানির বোতল রাখুন, শাকসবজির সাথে ভিটামিন-সি যুক্ত লেবু খান এবং পরিবারের সদস্যরা শিশুকে দেখাশোনা করলে দিনে অন্তত ২০ মিনিট বিশ্রাম নিন।",
+      "authorName": "Mother & Child Editorial Team",
+      "medicalReviewerName": "Dr. Nusrat Chowdhury (Demo Reviewer)",
+      "isMedicallyReviewed": true,
+      "references": [
+        "DGHS Maternal Health Pocketbook"
+      ],
+      "imageUrl": "/src/assets/images/product_organic_skincare_1794921208191.jpg",
+      "readTimeMin": 4,
+      "publishedAt": "2026-11-13",
+      "updatedAt": "2026-11-16"
+    }
+  ],
+  "babies": [
+    {
+      "id": "baby_1",
+      "parentId": "guest_demo",
+      "name": "আরিশা (Arisha)",
+      "dob": "2026-05-12",
+      "gender": "girl",
+      "logs": [
+        {
+          "id": "gl_1",
+          "babyId": "baby_1",
+          "recordedDate": "2026-06-12",
+          "ageMonths": 1,
+          "weightKg": 4.1,
+          "heightCm": 53.5,
+          "sleepHours": 16,
+          "feedingNotes": "Exclusive breastfeeding, 8–10 times/day"
+        },
+        {
+          "id": "gl_2",
+          "babyId": "baby_1",
+          "recordedDate": "2026-08-12",
+          "ageMonths": 3,
+          "weightKg": 5.8,
+          "heightCm": 59.8,
+          "sleepHours": 14.5,
+          "feedingNotes": "Exclusive breastfeeding, tummy time 20m"
+        },
+        {
+          "id": "gl_3",
+          "babyId": "baby_1",
+          "recordedDate": "2026-11-12",
+          "ageMonths": 6,
+          "weightKg": 7.5,
+          "heightCm": 66.2,
+          "sleepHours": 13.5,
+          "feedingNotes": "Breastmilk + soft moong dal khichuri 1x"
+        }
+      ],
+      "vaccinations": [
+        {
+          "id": "v1",
+          "vaccineNameEn": "BCG & OPV-0",
+          "vaccineNameBn": "বিসিজি ও পোলিও-০",
+          "dueAgeMonths": 0,
+          "status": "completed",
+          "completedDate": "2026-05-14"
+        },
+        {
+          "id": "v2",
+          "vaccineNameEn": "Pentavalent-1 & PCV-1",
+          "vaccineNameBn": "পেন্টাভ্যালেন্ট-১ ও পিসিভি-১",
+          "dueAgeMonths": 2,
+          "status": "completed",
+          "completedDate": "2026-11-17"
+        },
+        {
+          "id": "v3",
+          "vaccineNameEn": "Pentavalent-3 & IPV",
+          "vaccineNameBn": "পেন্টাভ্যালেন্ট-৩ ও আইপিভি",
+          "dueAgeMonths": 4,
+          "status": "completed",
+          "completedDate": "2026-09-18"
+        },
+        {
+          "id": "v4",
+          "vaccineNameEn": "MR-1 (Measles & Rubella)",
+          "vaccineNameBn": "হাম ও রুবেলা-১ (MR-1)",
+          "dueAgeMonths": 9,
+          "status": "pending"
+        }
+      ],
+      "milestonesCompleted": [
+        "head_steady",
+        "rolls_over",
+        "sits_with_support",
+        "social_smile"
+      ],
+      "reminders": [
+        {
+          "id": "rem_1794935586553",
+          "title": "Evening Polio Drop Check",
+          "category": "vaccine",
+          "dueDate": "2026-11-28",
+          "dueTime": "10:00",
+          "isCompleted": false,
+          "createdAt": "2026-11-17T17:13:06.553Z"
+        },
+        {
+          "id": "rem_1794935340186",
+          "title": "Morning Vitamin D3 Drop",
+          "category": "vaccine",
+          "dueDate": "2026-11-28",
+          "dueTime": "10:00",
+          "isCompleted": false,
+          "createdAt": "2026-11-17T17:09:00.186Z"
+        },
+        {
+          "id": "rem_1794935264756",
+          "title": "Evening Vitamin D3 Drop",
+          "category": "vaccine",
+          "dueDate": "2026-11-28",
+          "dueTime": "10:00",
+          "isCompleted": false,
+          "createdAt": "2026-11-17T17:07:44.756Z"
+        },
+        {
+          "id": "rem_1",
+          "title": "MR-1 (Measles & Rubella) EPI Clinic Visit",
+          "category": "vaccine",
+          "dueDate": "2027-02-12",
+          "dueTime": "10:00",
+          "isCompleted": false,
+          "createdAt": "2026-11-17T05:00:50.388Z"
+        },
+        {
+          "id": "rem_2",
+          "title": "6-Month Growth Check & Vitamin A Drop",
+          "category": "checkup",
+          "dueDate": "2026-11-28",
+          "dueTime": "11:30",
+          "isCompleted": false,
+          "createdAt": "2026-11-17T11:00:50.388Z"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_1",
+      "sellerId": "seller_1",
+      "shopSlug": "nurture-baby-bd",
+      "shopName": "Nurture Baby BD (Demo Seller)",
+      "brandId": "brand_1",
+      "brandName": "Nurture Baby BD",
+      "category": "baby_clothing",
+      "subCategory": "Muslin Swaddles",
+      "ageGroups": [
+        "newborn",
+        "infant"
+      ],
+      "collectionTags": [
+        "best_seller",
+        "trending",
+        "recommended"
+      ],
+      "titleEn": "Breathable Organic Cotton Muslin Swaddle (Set of 3)",
+      "titleBn": "অর্গানিক কটন মসলিন সোয়াডল কাঁথা (৩ পিসের সেট)",
+      "descriptionEn": "Ultra-soft double-gauze cotton muslin ideal for Dhaka humidity. Pre-washed and gentle on newborn skin.",
+      "descriptionBn": "বাংলাদেশের আবহাওয়ার জন্য উপযোগী নরম ও বাতাস চলাচলযোগ্য ১০০% অর্গানিক কটন মসলিন সোয়াডল।",
+      "priceBdt": 1350,
+      "compareAtBdt": 1650,
+      "stock": 34,
+      "variants": [
+        "Blush & Sage Set",
+        "Cream Botanical",
+        "Soft Ivory"
+      ],
+      "imageUrl": "/src/assets/images/product_muslin_swaddle_1794921206420.jpg",
+      "galleryUrls": [
+        "/src/assets/images/product_muslin_swaddle_1794921206420.jpg",
+        "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+        "/src/assets/images/feed_nursery_corner_1794921207506.jpg"
+      ],
+      "specifications": {
+        "Material": "100% Organic Double-Gauze Cotton",
+        "Dimensions": "120cm × 120cm",
+        "Origin": "Bangladesh"
+      },
+      "safetyInfoEn": "AZO-free botanical dyes, breathable weave reduces overheating risk.",
+      "safetyInfoBn": "ক্ষতিকর কেমিক্যালমুক্ত প্রাকৃতিক রঙ ও বাতাস চলাচলযোগ্য বুনন।",
+      "demoVideoPostId": "post_1",
+      "questions": [
+        {
+          "id": "pq_1794929878643",
+          "authorName": "আয়েশা আক্তার (Demo Mother)",
+          "question": "Is this soft enough for Dhaka summer?",
+          "createdAt": "2026-11-17T15:37:58.643Z"
+        },
+        {
+          "id": "pq_1794929856840",
+          "authorName": "আয়েশা আক্তার (Demo Mother)",
+          "question": "Is this soft enough for Dhaka summer?",
+          "createdAt": "2026-11-17T15:37:36.840Z"
+        },
+        {
+          "id": "pq_1",
+          "authorName": "সাবরিনা আক্তার",
+          "question": "Can this muslin cloth be used as a summer blanket for a 2-month-old?",
+          "answer": "Yes, the double-gauze cotton stays airy in humid weather and works well as a light summer cover.",
+          "answeredBy": "Nurture Baby BD",
+          "createdAt": "2026-11-16T15:35:09.683Z"
+        }
+      ],
+      "rating": 4.9,
+      "reviewsCount": 84,
+      "moderationStatus": "approved"
+    },
+    {
+      "id": "prod_2",
+      "sellerId": "seller_1",
+      "shopSlug": "nurture-baby-bd",
+      "shopName": "Nurture Baby BD (Demo Seller)",
+      "brandId": "brand_1",
+      "brandName": "Nurture Baby BD",
+      "category": "baby_skincare",
+      "subCategory": "Massage Oil",
+      "ageGroups": [
+        "newborn",
+        "infant",
+        "toddler"
+      ],
+      "collectionTags": [
+        "best_seller",
+        "recommended"
+      ],
+      "titleEn": "Calming Lavender & Chamomile Baby Massage Oil + Balm",
+      "titleBn": "ল্যাভেন্ডার ও ক্যামোমাইল বেবি ম্যাসাজ অয়েল ও বাম",
+      "descriptionEn": "Dermatologist-tested cold-pressed jojoba, almond, and chamomile oil paired with soothing oat barrier balm.",
+      "descriptionBn": "সংবেদনশীল শিশু ত্বকের জন্য জোজোবা ও ক্যামোমাইল সমৃদ্ধ ম্যাসাজ অয়েল এবং ক্যালেন্ডুলা বাম।",
+      "priceBdt": 1180,
+      "compareAtBdt": 1400,
+      "stock": 22,
+      "variants": [
+        "Oil + Balm Duo",
+        "100ml Massage Oil"
+      ],
+      "imageUrl": "/src/assets/images/product_organic_skincare_1794921208191.jpg",
+      "galleryUrls": [
+        "/src/assets/images/product_organic_skincare_1794921208191.jpg",
+        "/src/assets/images/feed_mother_newborn_1794921207230.jpg"
+      ],
+      "specifications": {
+        "Volume": "100ml Oil + 50g Balm",
+        "Ingredients": "Jojoba, Sweet Almond, Chamomile",
+        "ParabenFree": "Yes"
+      },
+      "safetyInfoEn": "Mineral-oil free, fragrance-free sensitive formula. Patch test recommended.",
+      "safetyInfoBn": "প্যারাবেন ও মিনারেল অয়েলমুক্ত নিরাপদ ফর্মুলা।",
+      "rating": 4.8,
+      "reviewsCount": 51,
+      "moderationStatus": "approved"
+    },
+    {
+      "id": "prod_3",
+      "sellerId": "seller_2",
+      "shopSlug": "shishucraft-organics",
+      "shopName": "ShishuCraft Organics (Demo Seller)",
+      "brandId": "brand_2",
+      "brandName": "ShishuCraft Organics",
+      "category": "educational_products",
+      "subCategory": "Montessori Wood",
+      "ageGroups": [
+        "infant",
+        "toddler",
+        "preschool"
+      ],
+      "collectionTags": [
+        "trending",
+        "new_arrival"
+      ],
+      "titleEn": "Natural Neem Wood Montessori Stacking Rings",
+      "titleBn": "প্রাকৃতিক নিম কাঠের মন্টেসরি স্ট্যাকিং রিংস",
+      "descriptionEn": "Non-toxic water-based pigment wooden rings crafted locally for 6m–36m motor skill development.",
+      "descriptionBn": "৬ থেকে ৩৬ মাস বয়সী শিশুর হাত ও চোখের সমন্বয় বাড়াতে নিরাপদ নিম কাঠের মন্টেসরি খেলনা।",
+      "priceBdt": 890,
+      "compareAtBdt": 1050,
+      "stock": 19,
+      "variants": [
+        "Earth Tone",
+        "Pastel Sage"
+      ],
+      "imageUrl": "/src/assets/images/guide_toddler_play_1794921210261.jpg",
+      "galleryUrls": [
+        "/src/assets/images/guide_toddler_play_1794921210261.jpg"
+      ],
+      "specifications": {
+        "Material": "Seasoned Neem Wood",
+        "Finish": "Food-grade Beeswax",
+        "AgeRange": "6m – 3y"
+      },
+      "safetyInfoEn": "Rounded splinter-free edges and saliva-safe natural beeswax polish.",
+      "safetyInfoBn": "মসৃণ প্রান্ত ও শিশুর জন্য সম্পূর্ণ নিরাপদ প্রাকৃতিক মোম পলিশ।",
+      "demoVideoPostId": "post_7",
+      "rating": 4.9,
+      "reviewsCount": 37,
+      "moderationStatus": "approved"
+    },
+    {
+      "id": "prod_4",
+      "sellerId": "seller_2",
+      "shopSlug": "shishucraft-organics",
+      "shopName": "ShishuCraft Organics (Demo Seller)",
+      "brandId": "brand_2",
+      "brandName": "ShishuCraft Organics",
+      "category": "feeding_products",
+      "subCategory": "Weaning Bowls",
+      "ageGroups": [
+        "infant",
+        "toddler"
+      ],
+      "collectionTags": [
+        "best_seller",
+        "recommended"
+      ],
+      "titleEn": "Bamboo Weaning Bowl & Soft-Tip Spoon Set",
+      "titleBn": "বাঁশের বেবি উইনিং বাটি ও নরম চামচ সেট",
+      "descriptionEn": "BPA-free natural bamboo bowl with silicone suction base and gentle baby-sized feeding spoon.",
+      "descriptionBn": "৬ মাস পরবর্তী সলিড খাবার শুরুর জন্য বিপিএ-মুক্ত প্রাকৃতিক বাঁশের বাটি ও নরম চামচ।",
+      "priceBdt": 680,
+      "compareAtBdt": 820,
+      "stock": 42,
+      "variants": [
+        "Warm Sand",
+        "Sage Mist"
+      ],
+      "imageUrl": "/src/assets/images/feed_baby_food_1794921207142.jpg",
+      "galleryUrls": [
+        "/src/assets/images/feed_baby_food_1794921207142.jpg",
+        "/src/assets/images/product_diapers_feeding_set_1794929083295.jpg"
+      ],
+      "specifications": {
+        "Material": "Natural Moso Bamboo + Food-grade Silicone",
+        "Care": "Hand wash warm water"
+      },
+      "safetyInfoEn": "100% BPA, PVC, and phthalate free.",
+      "safetyInfoBn": "শতভাগ বিপিএ ও ক্ষতিকর প্লাস্টিকমুক্ত।",
+      "demoVideoPostId": "post_2",
+      "rating": 4.7,
+      "reviewsCount": 29,
+      "moderationStatus": "approved"
+    },
+    {
+      "id": "prod_5",
+      "sellerId": "seller_1",
+      "shopSlug": "nurture-baby-bd",
+      "shopName": "Nurture Baby BD (Demo Seller)",
+      "brandId": "brand_1",
+      "brandName": "Nurture Baby BD",
+      "category": "nursery",
+      "subCategory": "Crib Canopies",
+      "ageGroups": [
+        "newborn",
+        "infant",
+        "toddler"
+      ],
+      "collectionTags": [
+        "new_arrival"
+      ],
+      "titleEn": "Handwoven Cotton Nursery Canopy & Sage Knit Blanket",
+      "titleBn": "হাতে বোনা কটন নার্সারি ক্যানোপি ও সেজ নিট কম্বল",
+      "descriptionEn": "Breathable cotton canopy to shield baby crib from mosquitoes and harsh afternoon glare.",
+      "descriptionBn": "শিশুর খাটের জন্য আরামদায়ক কটন ক্যানোপি ও হালকা নিট কম্বল।",
+      "priceBdt": 2850,
+      "compareAtBdt": 3200,
+      "stock": 9,
+      "variants": [
+        "Cream + Sage"
+      ],
+      "imageUrl": "/src/assets/images/feed_nursery_corner_1794921207506.jpg",
+      "galleryUrls": [
+        "/src/assets/images/feed_nursery_corner_1794921207506.jpg",
+        "/src/assets/images/product_muslin_swaddle_1794921206420.jpg"
+      ],
+      "specifications": {
+        "Fabric": "Breathable Combed Cotton",
+        "Height": "240cm Hanging Loop"
+      },
+      "safetyInfoEn": "Keep hanging ties securely fastened out of baby reach.",
+      "safetyInfoBn": "শিশুর নাগালের বাইরে নিরাপদে বেঁধে ব্যবহার করুন।",
+      "rating": 5,
+      "reviewsCount": 16,
+      "moderationStatus": "approved"
+    },
+    {
+      "id": "prod_6",
+      "sellerId": "seller_1",
+      "shopSlug": "nurture-baby-bd",
+      "shopName": "Nurture Baby BD (Demo Seller)",
+      "brandId": "brand_4",
+      "brandName": "DeshiMom Wellness",
+      "category": "diapers_wipes",
+      "subCategory": "Newborn Diapers",
+      "ageGroups": [
+        "newborn",
+        "infant"
+      ],
+      "collectionTags": [
+        "best_seller",
+        "trending"
+      ],
+      "titleEn": "Ultra-Breathable Bamboo Diapers (44ct) + 99% Water Wipes + Bottle",
+      "titleBn": "বাম্বু বেবি ডায়াপার (৪৪ পিস) ও অর্গানিক ওয়াইপস কম্বো",
+      "descriptionEn": "Hypoallergenic bamboo-fiber diapers with wetness indicator, biodegradable water wipes, and anti-colic glass bottle.",
+      "descriptionBn": "সংবেদনশীল ত্বকের জন্য বাতাস চলাচলযোগ্য বাম্বু ডায়াপার ও ৯৯% বিশুদ্ধ পানির বেবি ওয়াইপস সেট।",
+      "priceBdt": 1490,
+      "compareAtBdt": 1790,
+      "stock": 56,
+      "variants": [
+        "NB (Up to 5kg)",
+        "S (4-8kg)",
+        "M (6-11kg)"
+      ],
+      "imageUrl": "/src/assets/images/product_diapers_feeding_set_1794929083295.jpg",
+      "galleryUrls": [
+        "/src/assets/images/product_diapers_feeding_set_1794929083295.jpg"
+      ],
+      "specifications": {
+        "Absorbency": "Up to 12 hours",
+        "Fragrance": "Unscented",
+        "PackSize": "44 Diapers + 80 Wipes"
+      },
+      "safetyInfoEn": "Chlorine-free, lotion-free, dermatologically gentle.",
+      "safetyInfoBn": "ক্লোরিন ও সুগন্ধিমুক্ত, নবজাতকের ত্বকের জন্য নিরাপদ।",
+      "rating": 4.9,
+      "reviewsCount": 112,
+      "moderationStatus": "approved"
+    },
+    {
+      "id": "prod_7",
+      "sellerId": "seller_1",
+      "shopSlug": "nurture-baby-bd",
+      "shopName": "Nurture Baby BD (Demo Seller)",
+      "brandId": "brand_4",
+      "brandName": "DeshiMom Wellness",
+      "category": "baby_gear",
+      "subCategory": "Strollers",
+      "ageGroups": [
+        "newborn",
+        "infant",
+        "toddler"
+      ],
+      "collectionTags": [
+        "trending",
+        "recommended"
+      ],
+      "titleEn": "Compact City Fold Sage Stroller & Ergonomic Hip Carrier",
+      "titleBn": "কম্প্যাক্ট সিটি ফোল্ড সেজ স্ট্রলার ও এর্গোনমিক বেবি ক্যারিয়ার",
+      "descriptionEn": "Lightweight aluminum frame stroller with full recline, UPF 50+ sun canopy, and breathable cotton carrier.",
+      "descriptionBn": "সহজে ভাঁজযোগ্য হালকা ওজনের স্ট্রলার এবং কোমর ও কাঁধের চাপ কমানো কটন বেবি ক্যারিয়ার।",
+      "priceBdt": 8900,
+      "compareAtBdt": 10500,
+      "stock": 7,
+      "variants": [
+        "Sage & Sand",
+        "Plum Charcoal"
+      ],
+      "imageUrl": "/src/assets/images/product_baby_stroller_gear_1794929083647.jpg",
+      "galleryUrls": [
+        "/src/assets/images/product_baby_stroller_gear_1794929083647.jpg",
+        "/src/assets/images/hero_mother_baby_campaign_1794929083239.jpg"
+      ],
+      "specifications": {
+        "WeightLimit": "Up to 22 kg",
+        "Frame": "Anodized Aluminum (6.4 kg)",
+        "Harness": "5-Point Safety"
+      },
+      "safetyInfoEn": "EN-1888 safety harness geometry with one-foot linked rear brake.",
+      "safetyInfoBn": "৫-পয়েন্ট সেফটি হার্নেস ও ওয়ান-টাচ ব্রেকিং সিস্টেম।",
+      "rating": 4.8,
+      "reviewsCount": 24,
+      "moderationStatus": "approved"
+    },
+    {
+      "id": "prod_8",
+      "sellerId": "seller_3",
+      "shopSlug": "dhaka-little-looms",
+      "shopName": "Dhaka Little Looms (Demo Seller)",
+      "brandId": "brand_3",
+      "brandName": "Dhaka Little Looms",
+      "category": "maternity_wear",
+      "subCategory": "Nursing Kurtis",
+      "ageGroups": [
+        "pregnancy",
+        "new_mother"
+      ],
+      "collectionTags": [
+        "best_seller",
+        "new_arrival"
+      ],
+      "titleEn": "Sage Linen & Peach Cotton Nursing-Friendly Maternity Dress",
+      "titleBn": "সেজ লিনেন ও পীচ কটন নার্সিং-ফ্রেন্ডলি ম্যাটারনিটি ড্রেস",
+      "descriptionEn": "Breathable handloom linen-cotton tiered dress with discreet hidden feeding zippers for pregnancy through postpartum.",
+      "descriptionBn": "গর্ভাবস্থা ও প্রসব পরবর্তী নার্সিংয়ের জন্য গোপন জিপারসহ আরামদায়ক সুতি ও লিনেন ড্রেস।",
+      "priceBdt": 2150,
+      "compareAtBdt": 2550,
+      "stock": 18,
+      "variants": [
+        "M (38)",
+        "L (40)",
+        "XL (42)"
+      ],
+      "imageUrl": "/src/assets/images/product_maternity_fashion_1794929084481.jpg",
+      "galleryUrls": [
+        "/src/assets/images/product_maternity_fashion_1794929084481.jpg",
+        "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg"
+      ],
+      "specifications": {
+        "Fabric": "65% Combed Cotton, 35% Linen",
+        "FeedingAccess": "Hidden Dual Zippers"
+      },
+      "safetyInfoEn": "Pre-shrunk natural breathable weave for warm weather comfort.",
+      "safetyInfoBn": "গরমে আরামদায়ক প্রাকৃতিক সুতি বুনন।",
+      "rating": 4.9,
+      "reviewsCount": 46,
+      "moderationStatus": "approved"
+    },
+    {
+      "id": "prod_9",
+      "sellerId": "seller_3",
+      "shopSlug": "dhaka-little-looms",
+      "shopName": "Dhaka Little Looms (Demo Seller)",
+      "brandId": "brand_3",
+      "brandName": "Dhaka Little Looms",
+      "category": "mother_care",
+      "subCategory": "Postpartum Recovery",
+      "ageGroups": [
+        "pregnancy",
+        "new_mother"
+      ],
+      "collectionTags": [
+        "recommended"
+      ],
+      "titleEn": "Postpartum Hospital Bag & Recovery Care Kit",
+      "titleBn": "ডেলিভারি পরবর্তী মায়ের কেয়ার ও হসপিটাল ব্যাগ কিট",
+      "descriptionEn": "Thoughtful bundle with organic nursing pads, gentle peri-wash bottle, breathable cotton wrap, and lactation tea.",
+      "descriptionBn": "অর্গানিক নার্সিং প্যাড, পেরিনিয়াল কেয়ার বোতল, কটন বেল্ট ও ল্যাকটেশন চা-সহ সম্পূর্ণ মায়ের কেয়ার কিট।",
+      "priceBdt": 1750,
+      "compareAtBdt": 2100,
+      "stock": 25,
+      "variants": [
+        "Complete 6-Piece Kit"
+      ],
+      "imageUrl": "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+      "galleryUrls": [
+        "/src/assets/images/feed_pregnancy_wellness_1794921207800.jpg",
+        "/src/assets/images/product_maternity_fashion_1794929084481.jpg"
+      ],
+      "specifications": {
+        "Contents": "6 Essential Postpartum Items",
+        "Cotton": "100% Organic"
+      },
+      "safetyInfoEn": "Herbal tea ingredients are caffeine-free; consult your doctor if you have medical conditions.",
+      "safetyInfoBn": "ক্যাফেইন-মুক্ত উপাদান; বিশেষ শারীরিক অবস্থায় চিকিৎসকের পরামর্শ নিন।",
+      "rating": 4.8,
+      "reviewsCount": 33,
+      "moderationStatus": "approved"
+    },
+    {
+      "id": "prod_10",
+      "sellerId": "seller_2",
+      "shopSlug": "shishucraft-organics",
+      "shopName": "ShishuCraft Organics (Demo Seller)",
+      "brandId": "brand_2",
+      "brandName": "ShishuCraft Organics",
+      "category": "baby_toys",
+      "subCategory": "Sensory Rattles",
+      "ageGroups": [
+        "newborn",
+        "infant",
+        "toddler"
+      ],
+      "collectionTags": [
+        "new_arrival"
+      ],
+      "titleEn": "Handcrafted Crochet & Beechwood Sensory Rattle Set",
+      "titleBn": "হাতে বোনা ক্রোশে ও কাঠের সেন্সরি র‍্যাটেল সেট",
+      "descriptionEn": "Soft cotton crochet animal rattle and smooth wooden teething ring designed for tiny hands.",
+      "descriptionBn": "ছোট্ট হাতের গ্রিপ এবং দাঁত ওঠার সময়ের আরামের জন্য নরম সুতি ও প্রাকৃতিক কাঠের র‍্যাটেল।",
+      "priceBdt": 620,
+      "compareAtBdt": 750,
+      "stock": 31,
+      "variants": [
+        "Mint Bunny",
+        "Peach Bear"
+      ],
+      "imageUrl": "/src/assets/images/guide_toddler_play_1794921210261.jpg",
+      "galleryUrls": [
+        "/src/assets/images/guide_toddler_play_1794921210261.jpg"
+      ],
+      "specifications": {
+        "Material": "Organic Cotton Yarn + Beechwood",
+        "Age": "0m – 18m"
+      },
+      "safetyInfoEn": "Double-stitched embroidered eyes with zero plastic choking hazards.",
+      "safetyInfoBn": "কোনো প্লাস্টিক বাটন বা ঝুঁকিপূর্ণ অংশ নেই।",
+      "rating": 4.9,
+      "reviewsCount": 28,
+      "moderationStatus": "approved"
+    },
+    {
+      "id": "prod_11",
+      "sellerId": "seller_2",
+      "shopSlug": "shishucraft-organics",
+      "shopName": "ShishuCraft Organics (Demo Seller)",
+      "brandId": "brand_2",
+      "brandName": "ShishuCraft Organics",
+      "category": "books",
+      "subCategory": "Bengali Rhymes",
+      "ageGroups": [
+        "infant",
+        "toddler",
+        "preschool",
+        "kids"
+      ],
+      "collectionTags": [
+        "trending",
+        "recommended"
+      ],
+      "titleEn": "Bilingual Bengali-English Soft Cloth & Board Book Bundle",
+      "titleBn": "বাংলা ও ইংরেজি ছড়া ও ছবির সফট বুক সেট (৩টি বই)",
+      "descriptionEn": "Washable crinkle cloth first words book plus two sturdy board books featuring Bengali rhymes and everyday animals.",
+      "descriptionBn": "ধোয়া যায় এমন সফট ক্লথ বই এবং বাংলা ছড়া ও প্রাণীদের ছবির ২টি শক্ত বোর্ড বই।",
+      "priceBdt": 790,
+      "compareAtBdt": 950,
+      "stock": 40,
+      "variants": [
+        "3-Book Bilingual Set"
+      ],
+      "imageUrl": "/src/assets/images/hero_mother_baby_campaign_1794929083239.jpg",
+      "galleryUrls": [
+        "/src/assets/images/hero_mother_baby_campaign_1794929083239.jpg",
+        "/src/assets/images/guide_toddler_play_1794921210261.jpg"
+      ],
+      "specifications": {
+        "Pages": "12–16 thick wipeable pages per book",
+        "Languages": "Bengali & English"
+      },
+      "safetyInfoEn": "Soy-based non-toxic ink with rounded board corners.",
+      "safetyInfoBn": "নন-টক্সিক কালি ও গোলাকার নিরাপদ কোণা।",
+      "rating": 5,
+      "reviewsCount": 41,
+      "moderationStatus": "approved"
+    },
+    {
+      "id": "prod_12",
+      "sellerId": "seller_1",
+      "shopSlug": "nurture-baby-bd",
+      "shopName": "Nurture Baby BD (Demo Seller)",
+      "brandId": "brand_4",
+      "brandName": "DeshiMom Wellness",
+      "category": "safety_products",
+      "subCategory": "Mosquito Nets",
+      "ageGroups": [
+        "newborn",
+        "infant",
+        "toddler",
+        "preschool"
+      ],
+      "collectionTags": [
+        "best_seller"
+      ],
+      "titleEn": "Foldable Crib Mosquito Tent & Silicone Corner Guard Pack",
+      "titleBn": "ফোল্ডেবল বেবি মশারি ও সিলিকন কর্নার সেফটি প্যাক",
+      "descriptionEn": "Pop-up breathable micro-mesh baby mosquito dome paired with 12 clear table-corner protectors.",
+      "descriptionBn": "নবজাতকের নিরাপদ ঘুমের জন্য ফোল্ডেবল মশারি ও টেবিলের কোণার ১২টি সিলিকন প্রোটেক্টর।",
+      "priceBdt": 980,
+      "compareAtBdt": 1200,
+      "stock": 27,
+      "variants": [
+        "Standard Dome + 12 Guards"
+      ],
+      "imageUrl": "/src/assets/images/feed_nursery_corner_1794921207506.jpg",
+      "galleryUrls": [
+        "/src/assets/images/feed_nursery_corner_1794921207506.jpg",
+        "/src/assets/images/product_baby_stroller_gear_1794929083647.jpg"
+      ],
+      "specifications": {
+        "Mesh": "Fine Mosquito-Proof Micro-Mesh",
+        "CornerGuards": "12 Food-Grade Silicone"
+      },
+      "safetyInfoEn": "Ensure adhesive corner guards are firmly pressed onto clean dry surfaces.",
+      "safetyInfoBn": "পরিষ্কার শুকনো পৃষ্ঠে কর্নার গার্ডগুলো শক্তভাবে লাগান।",
+      "rating": 4.8,
+      "reviewsCount": 19,
+      "moderationStatus": "approved"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-2512",
+      "buyerId": "guest_demo",
+      "buyerName": "আয়েশা আক্তার (Demo Mother)",
+      "phone": "01712345678",
+      "district": "Dhaka",
+      "upazila": "Dhanmondi",
+      "area": "Road 7, House 14",
+      "postalCode": "1205",
+      "paymentMethod": "bkash_sandbox",
+      "paymentStatus": "paid_sandbox",
+      "courierProvider": "steadfast_sandbox",
+      "discountBdt": 0,
+      "subtotalBdt": 1350,
+      "deliveryFeeBdt": 60,
+      "totalBdt": 1410,
+      "status": "processing",
+      "subOrders": [
+        {
+          "subOrderId": "sub_1794936414106_1",
+          "sellerId": "seller_1",
+          "shopName": "Nurture Baby BD (Demo Seller)",
+          "items": [
+            {
+              "productId": "prod_1",
+              "titleEn": "Breathable Organic Cotton Muslin Swaddle (Set of 3)",
+              "titleBn": "অর্গানিক কটন মসলিন সোয়াডল কাঁথা (৩ পিসের সেট)",
+              "variant": "Blush & Sage Set",
+              "quantity": 1,
+              "unitPriceBdt": 1350
+            }
+          ],
+          "subtotalBdt": 1350,
+          "commissionBdt": 108,
+          "sellerNetBdt": 1242,
+          "status": "processing",
+          "courierRef": "BD-SANDBOX-873381"
+        }
+      ],
+      "createdAt": "2026-11-17T17:26:54.106Z"
+    },
+    {
+      "id": "ORD-3853",
+      "buyerId": "guest_demo",
+      "buyerName": "Nusrat Jahan",
+      "phone": "01711223344",
+      "district": "Dhaka",
+      "upazila": "Gulshan",
+      "area": "House 14, Road 22",
+      "postalCode": "1212",
+      "paymentMethod": "bkash_sandbox",
+      "paymentStatus": "paid_sandbox",
+      "courierProvider": "steadfast_sandbox",
+      "couponCode": "WELCOME10",
+      "discountBdt": 135,
+      "subtotalBdt": 1350,
+      "deliveryFeeBdt": 60,
+      "totalBdt": 1275,
+      "status": "processing",
+      "subOrders": [
+        {
+          "subOrderId": "sub_1794929961619_1",
+          "sellerId": "seller_1",
+          "shopName": "Nurture Baby BD (Demo Seller)",
+          "items": [
+            {
+              "productId": "prod_1",
+              "titleEn": "Breathable Organic Cotton Muslin Swaddle (Set of 3)",
+              "titleBn": "অর্গানিক কটন মসলিন সোয়াডল কাঁথা (৩ পিসের সেট)",
+              "variant": "Blush & Sage Set",
+              "quantity": 1,
+              "unitPriceBdt": 1350
+            }
+          ],
+          "subtotalBdt": 1350,
+          "commissionBdt": 108,
+          "sellerNetBdt": 1242,
+          "status": "processing",
+          "courierRef": "BD-SANDBOX-349420"
+        }
+      ],
+      "createdAt": "2026-11-17T15:39:21.619Z"
+    },
+    {
+      "id": "ORD-3325",
+      "buyerId": "guest_demo",
+      "buyerName": "আয়েশা আক্তার (Demo Mother)",
+      "phone": "01712345678",
+      "district": "Dhaka",
+      "upazila": "Dhanmondi",
+      "area": "House 12, Road 4",
+      "postalCode": "1205",
+      "paymentMethod": "bkash_sandbox",
+      "paymentStatus": "paid_sandbox",
+      "subtotalBdt": 1350,
+      "deliveryFeeBdt": 60,
+      "totalBdt": 1410,
+      "status": "confirmed",
+      "subOrders": [
+        {
+          "subOrderId": "sub_1794922159508_1",
+          "sellerId": "seller_1",
+          "shopName": "Nurture Baby BD",
+          "items": [
+            {
+              "productId": "prod_1",
+              "titleEn": "Breathable Organic Cotton Muslin Swaddle (Set of 3)",
+              "titleBn": "অর্গানিক কটন মসলিন সোয়াডল কাঁথা (৩ পিসের সেট)",
+              "variant": "Blush & Sage Set",
+              "quantity": 1,
+              "unitPriceBdt": 1350
+            }
+          ],
+          "subtotalBdt": 1350,
+          "commissionBdt": 108,
+          "sellerNetBdt": 1242,
+          "status": "pending"
+        }
+      ],
+      "createdAt": "2026-11-17T13:29:19.509Z"
+    },
+    {
+      "id": "ORD-1041",
+      "buyerId": "guest_demo",
+      "buyerName": "আয়েশা আক্তার",
+      "phone": "01711223344",
+      "district": "Dhaka",
+      "upazila": "Dhanmondi",
+      "area": "Road 7, House 14",
+      "postalCode": "1205",
+      "paymentMethod": "bkash_sandbox",
+      "paymentStatus": "paid_sandbox",
+      "subtotalBdt": 1350,
+      "deliveryFeeBdt": 60,
+      "totalBdt": 1410,
+      "status": "confirmed",
+      "subOrders": [
+        {
+          "subOrderId": "sub_init_1",
+          "sellerId": "seller_1",
+          "shopName": "Nurture Baby BD",
+          "items": [
+            {
+              "productId": "prod_1",
+              "titleEn": "Breathable Organic Cotton Muslin Swaddle (Set of 3)",
+              "titleBn": "অর্গানিক কটন মসলিন সোয়াডল কাঁথা (৩ পিসের সেট)",
+              "variant": "Blush & Sage Set",
+              "quantity": 1,
+              "unitPriceBdt": 1350
+            }
+          ],
+          "subtotalBdt": 1350,
+          "commissionBdt": 108,
+          "sellerNetBdt": 1242,
+          "status": "confirmed",
+          "courierRef": "BD-DEMO-TRACK-1041"
+        }
+      ],
+      "createdAt": "2026-11-16T07:26:13.829Z"
+    }
+  ],
+  "supportTickets": [
+    {
+      "id": "TKT-101",
+      "userId": "guest_demo",
+      "userName": "আয়েশা আক্তার",
+      "orderId": "ORD-1041",
+      "type": "general",
+      "subject": "Delivery timing query for Dhanmondi",
+      "details": "Please ask the rider to call 15 minutes before reaching Road 7.",
+      "status": "in_review",
+      "createdAt": "2026-11-16T21:35:09.683Z"
+    }
+  ],
+  "newsletterSubscribers": [
+    {
+      "email": "ayesha.demo@example.bd",
+      "lang": "bn",
+      "createdAt": "2026-11-15T23:35:09.683Z"
+    }
+  ],
+  "settings": {
+    "defaultCommissionPct": 8,
+    "freeDeliveryThresholdBdt": 2500,
+    "dhakaDeliveryBdt": 60,
+    "outsideDhakaDeliveryBdt": 120
+  },
+  "conversations": [
+    {
+      "id": "conv_1",
+      "participantIds": [
+        "guest_demo",
+        "demo_mother_1"
+      ],
+      "participantName": "নুসরাত জাহান (Nusrat)",
+      "participantAvatar": "/src/assets/images/feed_mother_newborn_1794921207230.jpg",
+      "lastMessage": "আসসালামু আলাইকুম! মসলিন কাঁথাটি ডেলিভারি পেতে ২ দিন লেগেছিল।",
+      "unreadCount": 1,
+      "updatedAt": "2026-11-17T12:26:13.829Z",
+      "messages": [
+        {
+          "id": "m1",
+          "conversationId": "conv_1",
+          "senderId": "guest_demo",
+          "senderName": "আয়েশা আক্তার",
+          "text": "আপনার রিভিউ দেখে মসলিন সোয়াডল সেটটা অর্ডার করলাম। ঢাকাতে ডেলিভারি কেমন দ্রুত আসে?",
+          "sharedProductId": "prod_1",
+          "createdAt": "2026-11-17T11:26:13.829Z"
+        },
+        {
+          "id": "m2",
+          "conversationId": "conv_1",
+          "senderId": "demo_mother_1",
+          "senderName": "নুসরাত জাহান",
+          "text": "আসসালামু আলাইকুম! মসলিন কাঁথাটি ডেলিভারি পেতে ২ দিন লেগেছিল।",
+          "createdAt": "2026-11-17T12:26:13.829Z"
+        }
+      ]
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif_1794936414106",
+      "type": "order",
+      "titleEn": "Order ORD-2512 Placed",
+      "titleBn": "অর্ডার ORD-2512 সম্পন্ন হয়েছে",
+      "bodyEn": "Split across 1 seller shop(s). Affiliate credit: ৳0.",
+      "bodyBn": "1টি সেলার শপে অর্ডার বিভক্ত হয়েছে। মোট: ৳1410।",
+      "link": "/orders",
+      "isRead": false,
+      "createdAt": "2026-11-17T17:26:54.106Z"
+    },
+    {
+      "id": "notif_1794929961619",
+      "type": "order",
+      "titleEn": "Order ORD-3853 Placed",
+      "titleBn": "অর্ডার ORD-3853 সম্পন্ন হয়েছে",
+      "bodyEn": "Split across 1 seller shop(s). Affiliate credit: ৳0.",
+      "bodyBn": "1টি সেলার শপে অর্ডার বিভক্ত হয়েছে। মোট: ৳1275।",
+      "link": "/orders",
+      "isRead": false,
+      "createdAt": "2026-11-17T15:39:21.619Z"
+    },
+    {
+      "id": "notif_1794929692723",
+      "type": "appointment",
+      "titleEn": "Appointment Confirmed",
+      "titleBn": "অ্যাপয়েন্টমেন্ট নিশ্চিত হয়েছে",
+      "bodyEn": "Dr. Farhana Rahman (Demo Profile) booked on 2026-11-23 at 11:30 AM.",
+      "bodyBn": "ডা. ফারহানা রহমান (ডেমো প্রোফাইল)-এর সাথে 2026-11-23 তারিখ 11:30 AM-এ সিরিয়াল নিশ্চিত হয়েছে।",
+      "link": "/appointments",
+      "isRead": false,
+      "createdAt": "2026-11-17T15:34:52.723Z"
+    },
+    {
+      "id": "notif_1794922159509",
+      "type": "order",
+      "titleEn": "Order ORD-3325 Placed",
+      "titleBn": "অর্ডার ORD-3325 সম্পন্ন হয়েছে",
+      "bodyEn": "Split across 1 seller shop(s). Affiliate credit: ৳0.",
+      "bodyBn": "1টি সেলার শপে অর্ডার বিভক্ত হয়েছে। মোট: ৳1410।",
+      "link": "/orders",
+      "isRead": false,
+      "createdAt": "2026-11-17T13:29:19.509Z"
+    },
+    {
+      "id": "notif_1794922153435",
+      "type": "appointment",
+      "titleEn": "Appointment Confirmed",
+      "titleBn": "অ্যাপয়েন্টমেন্ট নিশ্চিত হয়েছে",
+      "bodyEn": "Dr. Farhana Rahman (Demo Profile) booked on 2026-11-23 at 10:00 AM.",
+      "bodyBn": "ডা. ফারহানা রহমান (ডেমো প্রোফাইল)-এর সাথে 2026-11-23 তারিখ 10:00 AM-এ সিরিয়াল নিশ্চিত হয়েছে।",
+      "link": "/appointments",
+      "isRead": false,
+      "createdAt": "2026-11-17T13:29:13.435Z"
+    },
+    {
+      "id": "notif_1",
+      "type": "appointment",
+      "titleEn": "Appointment Confirmed",
+      "titleBn": "অ্যাপয়েন্টমেন্ট নিশ্চিত হয়েছে",
+      "bodyEn": "Video consultation with Dr. Farhana Rahman scheduled for 2026-11-22 at 10:30 AM.",
+      "bodyBn": "ডা. ফারহানা রহমানের সাথে আপনার ভিডিও পরামর্শ ২২ নভেম্বর সকাল ১০:৩০-এ নির্ধারিত হয়েছে।",
+      "link": "/appointments",
+      "isRead": false,
+      "createdAt": "2026-11-17T10:26:13.829Z"
+    },
+    {
+      "id": "notif_2",
+      "type": "order",
+      "titleEn": "Order ORD-1041 Confirmed",
+      "titleBn": "অর্ডার ORD-1041 নিশ্চিত হয়েছে",
+      "bodyEn": "Nurture Baby BD is preparing your muslin swaddle order.",
+      "bodyBn": "নরচার বেবি বিডি আপনার মসলিন সোয়াডল অর্ডারটি প্রস্তুত করছে।",
+      "link": "/orders",
+      "isRead": false,
+      "createdAt": "2026-11-17T01:26:13.829Z"
+    },
+    {
+      "id": "notif_3",
+      "type": "like",
+      "titleEn": "New likes on your wellness note",
+      "titleBn": "আপনার পোস্টে নতুন লাইক এসেছে",
+      "bodyEn": "Nusrat and 14 other mothers liked your pregnancy wellness story.",
+      "bodyBn": "নুসরাত এবং আরও ১৪ জন মা আপনার পোস্টটি পছন্দ করেছেন।",
+      "link": "/profile",
+      "isRead": true,
+      "createdAt": "2026-11-16T21:26:13.829Z"
+    }
+  ],
+  "reports": [
+    {
+      "id": "rep_1",
+      "reporterId": "demo_mother_1",
+      "targetType": "question",
+      "targetId": "q2",
+      "reason": "Medical verification requested",
+      "details": "Please confirm if the advice is reviewed by a verified paediatrician.",
+      "status": "open",
+      "createdAt": "2026-11-17T08:26:13.829Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud_1794929965935",
+      "actorId": "guest_demo",
+      "action": "CATEGORY_CREATED",
+      "targetType": "category",
+      "targetId": "travel_gear",
+      "summary": "Admin added marketplace category \"Travel Gear\" (travel_gear).",
+      "createdAt": "2026-11-17T15:39:25.935Z"
+    },
+    {
+      "id": "aud_1794929964536",
+      "actorId": "guest_demo",
+      "action": "SELLER_APPLIED",
+      "targetType": "seller",
+      "targetId": "seller_1794929964536",
+      "summary": "New seller onboarding request from \"Sylhet Baby Boutique\" (Dhaka).",
+      "createdAt": "2026-11-17T15:39:24.536Z"
+    },
+    {
+      "id": "aud_1",
+      "actorId": "system",
+      "action": "SEED_INIT",
+      "targetType": "platform",
+      "targetId": "v1",
+      "summary": "Initialized Mother & Child Bangladesh MVP dataset.",
+      "createdAt": "2026-11-16T13:26:13.829Z"
+    }
+  ]
+}

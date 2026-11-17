@@ -1,0 +1,379 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() >= 1 && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isVerifiedUser() {
+      return isSignedIn() && request.auth.token.email_verified == true;
+    }
+
+    function isAdmin() {
+      return isVerifiedUser() && (
+        exists(/databases/$(database)/documents/admins/$(request.auth.uid)) ||
+        request.auth.token.email == 'hasantanjil.official@gmail.com'
+      );
+    }
+
+    function isValidPublicUser(data) {
+      return data.keys().hasAll(['uid', 'displayName', 'username', 'isPrivate', 'followersCount', 'followingCount', 'likesCount', 'createdAt', 'updatedAt'])
+        && data.keys().hasOnly(['uid', 'displayName', 'username', 'bio', 'avatarUrl', 'coverUrl', 'creatorCategory', 'isPrivate', 'followersCount', 'followingCount', 'likesCount', 'createdAt', 'updatedAt'])
+        && isValidId(data.uid)
+        && data.displayName is string && data.displayName.size() >= 1 && data.displayName.size() <= 80
+        && data.username is string && data.username.size() >= 2 && data.username.size() <= 40 && data.username.matches('^[a-zA-Z0-9_\\.]+$')
+        && (!('bio' in data) || (data.bio is string && data.bio.size() <= 300))
+        && (!('avatarUrl' in data) || (data.avatarUrl is string && data.avatarUrl.size() <= 500))
+        && (!('coverUrl' in data) || (data.coverUrl is string && data.coverUrl.size() <= 500))
+        && (!('creatorCategory' in data) || (data.creatorCategory is string && data.creatorCategory.size() <= 60))
+        && data.isPrivate is bool
+        && data.followersCount is number && data.followersCount >= 0
+        && data.followingCount is number && data.followingCount >= 0
+        && data.likesCount is number && data.likesCount >= 0
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidPrivateUserInfo(data) {
+      return data.keys().hasAll(['uid', 'preferredLang', 'updatedAt'])
+        && data.keys().hasOnly(['uid', 'email', 'phone', 'district', 'upazila', 'area', 'postalCode', 'preferredLang', 'updatedAt'])
+        && isValidId(data.uid)
+        && (!('email' in data) || (data.email is string && data.email.size() <= 160))
+        && (!('phone' in data) || (data.phone is string && data.phone.size() <= 30))
+        && (!('district' in data) || (data.district is string && data.district.size() <= 80))
+        && (!('upazila' in data) || (data.upazila is string && data.upazila.size() <= 80))
+        && (!('area' in data) || (data.area is string && data.area.size() <= 120))
+        && (!('postalCode' in data) || (data.postalCode is string && data.postalCode.size() <= 20))
+        && data.preferredLang in ['bn', 'en']
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidPost(data) {
+      return data.keys().hasAll(['authorId', 'authorName', 'type', 'category', 'title', 'caption', 'aspectRatio', 'isVideo', 'isSponsored', 'moderationStatus', 'likesCount', 'commentsCount', 'savesCount', 'createdAt', 'updatedAt'])
+        && data.keys().hasOnly(['authorId', 'authorName', 'authorAvatar', 'type', 'category', 'title', 'caption', 'mediaUrl', 'aspectRatio', 'isVideo', 'videoDurationSec', 'isSponsored', 'moderationStatus', 'likesCount', 'commentsCount', 'savesCount', 'createdAt', 'updatedAt'])
+        && isValidId(data.authorId)
+        && data.authorName is string && data.authorName.size() >= 1 && data.authorName.size() <= 80
+        && (!('authorAvatar' in data) || (data.authorAvatar is string && data.authorAvatar.size() <= 500))
+        && data.type in ['photo', 'carousel', 'short_video', 'long_video', 'text', 'question', 'poll', 'review']
+        && data.category is string && data.category.size() >= 1 && data.category.size() <= 60
+        && data.title is string && data.title.size() >= 1 && data.title.size() <= 160
+        && data.caption is string && data.caption.size() >= 1 && data.caption.size() <= 2000
+        && (!('mediaUrl' in data) || (data.mediaUrl is string && data.mediaUrl.size() <= 500))
+        && data.aspectRatio in ['3:4', '4:3', '1:1', '9:16', '16:9']
+        && data.isVideo is bool
+        && (!('videoDurationSec' in data) || (data.videoDurationSec is number && data.videoDurationSec >= 0 && data.videoDurationSec <= 180))
+        && data.isSponsored is bool
+        && data.moderationStatus in ['approved', 'pending', 'removed']
+        && data.likesCount is number && data.likesCount >= 0
+        && data.commentsCount is number && data.commentsCount >= 0
+        && data.savesCount is number && data.savesCount >= 0
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidComment(data) {
+      return data.keys().hasAll(['postId', 'authorId', 'authorName', 'content', 'createdAt'])
+        && data.keys().hasOnly(['postId', 'authorId', 'authorName', 'content', 'createdAt'])
+        && isValidId(data.postId)
+        && isValidId(data.authorId)
+        && data.authorName is string && data.authorName.size() >= 1 && data.authorName.size() <= 80
+        && data.content is string && data.content.size() >= 1 && data.content.size() <= 1000
+        && data.createdAt is timestamp;
+    }
+
+    function isValidQuestion(data) {
+      return data.keys().hasAll(['authorId', 'authorDisplayName', 'isAnonymous', 'category', 'title', 'body', 'answersCount', 'moderationStatus', 'createdAt'])
+        && data.keys().hasOnly(['authorId', 'authorDisplayName', 'isAnonymous', 'category', 'title', 'body', 'answersCount', 'moderationStatus', 'createdAt'])
+        && isValidId(data.authorId)
+        && data.authorDisplayName is string && data.authorDisplayName.size() >= 1 && data.authorDisplayName.size() <= 80
+        && data.isAnonymous is bool
+        && data.category is string && data.category.size() >= 1 && data.category.size() <= 60
+        && data.title is string && data.title.size() >= 1 && data.title.size() <= 200
+        && data.body is string && data.body.size() >= 1 && data.body.size() <= 3000
+        && data.answersCount is number && data.answersCount >= 0
+        && data.moderationStatus in ['approved', 'pending', 'removed']
+        && data.createdAt is timestamp;
+    }
+
+    function isValidAppointment(data) {
+      return data.keys().hasAll(['patientId', 'doctorId', 'date', 'slot', 'consultationType', 'feeBdt', 'paymentStatus', 'status', 'createdAt', 'updatedAt'])
+        && data.keys().hasOnly(['patientId', 'doctorId', 'date', 'slot', 'consultationType', 'feeBdt', 'paymentStatus', 'status', 'createdAt', 'updatedAt'])
+        && isValidId(data.patientId)
+        && isValidId(data.doctorId)
+        && data.date is string && data.date.size() == 10 && data.date.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+        && data.slot is string && data.slot.size() >= 3 && data.slot.size() <= 30
+        && data.consultationType in ['video', 'clinic']
+        && data.feeBdt is number && data.feeBdt >= 0
+        && data.paymentStatus in ['pending', 'paid_sandbox', 'refunded']
+        && data.status in ['pending', 'confirmed', 'completed', 'cancelled']
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidBabyProfile(data) {
+      return data.keys().hasAll(['parentId', 'name', 'dob', 'gender', 'createdAt'])
+        && data.keys().hasOnly(['parentId', 'name', 'dob', 'gender', 'createdAt'])
+        && isValidId(data.parentId)
+        && data.name is string && data.name.size() >= 1 && data.name.size() <= 80
+        && data.dob is string && data.dob.size() == 10 && data.dob.matches('^[0-9]{4}-[0-9]{2}-[0-9]{2}$')
+        && data.gender in ['girl', 'boy', 'unspecified']
+        && data.createdAt is timestamp;
+    }
+
+    function isValidGrowthLog(data) {
+      return data.keys().hasAll(['babyId', 'parentId', 'recordedDate', 'weightKg', 'heightCm', 'createdAt'])
+        && data.keys().hasOnly(['babyId', 'parentId', 'recordedDate', 'weightKg', 'heightCm', 'sleepHours', 'createdAt'])
+        && isValidId(data.babyId)
+        && isValidId(data.parentId)
+        && data.recordedDate is string && data.recordedDate.size() == 10
+        && data.weightKg is number && data.weightKg > 0 && data.weightKg <= 60
+        && data.heightCm is number && data.heightCm > 20 && data.heightCm <= 180
+        && (!('sleepHours' in data) || (data.sleepHours is number && data.sleepHours >= 0 && data.sleepHours <= 24))
+        && data.createdAt is timestamp;
+    }
+
+    function isValidOrder(data) {
+      return data.keys().hasAll(['buyerId', 'district', 'upazila', 'area', 'postalCode', 'paymentMethod', 'paymentStatus', 'subtotalBdt', 'deliveryFeeBdt', 'totalBdt', 'status', 'createdAt', 'updatedAt'])
+        && data.keys().hasOnly(['buyerId', 'district', 'upazila', 'area', 'postalCode', 'paymentMethod', 'paymentStatus', 'subtotalBdt', 'deliveryFeeBdt', 'totalBdt', 'status', 'createdAt', 'updatedAt'])
+        && isValidId(data.buyerId)
+        && data.district is string && data.district.size() >= 1 && data.district.size() <= 80
+        && data.upazila is string && data.upazila.size() >= 1 && data.upazila.size() <= 80
+        && data.area is string && data.area.size() >= 1 && data.area.size() <= 120
+        && data.postalCode is string && data.postalCode.size() >= 2 && data.postalCode.size() <= 20
+        && data.paymentMethod in ['bkash_sandbox', 'nagad_sandbox', 'card_sandbox', 'cod']
+        && data.paymentStatus in ['unpaid', 'paid_sandbox', 'refunded']
+        && data.subtotalBdt is number && data.subtotalBdt >= 0
+        && data.deliveryFeeBdt is number && data.deliveryFeeBdt >= 0
+        && data.totalBdt is number && data.totalBdt >= 0
+        && data.status in ['pending', 'confirmed', 'shipped', 'delivered', 'cancelled']
+        && data.createdAt is timestamp
+        && data.updatedAt is timestamp;
+    }
+
+    function isValidReport(data) {
+      return data.keys().hasAll(['reporterId', 'targetType', 'targetId', 'reason', 'status', 'createdAt'])
+        && data.keys().hasOnly(['reporterId', 'targetType', 'targetId', 'reason', 'status', 'createdAt'])
+        && isValidId(data.reporterId)
+        && data.targetType in ['post', 'question', 'product', 'user']
+        && isValidId(data.targetId)
+        && data.reason is string && data.reason.size() >= 1 && data.reason.size() <= 120
+        && data.status in ['open', 'reviewed', 'resolved']
+        && data.createdAt is timestamp;
+    }
+
+    match /admins/{adminId} {
+      allow get: if isValidId(adminId) && isVerifiedUser() && request.auth.uid == adminId;
+      allow list: if false;
+      allow write: if false;
+    }
+
+    match /test/{docId} {
+      allow get: if docId == 'connection';
+      allow list, write: if false;
+    }
+
+    match /users/{userId} {
+      allow get: if isValidId(userId) && (existing().isPrivate == false || (isVerifiedUser() && request.auth.uid == userId) || isAdmin());
+      allow list: if resource.data.isPrivate == false || isAdmin();
+      allow create: if isValidId(userId) && isVerifiedUser() && request.auth.uid == userId
+        && isValidPublicUser(incoming())
+        && incoming().uid == request.auth.uid
+        && incoming().followersCount == 0
+        && incoming().followingCount == 0
+        && incoming().likesCount == 0
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+      allow update: if isValidId(userId) && isVerifiedUser() && isValidPublicUser(incoming()) && (
+        isAdmin() || (
+          request.auth.uid == userId
+          && incoming().uid == existing().uid
+          && incoming().createdAt == existing().createdAt
+          && incoming().updatedAt == request.time
+          && incoming().diff(existing()).affectedKeys().hasOnly(['displayName', 'username', 'bio', 'avatarUrl', 'coverUrl', 'creatorCategory', 'isPrivate', 'updatedAt'])
+        )
+      );
+      allow delete: if isValidId(userId) && (isAdmin() || (isVerifiedUser() && request.auth.uid == userId));
+
+      match /private/{docId} {
+        allow get: if isValidId(userId) && isValidId(docId) && ((isVerifiedUser() && request.auth.uid == userId) || isAdmin());
+        allow list: if (isVerifiedUser() && request.auth.uid == userId) || isAdmin();
+        allow create: if isValidId(userId) && isValidId(docId) && isVerifiedUser() && request.auth.uid == userId
+          && isValidPrivateUserInfo(incoming())
+          && incoming().uid == request.auth.uid
+          && incoming().updatedAt == request.time;
+        allow update: if isValidId(userId) && isValidId(docId) && isVerifiedUser() && request.auth.uid == userId
+          && isValidPrivateUserInfo(incoming())
+          && incoming().uid == existing().uid
+          && incoming().updatedAt == request.time
+          && incoming().diff(existing()).affectedKeys().hasOnly(['email', 'phone', 'district', 'upazila', 'area', 'postalCode', 'preferredLang', 'updatedAt']);
+        allow delete: if isValidId(userId) && isValidId(docId) && ((isVerifiedUser() && request.auth.uid == userId) || isAdmin());
+      }
+    }
+
+    match /posts/{postId} {
+      allow get: if isValidId(postId) && (existing().moderationStatus == 'approved' || isAdmin() || (isVerifiedUser() && existing().authorId == request.auth.uid));
+      allow list: if resource.data.moderationStatus == 'approved' || isAdmin();
+      allow create: if isValidId(postId) && isVerifiedUser()
+        && isValidPost(incoming())
+        && incoming().authorId == request.auth.uid
+        && incoming().moderationStatus == 'approved'
+        && incoming().likesCount == 0
+        && incoming().commentsCount == 0
+        && incoming().savesCount == 0
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+      allow update: if isValidId(postId) && isVerifiedUser() && isValidPost(incoming()) && (
+        isAdmin() || (
+          request.auth.uid == existing().authorId
+          && incoming().authorId == existing().authorId
+          && incoming().createdAt == existing().createdAt
+          && incoming().updatedAt == request.time
+          && incoming().diff(existing()).affectedKeys().hasOnly(['title', 'caption', 'category', 'updatedAt'])
+        )
+      );
+      allow delete: if isValidId(postId) && (isAdmin() || (isVerifiedUser() && existing().authorId == request.auth.uid));
+
+      match /comments/{commentId} {
+        allow get: if isValidId(postId) && isValidId(commentId);
+        allow list: if true;
+        allow create: if isValidId(postId) && isValidId(commentId) && isVerifiedUser()
+          && isValidComment(incoming())
+          && incoming().postId == postId
+          && incoming().authorId == request.auth.uid
+          && incoming().createdAt == request.time
+          && exists(/databases/$(database)/documents/posts/$(postId));
+        allow update: if false;
+        allow delete: if isValidId(postId) && isValidId(commentId) && (isAdmin() || (isVerifiedUser() && existing().authorId == request.auth.uid));
+      }
+    }
+
+    match /questions/{questionId} {
+      allow get: if isValidId(questionId) && (existing().moderationStatus == 'approved' || isAdmin());
+      allow list: if resource.data.moderationStatus == 'approved' || isAdmin();
+      allow create: if isValidId(questionId) && isVerifiedUser()
+        && isValidQuestion(incoming())
+        && incoming().authorId == request.auth.uid
+        && incoming().moderationStatus == 'approved'
+        && incoming().answersCount == 0
+        && incoming().createdAt == request.time;
+      allow update: if isValidId(questionId) && isVerifiedUser() && isValidQuestion(incoming()) && (
+        isAdmin() || (
+          request.auth.uid == existing().authorId
+          && incoming().authorId == existing().authorId
+          && incoming().createdAt == existing().createdAt
+          && incoming().diff(existing()).affectedKeys().hasOnly(['title', 'body', 'category'])
+        )
+      );
+      allow delete: if isValidId(questionId) && (isAdmin() || (isVerifiedUser() && existing().authorId == request.auth.uid));
+    }
+
+    match /appointments/{appointmentId} {
+      allow get: if isValidId(appointmentId) && isVerifiedUser() && (existing().patientId == request.auth.uid || isAdmin());
+      allow list: if isVerifiedUser() && (resource.data.patientId == request.auth.uid || isAdmin());
+      allow create: if isValidId(appointmentId) && isVerifiedUser()
+        && isValidAppointment(incoming())
+        && incoming().patientId == request.auth.uid
+        && incoming().status in ['pending', 'confirmed']
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+      allow update: if isValidId(appointmentId) && isVerifiedUser() && isValidAppointment(incoming()) && (
+        isAdmin() || (
+          existing().patientId == request.auth.uid
+          && !(existing().status in ['completed', 'cancelled'])
+          && incoming().patientId == existing().patientId
+          && incoming().doctorId == existing().doctorId
+          && incoming().createdAt == existing().createdAt
+          && incoming().updatedAt == request.time
+          && incoming().status == 'cancelled'
+          && incoming().diff(existing()).affectedKeys().hasOnly(['status', 'updatedAt'])
+        )
+      );
+      allow delete: if isValidId(appointmentId) && isAdmin();
+    }
+
+    match /babies/{babyId} {
+      allow get: if isValidId(babyId) && isVerifiedUser() && (existing().parentId == request.auth.uid || isAdmin());
+      allow list: if isVerifiedUser() && (resource.data.parentId == request.auth.uid || isAdmin());
+      allow create: if isValidId(babyId) && isVerifiedUser()
+        && isValidBabyProfile(incoming())
+        && incoming().parentId == request.auth.uid
+        && incoming().createdAt == request.time;
+      allow update: if isValidId(babyId) && isVerifiedUser() && isValidBabyProfile(incoming()) && (
+        isAdmin() || (
+          existing().parentId == request.auth.uid
+          && incoming().parentId == existing().parentId
+          && incoming().createdAt == existing().createdAt
+          && incoming().diff(existing()).affectedKeys().hasOnly(['name', 'dob', 'gender'])
+        )
+      );
+      allow delete: if isValidId(babyId) && isVerifiedUser() && (existing().parentId == request.auth.uid || isAdmin());
+
+      match /growth_logs/{logId} {
+        allow get: if isValidId(babyId) && isValidId(logId) && isVerifiedUser()
+          && (get(/databases/$(database)/documents/babies/$(babyId)).data.parentId == request.auth.uid || isAdmin());
+        allow list: if isVerifiedUser() && (resource.data.parentId == request.auth.uid || isAdmin());
+        allow create: if isValidId(babyId) && isValidId(logId) && isVerifiedUser()
+          && isValidGrowthLog(incoming())
+          && incoming().babyId == babyId
+          && incoming().parentId == request.auth.uid
+          && incoming().createdAt == request.time
+          && get(/databases/$(database)/documents/babies/$(babyId)).data.parentId == request.auth.uid;
+        allow update: if false;
+        allow delete: if isValidId(babyId) && isValidId(logId) && isVerifiedUser()
+          && (existing().parentId == request.auth.uid || isAdmin());
+      }
+    }
+
+    match /orders/{orderId} {
+      allow get: if isValidId(orderId) && isVerifiedUser() && (existing().buyerId == request.auth.uid || isAdmin());
+      allow list: if isVerifiedUser() && (resource.data.buyerId == request.auth.uid || isAdmin());
+      allow create: if isValidId(orderId) && isVerifiedUser()
+        && isValidOrder(incoming())
+        && incoming().buyerId == request.auth.uid
+        && incoming().status == 'pending'
+        && (incoming().paymentMethod != 'cod' || incoming().paymentStatus == 'unpaid')
+        && incoming().createdAt == request.time
+        && incoming().updatedAt == request.time;
+      allow update: if isValidId(orderId) && isVerifiedUser() && isValidOrder(incoming()) && (
+        isAdmin() || (
+          existing().buyerId == request.auth.uid
+          && !(existing().status in ['delivered', 'cancelled'])
+          && incoming().buyerId == existing().buyerId
+          && incoming().createdAt == existing().createdAt
+          && incoming().updatedAt == request.time
+          && incoming().status == 'cancelled'
+          && incoming().diff(existing()).affectedKeys().hasOnly(['status', 'updatedAt'])
+        )
+      );
+      allow delete: if isValidId(orderId) && isAdmin();
+    }
+
+    match /reports/{reportId} {
+      allow get: if isValidId(reportId) && isAdmin();
+      allow list: if isAdmin();
+      allow create: if isValidId(reportId) && isVerifiedUser()
+        && isValidReport(incoming())
+        && incoming().reporterId == request.auth.uid
+        && incoming().status == 'open'
+        && incoming().createdAt == request.time;
+      allow update: if isValidId(reportId) && isAdmin() && isValidReport(incoming());
+      allow delete: if isValidId(reportId) && isAdmin();
+    }
+  }
+}
