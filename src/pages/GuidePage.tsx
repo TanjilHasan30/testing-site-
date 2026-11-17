@@ -36,7 +36,8 @@ export const GuidePage: React.FC<{ initialCategory?: string }> = ({ initialCateg
   const [savedIds, setSavedIds] = useState<string[]>(() => {
     try {
       const raw = localStorage.getItem(SAVED_GUIDES_KEY);
-      return raw ? (JSON.parse(raw) as string[]) : [];
+      const parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? (parsed as string[]) : [];
     } catch {
       return [];
     }
@@ -53,7 +54,9 @@ export const GuidePage: React.FC<{ initialCategory?: string }> = ({ initialCateg
   }, [initialCategory]);
 
   useEffect(() => {
-    apiFetch<GuideArticle[]>('/api/v1/guides').then(setArticles).catch(() => {});
+    apiFetch<GuideArticle[]>('/api/v1/guides')
+      .then((items) => setArticles(Array.isArray(items) ? items : []))
+      .catch(() => {});
   }, [apiFetch]);
 
   const handleToggleBookmark = (guideId: string) => {

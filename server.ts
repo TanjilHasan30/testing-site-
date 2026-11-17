@@ -1491,6 +1491,10 @@ async function startServer() {
     }
   });
 
+  api.use((_req, res) => {
+    res.status(404).json({ error: 'API route not found.' });
+  });
+
   app.use('/api/v1', api);
 
   // Vite dev middleware or static dist fallback

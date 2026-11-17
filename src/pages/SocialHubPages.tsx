@@ -400,10 +400,12 @@ export const CreatorsAndProfilePage: React.FC<{ mode?: 'directory' | 'profile' |
         .catch(() => {
           apiFetch<{ user: UserProfile & { isFollowing?: boolean }; posts: EnrichedPost[] }>(
             '/api/v1/creators/ayesha_mom'
-          ).then(setProfileData);
+          )
+            .then(setProfileData)
+            .catch(() => {});
         });
       apiFetch<{ products: ProductItem[] }>('/api/v1/products')
-        .then((res) => setProducts(res.products))
+        .then((res) => setProducts(Array.isArray(res?.products) ? res.products : []))
         .catch(() => {});
     }
   }, [mode, username, viewerId, apiFetch]);
@@ -546,18 +548,22 @@ export const CreatorsAndProfilePage: React.FC<{ mode?: 'directory' | 'profile' |
 
   if (!profileData) return <div className="p-10 text-center text-sm text-[#777486]">{t(lang, 'loading')}</div>;
 
-  const { user, posts } = profileData;
-  const isDoctor = user.roles.includes('doctor');
-  const isVerifiedBadge = isDoctor || user.roles.includes('creator');
+  const { user, posts: rawPosts } = profileData;
+  const posts = Array.isArray(rawPosts) ? rawPosts : [];
+  const safeProducts = Array.isArray(products) ? products : [];
+  const isDoctor = Array.isArray(user.roles) && user.roles.includes('doctor');
+  const isVerifiedBadge = isDoctor || (Array.isArray(user.roles) && user.roles.includes('creator'));
   const storyPosts = posts.filter((p) => !p.isVideo && p.type !== 'short_video' && p.type !== 'long_video');
   const videoPosts = posts.filter((p) => p.isVideo || p.type === 'short_video' || p.type === 'long_video');
 
   // Curated product collection: tagged products in creator's posts + featured catalog items
-  const taggedProductIds = Array.from(new Set(posts.flatMap((p) => p.taggedProductIds)));
+  const taggedProductIds = Array.from(
+    new Set(posts.flatMap((p) => (Array.isArray(p.taggedProductIds) ? p.taggedProductIds : [])))
+  );
   const collectionProducts =
     taggedProductIds.length > 0
-      ? products.filter((prod) => taggedProductIds.includes(prod.id))
-      : products.slice(0, 4);
+      ? safeProducts.filter((prod) => taggedProductIds.includes(prod.id))
+      : safeProducts.slice(0, 4);
 
   return (
     <div className="max-w-6xl mx-auto px-4 md:px-6 py-6 space-y-6">
@@ -925,11 +931,11 @@ export const WishlistPage: React.FC = () => {
 
   useEffect(() => {
     apiFetch<{ products: ProductItem[] }>('/api/v1/products')
-      .then((res) => setProducts(res.products))
+      .then((res) => setProducts(Array.isArray(res?.products) ? res.products : []))
       .catch(() => {});
   }, [apiFetch]);
 
-  const savedProducts = products.filter((p) => wishlistIds.includes(p.id));
+  const savedProducts = (Array.isArray(products) ? products : []).filter((p) => wishlistIds.includes(p.id));
 
   return (
     <div className="max-w-5xl mx-auto px-4 md:px-6 py-6 space-y-6">
@@ -1068,7 +1074,7 @@ export const SavedCollectionsPage: React.FC = () => {
 
   useEffect(() => {
     apiFetch<{ items: EnrichedPost[] }>('/api/v1/feed?tab=discover&limit=24')
-      .then((res) => setSavedPosts(res.items.filter((p) => p.isSaved)))
+      .then((res) => setSavedPosts((Array.isArray(res?.items) ? res.items : []).filter((p) => p.isSaved)))
       .catch(() => {})
       .finally(() => setLoading(false));
   }, [apiFetch]);

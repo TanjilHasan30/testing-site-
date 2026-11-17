@@ -150,17 +150,18 @@ export const HomePage: React.FC = () => {
         apiFetch<GuideArticle[]>('/api/v1/guides'),
         apiFetch<BabyProfile[]>('/api/v1/babies'),
       ]);
-      setProducts(prodRes.products);
-      setSellers(prodRes.sellers);
-      setBrands(prodRes.brands);
-      setCategories(prodRes.categories);
-      setCampaigns(campRes.campaigns);
-      setPosts(feedRes.items);
-      setVideos(vidRes.items);
-      setDoctors(docRes);
-      setGuides(guideRes);
-      setBabies(babyRes);
-      if (babyRes[0]) setSelectedBabyId(babyRes[0].id);
+      setProducts(Array.isArray(prodRes?.products) ? prodRes.products : []);
+      setSellers(Array.isArray(prodRes?.sellers) ? prodRes.sellers : []);
+      setBrands(Array.isArray(prodRes?.brands) ? prodRes.brands : []);
+      setCategories(Array.isArray(prodRes?.categories) ? prodRes.categories : []);
+      setCampaigns(Array.isArray(campRes?.campaigns) ? campRes.campaigns : []);
+      setPosts(Array.isArray(feedRes?.items) ? feedRes.items : []);
+      setVideos(Array.isArray(vidRes?.items) ? vidRes.items : []);
+      setDoctors(Array.isArray(docRes) ? docRes : []);
+      setGuides(Array.isArray(guideRes) ? guideRes : []);
+      const safeBabies = Array.isArray(babyRes) ? babyRes : [];
+      setBabies(safeBabies);
+      if (safeBabies[0]) setSelectedBabyId(safeBabies[0].id);
     } catch {
       // Partial failures fall back smoothly
     }

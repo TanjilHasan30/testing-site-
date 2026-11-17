@@ -49,7 +49,8 @@ export const CommunityPage: React.FC = () => {
   const [followedTopics, setFollowedTopics] = useState<string[]>(() => {
     try {
       const saved = localStorage.getItem(FOLLOWED_TOPICS_KEY);
-      return saved ? (JSON.parse(saved) as string[]) : ['pregnancy', 'newborn'];
+      const parsed = saved ? JSON.parse(saved) : ['pregnancy', 'newborn'];
+      return Array.isArray(parsed) ? (parsed as string[]) : ['pregnancy', 'newborn'];
     } catch {
       return ['pregnancy', 'newborn'];
     }
@@ -72,9 +73,11 @@ export const CommunityPage: React.FC = () => {
         apiFetch<{ questions: QuestionItem[]; polls: PollItem[] }>('/api/v1/questions'),
         apiFetch<{ items: EnrichedPost[] }>(`/api/v1/feed?tab=discover&lang=${lang}&limit=20`),
       ]);
-      setQuestions(qaRes.questions);
-      setPolls(qaRes.polls);
-      setPosts(feedRes.items);
+      setQuestions(Array.isArray(qaRes?.questions) ? qaRes.questions : []);
+      setPolls(Array.isArray(qaRes?.polls) ? qaRes.polls : []);
+      setPosts(Array.isArray(feedRes?.items) ? feedRes.items : []);
+    } catch {
+      // Keep default empty collections on transient API failure
     } finally {
       setLoading(false);
     }

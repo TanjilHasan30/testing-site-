@@ -50,7 +50,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [cart, setCart] = useState<CartItem[]>(() => {
     try {
       const raw = localStorage.getItem('mc_cart');
-      return raw ? (JSON.parse(raw) as CartItem[]) : [];
+      const parsed = raw ? JSON.parse(raw) : [];
+      return Array.isArray(parsed) ? (parsed as CartItem[]) : [];
     } catch {
       return [];
     }
@@ -58,7 +59,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const [wishlistIds, setWishlistIds] = useState<string[]>(() => {
     try {
       const raw = localStorage.getItem('mc_wishlist');
-      return raw ? (JSON.parse(raw) as string[]) : ['prod_1'];
+      const parsed = raw ? JSON.parse(raw) : ['prod_1'];
+      return Array.isArray(parsed) ? (parsed as string[]) : ['prod_1'];
     } catch {
       return ['prod_1'];
     }
@@ -155,11 +157,28 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         headers.set('Content-Type', 'application/json');
       }
       const res = await fetch(url, { ...init, headers });
-      const data = await res.json().catch(() => ({}));
-      if (!res.ok) {
-        throw new Error(data.error || `Request failed (${res.status})`);
+      const contentType = res.headers.get('content-type') || '';
+      const rawText = await res.text();
+      let data: unknown = null;
+      if (rawText) {
+        try {
+          data = JSON.parse(rawText);
+        } catch {
+          if (!res.ok) {
+            throw new Error(`Request failed (${res.status})`);
+          }
+          throw new Error(
+            contentType.includes('application/json')
+              ? `Invalid JSON response from ${url}`
+              : `Unexpected non-JSON response (${contentType || 'unknown'}) from ${url}`
+          );
+        }
       }
-      return data as T;
+      if (!res.ok) {
+        const errObj = data && typeof data === 'object' ? (data as { error?: string }) : {};
+        throw new Error(errObj.error || `Request failed (${res.status})`);
+      }
+      return (data ?? {}) as T;
     },
     [viewerId]
   );
@@ -167,7 +186,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   const refreshNotifications = useCallback(async () => {
     try {
       const items = await apiFetch<NotificationItem[]>('/api/v1/notifications');
-      setNotifications(items);
+      setNotifications(Array.isArray(items) ? items : []);
     } catch {
       // Ignore transient load failures
     }
@@ -179,7 +198,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const markAllNotificationsRead = useCallback(async () => {
     await apiFetch('/api/v1/notifications/read-all', { method: 'POST' });
-    setNotifications((prev) => prev.map((n) => ({ ...n, isRead: true })));
+    setNotifications((prev) => (Array.isArray(prev) ? prev : []).map((n) => ({ ...n, isRead: true })));
   }, [apiFetch]);
 
   const signInWithGoogle = useCallback(async () => {
@@ -215,7 +234,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 
   const updateCartQty = useCallback((productId: string, variant: string, delta: number) => {
     setCart((prev) =>
-      prev
+      (Array.isArray(prev) ? prev : [])
         .map((c) =>
           c.productId === productId && c.variant === variant ? { ...c, quantity: c.quantity + delta } : c
         )
@@ -224,18 +243,24 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   }, []);
 
   const removeFromCart = useCallback((productId: string, variant: string) => {
-    setCart((prev) => prev.filter((c) => !(c.productId === productId && c.variant === variant)));
+    setCart((prev) =>
+      (Array.isArray(prev) ? prev : []).filter((c) => !(c.productId === productId && c.variant === variant))
+    );
   }, []);
 
   const clearCart = useCallback(() => setCart([]), []);
 
   const toggleWishlist = useCallback((productId: string) => {
-    setWishlistIds((prev) =>
-      prev.includes(productId) ? prev.filter((id) => id !== productId) : [...prev, productId]
-    );
+    setWishlistIds((prev) => {
+      const list = Array.isArray(prev) ? prev : [];
+      return list.includes(productId) ? list.filter((id) => id !== productId) : [...list, productId];
+    });
   }, []);
 
-  const unreadNotifications = notifications.filter((n) => !n.isRead).length;
+  const safeCart = Array.isArray(cart) ? cart : [];
+  const safeWishlistIds = Array.isArray(wishlistIds) ? wishlistIds : [];
+  const safeNotifications = Array.isArray(notifications) ? notifications : [];
+  const unreadNotifications = safeNotifications.filter((n) => n && !n.isRead).length;
 
   return (
     <AppContext.Provider
@@ -250,14 +275,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         activeRoles,
         signInWithGoogle,
         signOutUser,
-        cart,
+        cart: safeCart,
         addToCart,
         updateCartQty,
         removeFromCart,
         clearCart,
-        wishlistIds,
+        wishlistIds: safeWishlistIds,
         toggleWishlist,
-        notifications,
+        notifications: safeNotifications,
         unreadNotifications,
         refreshNotifications,
         markAllNotificationsRead,

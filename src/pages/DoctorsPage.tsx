@@ -42,17 +42,24 @@ export const DoctorsPage: React.FC = () => {
   const [asking, setAsking] = useState(false);
 
   const loadDoctors = useCallback(async () => {
-    const [docs, appts, videosRes] = await Promise.all([
-      apiFetch<DoctorProfile[]>('/api/v1/doctors'),
-      apiFetch<AppointmentItem[]>('/api/v1/appointments'),
-      apiFetch<{ items: PostItem[] }>('/api/v1/feed?tab=videos&limit=6'),
-    ]);
-    setDoctors(docs);
-    setAppointments(appts);
-    setEduVideos(videosRes.items.slice(0, 3));
-    if (routeDoctorId) {
-      const found = docs.find((d) => d.id === routeDoctorId);
-      if (found) setSelectedDoctor(found);
+    try {
+      const [docs, appts, videosRes] = await Promise.all([
+        apiFetch<DoctorProfile[]>('/api/v1/doctors'),
+        apiFetch<AppointmentItem[]>('/api/v1/appointments'),
+        apiFetch<{ items: PostItem[] }>('/api/v1/feed?tab=videos&limit=6'),
+      ]);
+      const safeDocs = Array.isArray(docs) ? docs : [];
+      const safeAppts = Array.isArray(appts) ? appts : [];
+      const safeVideos = Array.isArray(videosRes?.items) ? videosRes.items : [];
+      setDoctors(safeDocs);
+      setAppointments(safeAppts);
+      setEduVideos(safeVideos.slice(0, 3));
+      if (routeDoctorId) {
+        const found = safeDocs.find((d) => d.id === routeDoctorId);
+        if (found) setSelectedDoctor(found);
+      }
+    } catch {
+      // Fall back to empty state on transient fetch errors
     }
   }, [apiFetch, routeDoctorId]);
 

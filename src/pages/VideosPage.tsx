@@ -78,8 +78,8 @@ export const VideosPage: React.FC = () => {
       apiFetch<{ products: ProductItem[] }>('/api/v1/products'),
     ])
       .then(([feedRes, prodRes]) => {
-        setAllVideos(feedRes.items);
-        setProducts(prodRes.products);
+        setAllVideos(Array.isArray(feedRes?.items) ? feedRes.items : []);
+        setProducts(Array.isArray(prodRes?.products) ? prodRes.products : []);
       })
       .catch(() => setAllVideos([]))
       .finally(() => setLoading(false));
@@ -193,7 +193,7 @@ export const VideosPage: React.FC = () => {
   useEffect(() => {
     if (!current || !commentsOpen) return;
     apiFetch<CommentItem[]>(`/api/v1/posts/${current.id}/comments`)
-      .then(setComments)
+      .then((items) => setComments(Array.isArray(items) ? items : []))
       .catch(() => setComments([]));
   }, [current, commentsOpen, apiFetch]);
 

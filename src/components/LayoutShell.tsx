@@ -152,7 +152,7 @@ export const LayoutShell: React.FC<{ children: React.ReactNode }> = ({ children 
   useEffect(() => {
     const loadCats = () => {
       apiFetch<CategoryConfig[]>('/api/v1/categories')
-        .then(setCategories)
+        .then((cats) => setCategories(Array.isArray(cats) ? cats : []))
         .catch(() => {});
     };
     loadCats();

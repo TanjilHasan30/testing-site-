@@ -58,17 +58,30 @@ function hydrateMissingCollections(existing: Partial<DatabaseState>): DatabaseSt
   return {
     ...seed,
     ...existing,
+    users: Array.isArray(existing.users) && existing.users.length > 0 ? existing.users : seed.users,
+    sellers: Array.isArray(existing.sellers) && existing.sellers.length > 0 ? existing.sellers : seed.sellers,
     posts: mergedPosts,
     guides: mergedGuides,
     babies: mergedBabies,
     products: mergedProducts,
     doctors: mergedDoctors,
-    brands: existing.brands && existing.brands.length > 0 ? existing.brands : seed.brands,
-    categories: existing.categories && existing.categories.length > 0 ? existing.categories : seed.categories,
-    coupons: existing.coupons && existing.coupons.length > 0 ? existing.coupons : seed.coupons,
-    campaigns: existing.campaigns && existing.campaigns.length > 0 ? existing.campaigns : seed.campaigns,
-    supportTickets: existing.supportTickets ?? seed.supportTickets,
-    newsletterSubscribers: existing.newsletterSubscribers ?? seed.newsletterSubscribers,
+    questions: Array.isArray(existing.questions) ? existing.questions : seed.questions,
+    polls: Array.isArray(existing.polls) ? existing.polls : seed.polls,
+    appointments: Array.isArray(existing.appointments) ? existing.appointments : seed.appointments,
+    orders: Array.isArray(existing.orders) ? existing.orders : seed.orders,
+    notifications: Array.isArray(existing.notifications) ? existing.notifications : seed.notifications,
+    reports: Array.isArray(existing.reports) ? existing.reports : seed.reports,
+    auditLogs: Array.isArray(existing.auditLogs) ? existing.auditLogs : seed.auditLogs,
+    brands: Array.isArray(existing.brands) && existing.brands.length > 0 ? existing.brands : seed.brands,
+    categories:
+      Array.isArray(existing.categories) && existing.categories.length > 0 ? existing.categories : seed.categories,
+    coupons: Array.isArray(existing.coupons) && existing.coupons.length > 0 ? existing.coupons : seed.coupons,
+    campaigns:
+      Array.isArray(existing.campaigns) && existing.campaigns.length > 0 ? existing.campaigns : seed.campaigns,
+    supportTickets: Array.isArray(existing.supportTickets) ? existing.supportTickets : seed.supportTickets,
+    newsletterSubscribers: Array.isArray(existing.newsletterSubscribers)
+      ? existing.newsletterSubscribers
+      : seed.newsletterSubscribers,
     settings: existing.settings ?? seed.settings,
   };
 }
